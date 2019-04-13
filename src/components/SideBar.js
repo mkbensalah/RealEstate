@@ -1,7 +1,16 @@
 import React, { Component } from 'react';
 import Search from '../components/Search'
+import AdvancedSearch from '../components/AdvancedSearch'
 export default class SideBar extends Component {
     render() {
+        let search = null;
+        if(this.props.type === "AdvancedSearch"){
+            search = <AdvancedSearch/>
+        }
+        else { search = <Search/>}
+
+
+
         return (
             <div>
                 <div className="top-content">
@@ -22,7 +31,7 @@ export default class SideBar extends Component {
 
                 <div className="features-container section-container">
                     <div className="container">
-                    <Search/>
+                    {search}
                     </div>
                 </div>
             </div>

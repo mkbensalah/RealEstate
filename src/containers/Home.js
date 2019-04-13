@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import Header from './Header';
-import SideBar from './SideBar';
-import Footer from './Footer';
-import Properties from './Properties';
-import Modal from './Modal'
-import Aux from './hoc/Auxliary'
-import Register from './Register'
+import Header from '../components/Header';
+import SideBar from '../components/SideBar';
+import Footer from '../components/Footer';
+import Properties from '../components/Properties';
+import Modal from '../components/Modal'
+import Aux from '../components/hoc/Auxliary'
+import Register from '../components/Register'
 
 
 
@@ -36,7 +36,7 @@ class Home extends Component {
                     <Register/>
                 </Modal>
 				<Header ordered={this.purchaseHandler}/>
-				<SideBar />
+				<SideBar type="Search"/>
 				<Properties />
 				<Footer />
 			</Aux>
