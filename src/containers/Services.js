@@ -5,6 +5,7 @@ import Modal from '../components/Modal'
 import Aux from '../components/hoc/Auxliary'
 import Register from '../components/Register'
 import SideBar from '../components/SideBar';
+import Offers from '../components/Offers'
 
 
 
@@ -36,7 +37,7 @@ class Services extends Component {
                 </Modal>
                 <Header ordered={this.purchaseHandler} />
                 <SideBar type="AdvancedSearch"/>
-               
+                <Offers/>
                 <Footer />
             </Aux>
         );

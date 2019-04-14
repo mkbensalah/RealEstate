@@ -1358,7 +1358,7 @@ footer {
 	appearance: none;
 }
 
-form-contact-agent .form-control {
+.form-contact-agent .form-control {
 	height: 37px;
 }
 
@@ -1651,16 +1651,13 @@ form-contact-agent .form-control {
 	font-size: 14px;
 }
 
-.advance-search-header .row, .advanced-search-mobile .row, .search-expandable .row {
-  margin-right: -5px;
-  margin-left: -5px;
-}
+
 
 .advanced-search .advance-fields {
   padding-top: 15px;
 }
 
-bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
   width: 220px;
 }
 .form-group .bootstrap-select.btn-group, .form-horizonta .bootstrap-select.btn-group, .form-inline .bootstrap-select.btn-group {
@@ -1750,10 +1747,7 @@ a, button, .hover-effect, .actions li > span, .mobile-nav .nav-dropdown a, .top-
   transition: 0.3s;
 }
 
-.advance-search-header .row, .advanced-search-mobile .row, .search-expandable .row {
-  margin-right: -5px;
-  margin-left: -5px;
-}
+
 .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
   position: relative;
   min-height: 1px;
@@ -2411,10 +2405,1253 @@ input[type="hidden" i] {
   padding-left: 15px;
   padding-right: 15px;
 }
-@media (min-width: 768px){
-.col-sm-3 {
-  width: 25%;
+
+.sort-tab {
+	font-size: 15px;
+	font-weight: 400;
+	color: #9b9b9b;
 }
-@media (min-width: 768px){
-.col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9 {
-  float: le
+.table-cell {
+	vertical-align: middle !important;
+	display: table-cell;
+}
+select.bs-select-hidden, select.selectpicker {
+	display: none!important;
+}
+.bootstrap-select.btn-group {
+	font-weight: 400;
+	color: #959595 !important;
+	font-size: 15px;
+}
+.sort-tab .bootstrap-select {
+	top: -1px;
+	left: -8px;
+	width: auto !important;
+}
+.breadcrumb {
+	padding: 0 0 ;
+	line-height: 12px;
+	margin: 0;
+	background: none;
+	list-style: none;
+	border-radius: 4px;
+	display: block;
+	list-style-type: decimal;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	padding-inline-start: 40px;
+}
+.breadcrumb li {
+	font-size: 12px;
+	line-height: 12px;
+	font-weight: 300;
+	margin: 0;
+	color: #707070;
+	display: inline-block;
+}
+.breadcrumb li:after {
+	font-family: "FontAwesome";
+	color: #9b9b9b;
+	content: "\f105";
+	padding: 0 5px;
+	box-sizing: border-box;
+}
+.breadcrumb li + li:before {
+	content: "";
+}
+.breadcrumb li:last-child:after {
+	content: "";
+}
+.breadcrumb li a {
+	font-weight: 400;
+}
+.sort-tab {
+	font-size: 15px;
+	font-weight: 400;
+	color: #9b9b9b;
+}
+.table-cell{
+	vertical-align: middle !important;
+	display: table-cell;
+}
+.sort-tab .bootstrap-select .btn-default {
+	height: auto;
+	padding-top: 0;
+	padding-bottom: 0;
+	border: none;
+	background-color: transparent;
+}
+.btn-group >.btn:first-child {
+	margin-left: 0;
+}
+.view-btn.active {
+	color: #000;
+}
+a:hover, a:focus, a:active, .blue:hover, .btn-link:hover, .breadcrumb li a:hover, .pagination-main .pagination a:hover, .vc_toggle_title h4:hover, .footer a:hover, .impress-address:hover, .agent-media .view:hover, .my-property .dropdown-menu a:hover, .article-detail .article-title a:hover, .comments-block .article-title a:hover, .detail-block .list-features a:hover {
+	color: rgba(0,174,239,0.75);
+	text-decoration: none;
+}
+.bootstrap-select.btn-group .dropdown-menu li a:hover, .bootstrap-select.btn-group .dropdown-menu li a:focus, .bootstrap-select.btn-group .dropdown-menu li a:active {
+	background-color: rgba(0, 174, 239, 0.12);
+}
+.bootstrap-select.btn-group .dropdown-menu.open {
+	overflow-y: scroll;
+	max-height: 325px;
+}
+.bootstrap-select.btn-group{
+	font-weight: 400;
+	color: #959595 !important;
+}
+.bootstrap-select.btn-group .dropdown-menu {
+	min-width: 100%;
+	z-index: 1035;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.sort-tab .dropdown-menu {
+	left: auto;
+}
+.open >.dropdown-menu {
+	display: block;
+}
+.view-btn {
+	font-size: 20px;
+	margin: 0 5px;
+	cursor: pointer;
+	color: #cfcfcf;
+	vertical-align: middle !important;
+}
+.dropdown-menu > li > a {
+	padding: 10px 15px;
+}
+.dropdown-menu >li >a {
+	display: block;
+	padding: 3px 20px;
+	clear: both;
+	font-weight: 400;
+	line-height: 1.42857;
+	color: #333;
+	white-space: nowrap;
+}
+.dropdown-menu >li >a:focus, .dropdown-menu >li >a:hover {
+	text-decoration: none;
+	color: #262626;
+	background-color: #f5f5f5;
+}
+.bootstrap-select.btn-group .dropdown-menu li a {
+	cursor: pointer;
+}
+.fa-th-list:before {
+	content: "\f00b";
+}
+.fa-th-large:before {
+	content: "\f009";
+}
+.sort-tab .btn {
+	font-size: 14px;
+	line-height: 1;
+	font-weight: 500;
+	margin: 0;
+	color: #00AEEF;
+}
+.open >.dropdown-menu {
+	display: block;
+}
+.sort-tab .dropdown-menu {
+	left: auto;
+}
+.sort-tab .dropdown-menu {
+	left: auto;
+}
+.sort-tab .dropdown-menu{
+	right: 0;
+}
+.bootstrap-select.btn-group .dropdown-toggle .filter-option {
+	display: inline-block;
+	overflow: hidden;
+	width: 100%;
+	text-align: left;
+}
+.bootstrap-select >.dropdown-toggle {
+	width: 100%;
+	padding-right: 25px;
+}
+.sort-tab .btn{
+	color: #00AEEF;
+	font-size: 14px;
+	line-height: 1;
+	font-weight: 500;
+	margin: 0;
+}
+.breadcrumb-top .breadcrumb {
+	padding: 0 0 20px;
+}
+.bootstrap-select.btn-group .dropdown-toggle .filter-option {
+	display: inline-block;
+	overflow: hidden;
+	width: 100%;
+	text-align: left;
+}
+.fa-unsorted:before, .fa-sort:before {
+	content: "\f0dc";
+}
+.sort-tab .btn {
+	font-size: 14px;
+	line-height: 1;
+	font-weight: 500;
+	margin: 0;
+}
+.view-btn:hover, .view-btn:active, .view-btn.active {
+	color: #000;
+}
+.row:after {
+	clear: both;
+}
+.row:after, .row:before {
+	content: " ";
+	display: table;
+}
+.fa-th-large:before {
+	content: "\f009";
+}
+.fa-th-list:before {
+	content: "\f00b";
+}
+.view-btn {
+	font-size: 20px;
+	margin: 0 5px;
+	cursor: pointer;
+	color: #cfcfcf;
+	vertical-align: middle !important;
+}
+.dropdown-menu > li > a {
+	padding: 10px 15px;
+}
+.view-btn:hover, .view-btn:active, .view-btn.active {
+	color: #000;
+}
+#section-body {
+	padding-bottom: 40px;
+	position: relative;
+}
+
+
+.list-grid-area{
+	float: right;
+}
+.property-listing {
+	margin-bottom: -8px;
+}
+.header-mobile:before, .navi > ul:before, .auto-complete .search-footer:before, .board-header:before, .msg-type-block .msg-attachment-row:before, .pkgs-status li:before, .steps-nav:before, .account-block:before, .invoice-header:before, .invoice-contact:before, .area-title:before, .my-property .media-body:before, .add-tab-content .add-tab-row:before, .my-profile-search:before, .header-detail:before, .media-tabs:before, .form-small .agent-media-head:before, .yelp-category .yelp-cat-list li:before, .detail-title:before, .document-list li:before, .plan-tabber .tab-pane:before, .floor-title-block:before, .print-header:before, .print-header-detail:before, .accord-block .accord-tab:before, .profile-tabs:before, .property-filter-wrap:before, .lightbox-popup .popup-inner:before, .lightbox-header:before, .lightbox-slide-nav:before, .article-footer:before, .comment-navigation:before, .info-title:before, .method-row:before, .pkg-total-list li:before, .item-foot:before, .property-listing:before, .property-item-v2 .item-body-top:before, .property-item-v2 .item-body-bottom:before, .item-caption .item-caption-list:before, .widget-download li:before, .widget-calculate .morg-result:before, .widget-categories ul:before, .widget_categories ul:before, .widget_archive ul:before, .widget_meta ul:before, .widget_recent_entries ul:before, .widget_pages ul:before, .widget-pages ul:before, .widget_recent_comments ul:before, .widget_nav_menu ul:before, .widget-categories li:before, .widget_categories li:before, .widget_archive li:before, .widget_meta li:before, .widget_recent_entries li:before, .widget_pages li:before, .widget-pages li:before, .widget_recent_comments li:before, .widget_nav_menu li:before, .header-mobile:after, .navi > ul:after, .auto-complete .search-footer:after, .board-header:after, .msg-type-block .msg-attachment-row:after, .pkgs-status li:after, .steps-nav:after, .account-block:after, .invoice-header:after, .invoice-contact:after, .area-title:after, .my-property .media-body:after, .add-tab-content .add-tab-row:after, .my-profile-search:after, .header-detail:after, .media-tabs:after, .form-small .agent-media-head:after, .yelp-category .yelp-cat-list li:after, .detail-title:after, .document-list li:after, .plan-tabber .tab-pane:after, .floor-title-block:after, .print-header:after, .print-header-detail:after, .accord-block .accord-tab:after, .profile-tabs:after, .property-filter-wrap:after, .lightbox-popup .popup-inner:after, .lightbox-header:after, .lightbox-slide-nav:after, .article-footer:after, .comment-navigation:after, .info-title:after, .method-row:after, .pkg-total-list li:after, .item-foot:after, .property-listing:after, .property-item-v2 .item-body-top:after, .property-item-v2 .item-body-bottom:after, .item-caption .item-caption-list:after, .widget-download li:after, .widget-calculate .morg-result:after, .widget-categories ul:after, .widget_categories ul:after, .widget_archive ul:after, .widget_meta ul:after, .widget_recent_entries ul:after, .widget_pages ul:after, .widget-pages ul:after, .widget_recent_comments ul:after, .widget_nav_menu ul:after, .widget-categories li:after, .widget_categories li:after, .widget_archive li:after, .widget_meta li:after, .widget_recent_entries li:after, .widget_pages li:after, .widget-pages li:after, .widget_recent_comments li:after, .widget_nav_menu li:after {
+    content: " ";
+    display: table;
+}
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.header-mobile:after, .navi > ul:after, .auto-complete .search-footer:after, .board-header:after, .msg-type-block .msg-attachment-row:after, .pkgs-status li:after, .steps-nav:after, .account-block:after, .invoice-header:after, .invoice-contact:after, .area-title:after, .my-property .media-body:after, .add-tab-content .add-tab-row:after, .my-profile-search:after, .header-detail:after, .media-tabs:after, .form-small .agent-media-head:after, .yelp-category .yelp-cat-list li:after, .detail-title:after, .document-list li:after, .plan-tabber .tab-pane:after, .floor-title-block:after, .print-header:after, .print-header-detail:after, .accord-block .accord-tab:after, .profile-tabs:after, .property-filter-wrap:after, .lightbox-popup .popup-inner:after, .lightbox-header:after, .lightbox-slide-nav:after, .article-footer:after, .comment-navigation:after, .info-title:after, .method-row:after, .pkg-total-list li:after, .item-foot:after, .property-listing:after, .property-item-v2 .item-body-top:after, .property-item-v2 .item-body-bottom:after, .item-caption .item-caption-list:after, .widget-download li:after, .widget-calculate .morg-result:after, .widget-categories ul:after, .widget_categories ul:after, .widget_archive ul:after, .widget_meta ul:after, .widget_recent_entries ul:after, .widget_pages ul:after, .widget-pages ul:after, .widget_recent_comments ul:after, .widget_nav_menu ul:after, .widget-categories li:after, .widget_categories li:after, .widget_archive li:after, .widget_meta li:after, .widget_recent_entries li:after, .widget_pages li:after, .widget-pages li:after, .widget_recent_comments li:after, .widget_nav_menu li:after {
+    clear: both;
+}
+
+.header-mobile:before, .navi > ul:before, .auto-complete .search-footer:before, .board-header:before, .msg-type-block .msg-attachment-row:before, .pkgs-status li:before, .steps-nav:before, .account-block:before, .invoice-header:before, .invoice-contact:before, .area-title:before, .my-property .media-body:before, .add-tab-content .add-tab-row:before, .my-profile-search:before, .header-detail:before, .media-tabs:before, .form-small .agent-media-head:before, .yelp-category .yelp-cat-list li:before, .detail-title:before, .document-list li:before, .plan-tabber .tab-pane:before, .floor-title-block:before, .print-header:before, .print-header-detail:before, .accord-block .accord-tab:before, .profile-tabs:before, .property-filter-wrap:before, .lightbox-popup .popup-inner:before, .lightbox-header:before, .lightbox-slide-nav:before, .article-footer:before, .comment-navigation:before, .info-title:before, .method-row:before, .pkg-total-list li:before, .item-foot:before, .property-listing:before, .property-item-v2 .item-body-top:before, .property-item-v2 .item-body-bottom:before, .item-caption .item-caption-list:before, .widget-download li:before, .widget-calculate .morg-result:before, .widget-categories ul:before, .widget_categories ul:before, .widget_archive ul:before, .widget_meta ul:before, .widget_recent_entries ul:before, .widget_pages ul:before, .widget-pages ul:before, .widget_recent_comments ul:before, .widget_nav_menu ul:before, .widget-categories li:before, .widget_categories li:before, .widget_archive li:before, .widget_meta li:before, .widget_recent_entries li:before, .widget_pages li:before, .widget-pages li:before, .widget_recent_comments li:before, .widget_nav_menu li:before, .header-mobile:after, .navi > ul:after, .auto-complete .search-footer:after, .board-header:after, .msg-type-block .msg-attachment-row:after, .pkgs-status li:after, .steps-nav:after, .account-block:after, .invoice-header:after, .invoice-contact:after, .area-title:after, .my-property .media-body:after, .add-tab-content .add-tab-row:after, .my-profile-search:after, .header-detail:after, .media-tabs:after, .form-small .agent-media-head:after, .yelp-category .yelp-cat-list li:after, .detail-title:after, .document-list li:after, .plan-tabber .tab-pane:after, .floor-title-block:after, .print-header:after, .print-header-detail:after, .accord-block .accord-tab:after, .profile-tabs:after, .property-filter-wrap:after, .lightbox-popup .popup-inner:after, .lightbox-header:after, .lightbox-slide-nav:after, .article-footer:after, .comment-navigation:after, .info-title:after, .method-row:after, .pkg-total-list li:after, .item-foot:after, .property-listing:after, .property-item-v2 .item-body-top:after, .property-item-v2 .item-body-bottom:after, .item-caption .item-caption-list:after, .widget-download li:after, .widget-calculate .morg-result:after, .widget-categories ul:after, .widget_categories ul:after, .widget_archive ul:after, .widget_meta ul:after, .widget_recent_entries ul:after, .widget_pages ul:after, .widget-pages ul:after, .widget_recent_comments ul:after, .widget_nav_menu ul:after, .widget-categories li:after, .widget_categories li:after, .widget_archive li:after, .widget_meta li:after, .widget_recent_entries li:after, .widget_pages li:after, .widget-pages li:after, .widget_recent_comments li:after, .widget_nav_menu li:after {
+    content: " ";
+    display: table;
+}
+
+.property-listing .row {
+	margin-right: -4px;
+	margin-left: -4px;
+}
+
+.grid-view .item-wrap:nth-child(2n+1) {
+	clear: both;
+}
+
+.grid-view .item-wrap {
+	width: 50%;
+	margin-bottom: 10px;
+	padding-right: 4px;
+	padding-left: 4px;
+}
+
+.property-listing .item-wrap {
+	margin-bottom: 8px;
+	padding-right: 4px;
+	padding-left: 4px;
+}
+
+.logo, .header-section .header-left, .header-section-4 .header-left, .header-section .header-left .navi, .header-section-4 .header-left .navi, .header-bottom .header-nav, .header-section-3 .contact-block, .header-section-6-wrap, .header-mobile .header-logo, .header-mobile .header-user, .header-mobile .mobile-nav, .navi > ul > li, .mobile-nav, .top-bar .top-bar-left, .top-bar .top-bar-right, .modal-header ul, .modal-header .modal-title, .login-tabs li, .auto-complete .search-footer .search-count, .advanced-search .btn.btn-secondary i, .advanced-search .btn.btn-primary i, .advanced-search .btn.btn-default i, .page-title .page-title-left, .board-header .board-header-left, .pkgs-status .pkg-status-left, .steps-nav .btn-left, .account-block .account-block-left, .invoice-header .invoice-head-left, .invoice-contact .invoice-contact-left, .area-title .title-left, .my-profile-search .profile-top-left, .header-detail .header-left, .form-small .head-left, .yelp-category .yelp-cat-list .cat-list-left, .detail-title .title-left, .floor-title-block .floor-title, .print-header .print-header-left, .print-header-detail .print-header-detail-left, .accord-block .accord-tab h3, .profile-description .profile-description-left, .agency-description .profile-description-left, .profile-tabs li, .profile-agents .profile-description-top, .filter-title, .lightbox-left, .lightbox-arrow-left, .article-footer .author-meta, .gallery-item, .compare-thumb-main .compare-thumb, .compare-thumb-main .thumb-inner-empty, .comment-navigation .nav-previous, #transportation, #supermarkets, #schools, #libraries, #pharmacies, #hospitals, .info-title .info-title-left, .method-select, .method-type, .houzez-energy-table dt, .item-foot .item-foot-left, .grid-view .item-wrap, .property-item .body-left, .property-item-v2 .item-title, .property-item-v2 .item-amenities, .item-caption .item-caption-list li, .parallax-property-caption-wrap.left .parallax-property-caption, .module-item, .widget-calculate .morg-result #mortgage_mwbi, .flickr-thumbs a, .instagramm-thumbs a, .btn-social .fa, .alignleft, a img.alignleft {
+    float: left;
+}
+.grid-view .item-wrap{
+	margin: 0;
+}
+
+.property-item{
+	display: block;
+	padding: 8px;
+    background-color: #fff;
+}
+
+.table-list{
+	width: 100%;
+}
+
+.property-item .table-cell{
+	display: block;
+	vertical-align: top !important;
+}
+
+
+.grid-view .figure-block, .grid-view .item-thumb, .grid-view figure {
+	height: auto;
+}
+
+.grid-view .figure-block{
+	display: block;
+	width: 100%;
+}
+
+.figure-block {
+	z-index: 0;
+	position: relative;
+}
+
+.grid-view .item-thumb, .grid-view figure{
+	display: block;
+	width: 100%;
+}
+
+.item-thumb, figure{
+	position: relative;
+}
+
+figure {
+	margin: 0;
+	margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 40px;
+    margin-inline-end: 40px;
+}
+
+.grid-view .label-left, .grid-view .label-right {
+	max-width: 240px;
+}
+.property-item .label-wrap {
+	margin-bottom: 5px;
+}
+
+.grid-view .hide-on-list{
+	display: block;
+}
+
+.label-right {
+	right: 12px;
+	text-align: right;
+}
+.label-left, .label-right {
+	top: 12px;
+	z-index: 3;
+}
+.label-wrap {
+	line-height: normal;
+}
+
+.label-right {
+	right: 12px;
+	text-align: right;
+}
+.label-left, .label-right {
+	top: 12px;
+	z-index: 3;
+}
+.label-wrap {
+	line-height: normal;
+	vertical-align: middle !important;
+}
+
+.label-right .label:last-child {
+	margin-left: 5px;
+}
+.label-wrap .label:last-child {
+	margin-right: 0;
+}
+.label-right .label {
+	margin-left: 5px;
+	margin-right: 0;
+}
+.label-wrap .label {
+	position: relative;
+	margin-right: 5px;
+	color: #fff;
+	border-radius: 2px;
+	font-size: 10px;
+	padding: 3px 6px 2px;
+	text-transform: uppercase;
+	line-height: 11px;
+	display: inline-block;
+	font-weight: 500;
+}
+.label-status {
+	background-color: #333;
+	font-weight: 700;
+}
+.label-status, .label-default {
+	background-color: #bcbcbc;
+}
+label, .label {
+	font-weight: 500;
+	margin-bottom: 5px;
+}
+.label-default {
+	background-color: #777;
+}
+.label {
+	display: inline;
+	padding: .2em .6em .3em;
+	font-size: 75%;
+	font-weight: 700;
+	line-height: 1;
+	color: #fff;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: baseline;
+	border-radius: .25em;
+}
+
+.label-right {
+	right: 12px;
+	text-align: right;
+}
+.label-wrap {
+	line-height: normal;
+}
+.add-sort-table .row-sort, .add-sort-table .row-remove, .header-detail .item-price .price-start, .header-detail .table-cell, .agency-block .agency-body-left, .agency-block .agency-body-right, .article-detail table > tbody > tr > th, .comments-block table > tbody > tr > th, .article-detail table > tbody > tr > td, .comments-block table > tbody > tr > td, .property-item .item-body, .property-item .table-cell, .property-item .cell, .property-item-v2 .figure-block, .property-item-v2 .item-body, .services-module.style3 .service-block .block-icon, .services-module.style3 .service-block .block-content, .package-block .package-price span, .label-wrap .label, .label-featured {
+	vertical-align: top !important;
+}
+
+.label-wrap .label a {
+	color: inherit;
+}
+.item-thumb .price, figure .price {
+	z-index: 4;
+	bottom: 12px;
+	left: 12px;
+	text-align: left;
+}
+
+.grid-view .hide-on-list{
+	display: block;
+}
+
+.item-thumb .price, figure .price{
+	position: absolute;
+}
+
+.price {
+	text-align: right;
+	color: #000;
+}
+.item-thumb .price .item-price, figure .price .item-price {
+	color: #fff;
+}
+
+.item-thumb .price .item-price, figure .price .item-price, .item-thumb .price .item-sub-price, figure .price .item-sub-price, .item-thumb .hover-effect:before, figure .hover-effect:before, .price .item-price{
+	display: block;
+}
+
+.price .item-price {
+	font-size: 18px;
+	line-height: 18px;
+	font-weight: 500;
+	margin: 0 0 7px;
+}
+
+.hover-effect {
+	overflow: hidden;
+	z-index: 0;
+	display: block;
+}
+
+.item-thumb .hover-effect:before, figure .hover-effect:before, .carousel-module .carousel .item figure .hover-effect:before, .item-thumb .slideshow .slideshow-nav-main .slick-slide:before, .slideshow .slideshow-nav-main .item-thumb .slick-slide:before, figure .slideshow .slideshow-nav-main .slick-slide:before, .slideshow .slideshow-nav-main figure .slick-slide:before {
+	background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 65%, rgba(0,0,0,.75) 100%);
+}
+.item-thumb .hover-effect:before, figure .hover-effect:before {
+	z-index: 2;
+	content: '';
+	background-color: rgba(255, 255, 255, 0.5);
+	opacity: 0;
+}
+.navi > ul ul, .navi > ul .houzez-megamenu-inner, .mobile-nav .nav-dropdown, .gallery-thumb .icon, #transportation span, #supermarkets span, #schools span, #libraries span, #pharmacies span, #hospitals span, .item-thumb .hover-effect:before, figure .hover-effect:before, .services-module .service-block, .agents-block, .partner-block, .widget-instagramm-slider a, .widget-instagramm-slider a:hover, .owl-theme .owl-nav [class*=owl-] {
+	-webkit-transition: 0.2s;
+	transition: 0.2s;
+}
+.input-icon:before, .search-location .location-trigger, .mapPlaceholder, .slider-placeholder, .mobile-nav .nav-dropdown li .expand-me, .account-action .user-image .user-alert, .sticky_nav, .property-menu-wrap, .header-section-4.nav-right .header-right, .header-section-1.nav-right .header-right, .splash-header.nav-right .header-right, .modal-header .close, .advanced-search-sticky, #splash-section .splash-inner-media, #save_search_click, .module-half .advance-trigger-wrap #save_search_click, .user-dashboard-left, .dashboard-bar, .add-title-tab .add-expand, .file-upload-block .btn, .single-input-search button, .detail-top .tab-pane .view-popup, .detail-top.detail-top-full #gallery:before, .detail-top.detail-top-full .media-tabs, .detail-slider .banner-link, .detail-bar .detail-tabs.detail-tabs-vertical, .team-caption, .team-caption .link-block, #lightbox-popup-main, .lightbox-popup .popup-inner .expand-icon, .lightbox-right, .lightbox-header .header-actions, .gallery-area .gallery-inner, .lightbox-nav-title, .mapfull, .compare-panel, #transportation span, #supermarkets span, #schools span, #libraries span, #pharmacies span, #hospitals span, .item-thumb .hover-effect:before, figure .hover-effect:before, .item-thumb .hover-effect:after, figure .hover-effect:after, .property-item.item-grid .phone, .property-item-v2 .item-body-top, .banner-parallax .banner-bg-wrap, .banner-inner:before, .banner-video-inner:before, .team-block-mobile, .widget-calculate .field-icon, .widget-categories .cat-count, .widget_categories .cat-count, .widget_archive .cat-count, .widget_meta .cat-count, .widget_recent_entries .cat-count, .widget_pages .cat-count, .widget-pages .cat-count, .widget_recent_comments .cat-count, .widget_nav_menu .cat-count, .widget_search form button, .widget_houzez_twitter .owl-theme .owl-nav .owl-prev, .widget_houzez_twitter .owl-theme .owl-nav .owl-next, .footer-widget.widget_search form button, .rating-container .filled-stars, #ihf-main-container .chosen-container-single .chosen-single:after {
+	top: 0;
+}
+.input-icon:before, .mapPlaceholder, .slider-placeholder, .navi > ul .sub-menu, .mobile-nav .nav-dropdown, .sticky_nav, .property-menu-wrap, .auto-complete, .search-expandable, #splash-section .splash-inner-media, .splash-half .splash-footer, .user-dashboard-left, .dashboard-bar, .steps-nav, .detail-top.detail-top-full #gallery:before, .detail-top.detail-top-full .media-tabs-up, .detail-top.detail-top-full .media-detail-down, .detail-slider .banner-link, .detail-sub-title:before, .team-caption, .team-caption .link-block, .team-caption-inner, #lightbox-popup-main, .lightbox-slide-nav, .lightbox-nav-title, .mapfull, .item-thumb .hover-effect:before, figure .hover-effect:before, .item-thumb .hover-effect:after, figure .hover-effect:after, .property-item-v2 .item-body-top, .property-item-v2 .item-body-bottom, .banner-parallax .banner-bg-wrap, .banner-inner:before, .banner-video-inner:before, .banner-module .slider-caption .label-wrap, .banner-slider .owl-nav .owl-prev, .banner-slider .owl-dots, .team-block-mobile, .widget-calculate .field-icon, .widget-categories a:before, .widget_categories a:before, .widget_archive a:before, .widget_meta a:before, .widget_recent_entries a:before, .widget_pages a:before, .widget-pages a:before, .widget_recent_comments a:before, .widget_nav_menu a:before, .footer-widget.widget-categories li a:before, .footer-widget.widget_categories li a:before, .footer-widget.widget_archive li a:before, .footer-widget.widget_meta li a:before, .footer-widget.widget_recent_entries li a:before, .footer-widget.widget_pages li a:before, .footer-widget.widget-pages li a:before, .footer-widget.widget_recent_comments li a:before, .footer-widget.widget_nav_menu li a:before, .widget-instagramm-slider .owl-nav, .slick-prev {
+	left: 0;
+}
+
+.hover-effect, .field-group input, .search-location .location-trigger, .ui-slider .ui-slider-handle:before, .share_tooltip, .splash-header, .navi > ul .sub-menu li a, .navi > ul ul, .navi > ul .houzez-megamenu-inner, .mobile-nav .nav-dropdown li .expand-me, .account-action .user-image img, .account-action .user-image .user-alert, .account-dropdown > ul > li a, .account-dropdown > ul > li .msg-alert, .property-menu a, .top-bar .dropdown-menu > li, .login-register-block .back, .auto-complete .search-view, .advanced-search .btn.btn-secondary, .advanced-search .btn.btn-primary, .advanced-search .btn.btn-default, .search-expandable .field-expand, .figure-block img, .board-panel-menu > li a, .board-panel-menu > li .msg-alert, .board-panel-menu > li.active .sub-menu, .messages-area .media-object, .msg-to-agent-block .media-object, .msg-type-block .arrow, .msg-type-block .arrow:after, .steps-progress-main .steps-progress span, .account-block .my-avatar .profile-img-info, .submit-form-wrap .form-step:first-child, .my-property .dropdown-menu a, .add-tab-content .additional-block button, .single-input-search button:before, .header-detail .item-price, .header-detail .item-sub-price, .form-media .media-left a, .detail-top.detail-top-full .header-detail .price-start, .media-tabs-list li > a, .agent-media .media-left a, .detail-bar .detail-tabs.detail-tabs-vertical, .detail-bar .detail-tabs.detail-tabs-vertical li, .property-reviews .add-rating label, .print-header-detail-right .item-price, .print-header-detail-right .item-sub-price, .print-logo span, .print-logo .tag-line, .agent-listing .media-left figure, .agency-block .social-top, .agency-block.item-grid .media-left, .agency-block.item-grid .media-body, .agency-block.item-grid .agency-body-left, .agency-block.item-grid .agency-body-right, .agency-block.item-grid .social-bottom, .article-footer .meta-tags a, .pay-step-block a, .pay-step-block > span, .membership-content .btn-submit, .stripe_visible_btn, .class-energy-indicator span, .item-thumb .price .item-price, figure .price .item-price, .item-thumb .price .item-sub-price, figure .price .item-sub-price, .item-thumb .hover-effect:before, figure .hover-effect:before, .price .item-price, .price .item-sub-price, .tabs a, .property-listing.list-view .hide-on-grid, .grid-view .figure-block, .grid-view .item-thumb, .grid-view figure, .grid-view .property-item, .grid-view .property-item .table-cell, .grid-view .property-item-v2 .figure-block, .grid-view .property-item-v2 .item-thumb, .grid-view .property-item-v2 figure, .grid-view .property-item-v2 .item-body, .grid-view .hide-on-list, .property-item, .property-item .body-left, .property-item .body-right, .property-item.item-grid, .property-item.item-grid .item-thumb, .property-item.item-grid figure, .property-item.item-grid .body-left, .property-item.item-grid .body-right, .property-item.item-grid .item-body, .property-item-v2.item-grid .figure-block, .property-item-v2.item-grid .item-thumb, .property-item-v2.item-grid figure, .property-item-v2.item-grid .item-body, .item-amenities li span, .item-price-block span, .post-card-description .post-card-title, .post-card-description h3, .post-card-author .author-name span, .location-block a, .banner-slider .banner-link, .widget .media-left a, .widget-categories li, .widget_categories li, .widget_archive li, .widget_meta li, .widget_recent_entries li, .widget_pages li, .widget-pages li, .widget_recent_comments li, .widget_nav_menu li, .widget-reviews .media-left a, .reviews-list .media-left a, .widget_recent_entries .post-date, .widget_recent_comments .recentcomments a, .widget_search form button:before, .widget-news .media-left a, .widget-news .media-right a, .footer-widget.widget_search form button:before, .owl-theme .owl-dots .owl-dot span, .fave-load-more a, .add-rating .caption .label, .screen-reader-text:focus, .aligncenter, div.aligncenter, a img.aligncenter, .f7-form-control, input.wpcf7-form-control[type='text'], input.wpcf7-form-control[type='email'], input.wpcf7-form-control[type='password'], input.wpcf7-form-control[type='tel'], textarea.wpcf7-form-control, .post-password-form input[type='password'], .wpcf7-form .wpcf7-form-control-wrap, .idx-form-control, #ihf-main-container .form-control, .dsidx-resp-area input[type='text'], .dsidx-resp-area input[type='password'], .dsidx-resp-area input[type='email'], .dsidx-resp-area select, .dsidx-resp-area textarea, .ihf-grid-result-address, #ihf-main-container #ihf-main-search-form .text-danger {
+	display: block;
+}
+#email_messages, .input-icon:before, .search-location .location-trigger, .ui-slider .ui-slider-handle, .ui-slider .ui-slider-handle:before, .loader-ripple div, .mapPlaceholder, .slider-placeholder, .mapPlaceholder .loader-inner, .slider-placeholder .loader-inner, .mapPlaceholder .loader-ripple, .slider-placeholder .loader-ripple, .share_tooltip, .tooltip_left, .tooltip_left:after, .navi > ul ul, .navi > ul .houzez-megamenu-inner, .mobile-nav .nav-dropdown, .mobile-nav .nav-dropdown li .expand-me, .account-action .user-image .user-alert, .account-dropdown, .account-dropdown > ul > li .msg-alert, .header-section-4.nav-right .header-right, .header-section-1.nav-right .header-right, .splash-header.nav-right .header-right, .modal-header .close, .auto-complete, .auto-complete .search-view, .search-expandable, .search-expand-btn:after, #splash-section .splash-inner-media, #save_search_click, .splash-half .splash-search, .splash-half .splash-footer, .user-dashboard-left, .dashboard-bar, .board-panel-menu > li .msg-alert, .msg-type-block .arrow, .msg-type-block .arrow:after, .saved-search-list .saved-search-block .remove-search, .saved-search-list .saved-search-block .btn-primary, .add-title-tab .add-expand, .file-upload-block .btn, .gallery-thumb .icon, .single-input-search button, .form-media, .detail-top .tab-pane .view-popup, .detail-top.detail-top-full #gallery:before, .detail-top.detail-top-full .media-tabs-up, .detail-top.detail-top-full .media-tabs-up .label-wrap, .detail-top.detail-top-full .media-detail-down, .detail-media .label-wrap, .media-tabs, .detail-slider .banner-link, .form-small .ajax-loader, .agent-media input[type='checkbox'], .detail-bar .detail-tabs.detail-tabs-vertical, .detail-sub-title:before, .video-block .play-icon, .agent-info-block .agent-thumb input[type='checkbox'], .print-banner .qr-image, .profile-detail-block .profile-image .company-logo, .team-caption, .team-caption .link-block, .team-caption-inner, .lightbox-popup .popup-inner .expand-icon, .lightbox-right, .lightbox-header .header-actions, .lightbox-slide-nav, .lightbox-nav-title, #houzez-gmap-main .map-arrows-actions, #houzez-gmap-main .map-next-prev-actions, #houzez-gmap-main .map-zoom-actions, .map-notfound, .panel-btn, .compare-thumb-main .btn-trash, .bypostauthor .comment-banner, #transportation img, #supermarkets img, #schools img, #libraries img, #pharmacies img, #hospitals img, #transportation span, #supermarkets span, #schools span, #libraries span, #pharmacies span, #hospitals span, .indicator-energy, .indicator-energy:before, .list-loading, .item-thumb .label-featured, figure .label-featured, .item-thumb .actions, figure .actions, .item-thumb .price, figure .price, .item-thumb .item-price-block, figure .item-price-block, .item-thumb .hover-effect:before, figure .hover-effect:before, .item-thumb .hover-effect:after, figure .hover-effect:after, .item-body .phone, .grid-view .property-item-v2 .item-price-block, .property-item-v2 .item-body-top, .property-item-v2 .item-body-bottom, .property-item-v2.item-grid .item-price-block, .property-item-grid .item-caption, .parallax-property-caption-wrap, .testimonial-carousel.owl-theme .owl-nav [class*='owl-'], .banner-video .banner-video-inner, .banner-parallax .banner-bg-wrap, .banner-inner:before, .banner-caption, .banner-video-inner, .banner-video-inner:before, .banner-module .caption-desktop .price, .banner-module .slider-caption, .banner-module .slider-caption .label-wrap, .banner-slider .owl-dots, .team-block-mobile, .widget-calculate .field-icon, .widget-categories a:before, .widget_categories a:before, .widget_archive a:before, .widget_meta a:before, .widget_recent_entries a:before, .widget_pages a:before, .widget-pages a:before, .widget_recent_comments a:before, .widget_nav_menu a:before, .widget-categories .cat-count, .widget_categories .cat-count, .widget_archive .cat-count, .widget_meta .cat-count, .widget_recent_entries .cat-count, .widget_pages .cat-count, .widget-pages .cat-count, .widget_recent_comments .cat-count, .widget_nav_menu .cat-count, .widget_search form button, .widget-change .body-inner > .btn .fa, .footer-widget.widget_search form button, .widget-instagramm-slider .owl-nav .owl-prev, .widget-instagramm-slider .owl-nav .owl-next, .owl-theme .owl-nav [class*=owl-], label.error, .label.error, label + .bootstrap-select .success, .label + .bootstrap-select .success, .label-left, .label-right, .rating-container .filled-stars, .rating-container .caption, .rating-container .caption .label:before, .rating-container .caption .label:after, #ihf-main-container .chosen-container-single .chosen-single:after {
+	position: absolute;
+}
+.mapPlaceholder, .slider-placeholder, .map-half, .splash-half, .user-dashboard-left, .dashboard-bar, .steps-progress-main .steps-progress span, .detail-top.detail-top-full #gallery:before, .detail-slider .banner-link, .team-caption, .team-caption .link-block, #lightbox-popup-main, #houzez-gmap-main.fave-screen-fix #houzez-listing-map, #houzez-gmap-main.fave-screen-fix #houzez-listing-map-vc, #houzez-gmap-main.fave-screen-fix #listing-map, .compare-panel, .item-thumb .hover-effect:before, figure .hover-effect:before, .item-thumb .hover-effect:after, figure .hover-effect:after, .location-block a:before, .banner-parallax .banner-bg-wrap, .banner-inner, .banner-inner:before, .banner-video-inner:before, .banner-slider .banner-link, .team-block-mobile {
+	height: 100%;
+}
+
+.figure-block img{
+	display: block;
+}
+
+.item-thumb img, figure img{
+	width: 100%;
+}
+
+.item-thumb .hover-effect:after, figure .hover-effect:after {
+	z-index: 1;
+	content: '';
+	opacity: 1;
+	background: transparent;
+	background: -webkit-linear-gradient(top, transparent 0%, transparent 0%, rgba(0, 0, 0, 0.2) 65%, rgba(0, 0, 0, 0.8) 100%);
+	background: linear-gradient(to bottom, transparent 0%, transparent 0%, rgba(0, 0, 0, 0.2) 65%, rgba(0, 0, 0, 0.8) 100%);
+}
+a, button, .hover-effect, .actions li > span, .mobile-nav .nav-dropdown a, .top-bar .dropdown-menu > li, .login-tabs li, .banner-search-tabs .search-tab, .detail-bar .detail-tabs li, .video-thumb, .attachment-houzez-property-detail-gallery, .profile-tabs li, #houzez-gmap-main .map-btn, #transportation, #supermarkets, #schools, #libraries, #pharmacies, #hospitals, .item-thumb .hover-effect:after, figure .hover-effect:after, .banner-module .slider-caption {
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+}
+
+.item-thumb .actions, figure .actions {
+	z-index: 4;
+	right: 12px;
+	bottom: 12px;
+}
+
+.item-thumb .actions, figure .actions{
+	position: absolute;
+}
+
+.actions {
+	list-style: none;
+	font-size: 0 !important;
+	white-space: nowrap;
+	margin: 0;
+}
+
+.actions li {
+	margin-right: 5px !important;
+	color: #fff;
+	cursor: pointer;
+	vertical-align: middle !important;
+	display: inline-block;
+	position: relative;
+	font-size: 12px !important;
+}
+
+.actions li > span {
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 4px;
+	background-color: #000;
+	opacity: .6;
+	text-align: center;
+	display: inline-block;
+}
+a, button, .hover-effect, .actions li > span, .mobile-nav .nav-dropdown a, .top-bar .dropdown-menu > li, .login-tabs li, .banner-search-tabs .search-tab, .detail-bar .detail-tabs li, .video-thumb, .attachment-houzez-property-detail-gallery, .profile-tabs li, #houzez-gmap-main .map-btn, #transportation, #supermarkets, #schools, #libraries, #pharmacies, #hospitals, .item-thumb .hover-effect:after, figure .hover-effect:after, .banner-module .slider-caption {
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+}
+.fa-heart-o:before {
+	content: "\f08a";
+}
+.fa-camera:before {
+	content: "\f030";
+}
+
+.actions li:last-child {
+	margin: 0 !important;
+}
+.actions li {
+	margin-right: 5px !important;
+	color: #fff;
+	cursor: pointer;
+	font-size: 12px !important;
+}
+
+.fa-plus:before {
+	content: "\f067";
+}
+
+.grid-view .property-item .item-body {
+	padding: 15px 12px 7px;
+}
+
+.property-item .table-cell{
+	display: block;
+}
+
+.grid-view .property-item .item-body{
+	width: 100%;
+}
+.property-item .item-body {
+    overflow: hidden;
+    width: 10000px;
+    padding: 10px 12px 10px 20px;
+
+}
+
+.property-item .item-body, .property-item .table-cell, .property-item .cell, .property-item-v2 .figure-block, .property-item-v2 .item-body, .services-module.style3 .service-block .block-icon, .services-module.style3 .service-block .block-content, .package-block .package-price span, .label-wrap .label, .label-featured {
+	vertical-align: top !important;
+}
+
+.grid-view .property-item .body-left {
+	margin-bottom: 15px;
+}
+
+.property-item .table-cell{
+	display: block;
+}
+
+.grid-view .property-item .body-left{
+	width: 100%;
+}
+
+.property-item .body-left, .property-item-v2 .item-title, .property-item-v2 .item-amenities, .item-caption .item-caption-list li, .parallax-property-caption-wrap.left .parallax-property-caption, .module-item, .widget-calculate .morg-result #mortgage_mwbi, .flickr-thumbs a, .instagramm-thumbs a, .btn-social .fa, .alignleft, a img.alignleft {
+	float: left;
+}
+.item-body .table-cell, .grid-view .property-item-v2 .body-inner, .grid-view .property-item-v2 .item-body-top, .grid-view .property-item-v2 .item-body-bottom, .property-item.item-grid, .property-item.item-grid .phone, .property-item-v2 .item-body, .property-item-v2.item-grid .body-inner, .property-item-v2.item-grid .item-body-top, .property-item-v2.item-grid .item-body-bottom, .parallax-properties-media, .services-module .service-block, .agents-block, .partner-block, .location-block, .package-block, .banner-video, .banner-parallax, .banner-module, .banner-module .owl-item, .banner-slider .banner-link, .widget-calculate .form-group, .widget-categories li, .widget_categories li, .widget_archive li, .widget_meta li, .widget_recent_entries li, .widget_pages li, .widget-pages li, .widget_recent_comments li, .widget_nav_menu li, .widget-categories a, .widget_categories a, .widget_archive a, .widget_meta a, .widget_recent_entries a, .widget_pages a, .widget-pages a, .widget_recent_comments a, .widget_nav_menu a, .widget_search form div, .widget-change .body-inner > .btn, .widget_houzez_twitter .owl-theme .owl-nav [class*='owl-'], .footer-widget.widget_search form div, .footer .read .fa, .rating-wrap, .rating-container .rating, .rating-container .caption .label, .ihf-share-btn-more .fa-share {
+	position: relative;
+}
+.grid-view .property-item .info-row {
+	text-align: left;
+}
+
+.property-item .label-wrap {
+	margin-bottom: 5px;
+}
+.header-mobile, .navi .houzez-megamenu-inner > .sub-menu .houzez-menu-title-hidden > a, .mobile-nav .nav-dropdown ul ul, .account-dropdown .sub-menu, .property-menu-wrap, .header-section-1 .user-name, .header-section-4 .user-name, .header-section-5 .user-name, .header-section-6 .user-name, .splash-header .user-name, .top-bar .mobile-nav, .advanced-search-hidden, .search-hidden, .auto-complete, .advanced-search .advance-fields, .field-expand, .advanced-search-mobile, .advanced-search-mobile .advance-fields, .advanced-search-module .features-list, #section-body.houzez-body-half .item-body .phone, .board-panel-menu .sub-menu, .dashboard-content-area .validate-errors, .dashboard-content-area .validate-errors-gal, .steps-nav .btn-submit, .steps-nav .btn-left, .account-block.form-step, .gallery-thumb .icon-loader, .media-tabs .actions, .accord-block .accord-content, .agency-block .social-bottom, .agency-block.item-grid .social-top, .lightbox-left .lightbox-close, .gallery-area .lightbox-slide, .method-option, #stripe_form_featured_listing, .houzez_stripe_buttons, .property-listing.list-view .hide-on-list, .grid-view .hide-on-grid, .caption-above .detail-bottom, .caption-above .thumb-caption, .caption-bottom .detail-above, .carousel-col-5 .actions, .carousel-col-6 .actions, .widget-calculate .morg-detail, .widget-calculate .morg-summery, .scrolltop-btn, .rating-container .clear-rating, .rating-container .caption, #ihf-main-container .chosen-container-single .chosen-single div, #ihf-detail-features-tab h5 {
+	display: none;
+}
+.label-wrap {
+	line-height: normal;
+}
+.label-wrap .label:last-child {
+	margin-right: 0;
+}
+.label-wrap .label {
+	position: relative;
+	margin-right: 5px;
+	color: #fff;
+	border-radius: 2px;
+	font-size: 10px;
+	padding: 3px 6px 2px;
+	text-transform: uppercase;
+	line-height: 11px;
+	font-weight: 500;
+}
+.add-sort-table .row-sort, .add-sort-table .row-remove, .header-detail .item-price .price-start, .header-detail .table-cell, .agency-block .agency-body-left, .agency-block .agency-body-right, .article-detail table > tbody > tr > th, .comments-block table > tbody > tr > th, .article-detail table > tbody > tr > td, .comments-block table > tbody > tr > td, .property-item .item-body, .property-item .table-cell, .property-item .cell, .property-item-v2 .figure-block, .property-item-v2 .item-body, .services-module.style3 .service-block .block-icon, .services-module.style3 .service-block .block-content, .package-block .package-price span, .label-wrap .label, .label-featured {
+	vertical-align: top !important;
+}
+.list-inline > li, .actions li, .actions li > span, .share_tooltip a, .header-top-social li, .header-section-5 .header-top, .header-mobile .user-icon, .navi a, .navi > ul .has-child > a:after, .mobile-nav .nav-trigger, .mobile-nav .nav-dropdown a, .account-action > li, .account-action .user-image, .property-menu li, .top-contact li, .top-drop-downs > li, .auto-complete .amenities li, .search-expand-btn, #save_search_click:after, .board-panel-menu .sub-menu a:before, .all-msgs-list a, .msgs-list .message-date span, .steps-progress-main .steps-progress, .my-property .my-description .label, .add-tab-content .additional-block .sort-additional-row, .add-tab-content .additional-block .remove-additional-row, .add-attachment .attach-actions li, .media-drag-drop .icon-cloud-upload, .header-detail h1 .actions span, .form-media, .media-tabs-list li, .yelp-category .yelp-cat-list .time-review, .yelp-cat-icon, .walkscore_details img, .walkscore_details span, .detail-amenities-list li, .agent-info-block .agent-thumb, .agent-info-block .agent-info li, .plan-tabs li, .print-detail .agent-media li, .print-detail .accord-tab li, .print-logo, .accord-block .accord-tab li, .profile-social li, .agency-social li, .profile-social a, .agency-social a, .team-social li, .team-social a, .lightbox-header .header-title img, .gallery-area .lightbox-slide img, #houzez-gmap-main .map-btn, #houzez-gmap-main .map-search, .article-footer .meta-tags li, .author-meta li, .page-pagination a, .class-energy-indicator, .list-loading-bar, .item-body .date p, .tabs li, .item-amenities li, .item-date li, .pagination-main .pagination li, .caption-above .detail h3, .caption-bottom .detail h3, .testimonial-item .auther-thumb, .agents-block .auther-thumb, .partner-block .auther-thumb, .package-block .package-price span, .package-block .btn, .banner-module .slider-caption, .widget .rating p, .widget_tag_cloud .tagcloud a, .footer-widget.widget_tag_cloud .tagcloud a, .footer .social li, .footer-bottom .navi li, .label-wrap, .label-wrap .label, .rating-wrap, .rating-wrap .rating-container, .rating-container .rating, .rating-container .star, .post-password-form input[type='submit'], .wpcf7-submit, .idx-btn, #ihf-main-container .btn, #ihf-main-container .btn-primary, #ihf-main-container .ihf-map-search-refine-link, #ihf-main-container .ihf-advanced-search-launch, .dsidx-resp-area-submit input[type='submit'], .ihf-grid-result-basic-info-container > div, #ihf-main-container .chosen-container-single .chosen-single:after {
+	display: inline-block;
+}
+.label-status {
+	background-color: #333;
+	font-weight: 700;
+}
+.label-status, .label-default {
+	background-color: #bcbcbc;
+}
+label, .label {
+	font-weight: 500;
+	margin-bottom: 5px;
+}
+.label-default {
+	background-color: #777;
+}
+.label-wrap .label a {
+	color: inherit;
+}
+.item-body h2, .item-body .property-title, .post-card-description h3, .post-card-description .post-card-title, .my-property .my-heading, .module-title h2, .houzez-module .module-title-nav h2 {
+	font-family: Roboto;
+	font-weight: 500;
+	text-transform: inherit;
+	text-align: inherit;
+}
+.item-body .property-title, .item-body h2 {
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: 500;
+	margin: 0 0 7px 0;
+}
+.item-body .property-title, .item-body h2 {
+	max-width: 380px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.item-body h2, .post-card-description h3, .my-property .my-heading {
+	font-size: 16px;
+	line-height: 20px;
+	margin: 0 0 8px 0;
+	font-weight: 500;
+	text-transform: inherit;
+	text-align: inherit;
+}
+.property-item h2 a, .property-item .property-title a, .widget .media-heading a {
+	color: #000000;
+}
+
+.item-body .property-title a {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: block;
+}
+.item-body .property-address, .item-body h4 {
+	font-size: 13px;
+	line-height: 13px;
+	margin: 0;
+}
+.item-body .property-address, .item-body h4 {
+	overflow: hidden;
+	max-width: 265px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	color: #9b9b9b;
+}
+address {
+	margin-bottom: 20px;
+	font-style: normal;
+	line-height: 1.42857;
+}
+
+.grid-view .property-item .item-body .amenities {
+	height: auto;
+}
+.grid-view .property-item .info-row {
+	text-align: left;
+}
+.item-body .info-row + .info-row {
+	margin-top: 10px;
+}
+.item-body .amenities {
+	min-height: 40px;
+}
+.header-mobile, .navi .houzez-megamenu-inner > .sub-menu .houzez-menu-title-hidden > a, .mobile-nav .nav-dropdown ul ul, .account-dropdown .sub-menu, .property-menu-wrap, .header-section-1 .user-name, .header-section-4 .user-name, .header-section-5 .user-name, .header-section-6 .user-name, .splash-header .user-name, .top-bar .mobile-nav, .advanced-search-hidden, .search-hidden, .auto-complete, .advanced-search .advance-fields, .field-expand, .advanced-search-mobile, .advanced-search-mobile .advance-fields, .advanced-search-module .features-list, #section-body.houzez-body-half .item-body .phone, .board-panel-menu .sub-menu, .dashboard-content-area .validate-errors, .dashboard-content-area .validate-errors-gal, .steps-nav .btn-submit, .steps-nav .btn-left, .account-block.form-step, .gallery-thumb .icon-loader, .media-tabs .actions, .accord-block .accord-content, .agency-block .social-bottom, .agency-block.item-grid .social-top, .lightbox-left .lightbox-close, .gallery-area .lightbox-slide, .method-option, #stripe_form_featured_listing, .houzez_stripe_buttons, .property-listing.list-view .hide-on-list, .grid-view .hide-on-grid, .caption-above .detail-bottom, .caption-above .thumb-caption, .caption-bottom .detail-above, .carousel-col-5 .actions, .carousel-col-6 .actions, .widget-calculate .morg-detail, .widget-calculate .morg-summery, .scrolltop-btn, .rating-container .clear-rating, .rating-container .caption, #ihf-main-container .chosen-container-single .chosen-single div, #ihf-detail-features-tab h5 {
+	display: none;
+}
+
+.item-body .amenities p {
+	font-size: 13px;
+	line-height: 16px;
+	margin: 0 0 5px 0;
+	font-weight: 500;
+	text-transform: inherit;
+	text-align: inherit;
+	font-size: 13px;
+	line-height: 16px;
+	font-weight: 500;
+	margin: 0 0 5px 0;
+}
+.item-body .amenities span {
+	margin-right: 10px;
+}.item-body .amenities p {
+	font-size: 13px;
+	line-height: 16px;
+	margin: 0 0 5px 0;
+	font-weight: 500;
+	text-transform: inherit;
+	text-align: inherit;
+	font-size: 13px;
+	line-height: 16px;
+	font-weight: 500;
+	margin: 0 0 5px 0;
+}
+.grid-view .property-item .info-row {
+	text-align: left;
+}.grid-view .property-item .info-row {
+	text-align: left;
+}
+.item-body .info-row + .info-row {
+	margin-top: 10px;
+}
+.header-mobile, .navi .houzez-megamenu-inner > .sub-menu .houzez-menu-title-hidden > a, .mobile-nav .nav-dropdown ul ul, .account-dropdown .sub-menu, .property-menu-wrap, .header-section-1 .user-name, .header-section-4 .user-name, .header-section-5 .user-name, .header-section-6 .user-name, .splash-header .user-name, .top-bar .mobile-nav, .advanced-search-hidden, .search-hidden, .auto-complete, .advanced-search .advance-fields, .field-expand, .advanced-search-mobile, .advanced-search-mobile .advance-fields, .advanced-search-module .features-list, #section-body.houzez-body-half .item-body .phone, .board-panel-menu .sub-menu, .dashboard-content-area .validate-errors, .dashboard-content-area .validate-errors-gal, .steps-nav .btn-submit, .steps-nav .btn-left, .account-block.form-step, .gallery-thumb .icon-loader, .media-tabs .actions, .accord-block .accord-content, .agency-block .social-bottom, .agency-block.item-grid .social-top, .lightbox-left .lightbox-close, .gallery-area .lightbox-slide, .method-option, #stripe_form_featured_listing, .houzez_stripe_buttons, .property-listing.list-view .hide-on-list, .grid-view .hide-on-grid, .caption-above .detail-bottom, .caption-above .thumb-caption, .caption-bottom .detail-above, .carousel-col-5 .actions, .carousel-col-6 .actions, .widget-calculate .morg-detail, .widget-calculate .morg-summery, .scrolltop-btn, .rating-container .clear-rating, .rating-container .caption, #ihf-main-container .chosen-container-single .chosen-single div, #ihf-detail-features-tab h5 {
+	display: none;
+}
+
+.item-body .date p {
+	font-size: 12px;
+	line-height: 12px;
+	font-weight: 300;
+	margin: 0;
+}
+.item-body .date p {
+	margin-right: 10px;
+	color: #9b9b9b;
+}.item-body .date p i {
+	margin-right: 5px;
+}
+.item-body .date p {
+	font-size: 12px;
+	line-height: 12px;
+	font-weight: 300;
+	margin: 0;
+}
+.item-body .date p {
+	margin-right: 10px;
+	color: #9b9b9b;
+}
+.grid-view .property-item .info-row {
+	text-align: left;
+}
+
+.item-body .date a {
+	color: #9b9b9b;
+}
+
+.item-body p, .item-body .date p:last-child{
+	margin: 0;
+}
+.item-body .date p {
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 300;
+    margin: 0;
+
+}
+
+.item-body .date p i {
+	margin-right: 5px;
+}.grid-view .property-item .body-right, .grid-view .property-item-v2 .figure-block, .grid-view .property-item-v2 .item-thumb, .grid-view .property-item-v2 figure, .grid-view .property-item-v2 .item-body, .grid-view .property-item-v2 .body-inner, .grid-view .property-item-v2 .item-title, .grid-view .property-item-v2 .item-amenities, .grid-view .property-item-v2 .item-date, .grid-view-1-col .item-wrap, .property-item, .property-item .cell, .property-item.item-grid .body-left, .property-item.item-grid .body-right, .property-item.item-grid .item-body, .property-item-v2, .property-item-v2 .item-body-top, .property-item-v2 .item-body-bottom, .property-item-v2.item-grid .figure-block, .property-item-v2.item-grid .item-thumb, .property-item-v2.item-grid figure, .property-item-v2.item-grid .item-body, .property-item-v2.item-grid .body-inner, .property-item-v2.item-grid .item-title, .property-item-v2.item-grid .item-amenities, .property-item-v2.item-grid .item-date, .pagination-main .pagination, .houzez-module .module-title-nav, .callto-action, .post-card-author, .location-block a:before, .package-block, .banner-video .banner-video-inner, .banner-parallax .banner-bg-wrap, .banner-inner, .banner-inner:before, .banner-caption, .banner-video-inner, .banner-video-inner:before, .banner-slider .banner-link, .team-block-mobile, .figure-grid, .detail, .widget-categories ul ul, .widget_categories ul ul, .widget_archive ul ul, .widget_meta ul ul, .widget_recent_entries ul ul, .widget_pages ul ul, .widget-pages ul ul, .widget_recent_comments ul ul, .widget_nav_menu ul ul, .widget-categories li, .widget_categories li, .widget_archive li, .widget_meta li, .widget_recent_entries li, .widget_pages li, .widget-pages li, .widget_recent_comments li, .widget_nav_menu li, .widget_calendar table, .widget_search form input[type='text'], .footer-widget.widget_search form input[type='text'], .widget-instagramm-slider .owl-nav, #footer-section, .footer-bottom, .f7-form-control, input.wpcf7-form-control[type='text'], input.wpcf7-form-control[type='email'], input.wpcf7-form-control[type='password'], input.wpcf7-form-control[type='tel'], textarea.wpcf7-form-control, .post-password-form input[type='password'], .wpcf7-text, .wpcf7-textarea, .idx-form-control, #ihf-main-container .form-control, .dsidx-resp-area input[type='text'], .dsidx-resp-area input[type='password'], .dsidx-resp-area input[type='email'], .dsidx-resp-area select, .dsidx-resp-area textarea, .ihf-grid-result-basic-info-container, #ihf-main-container .areaPickerExpandAllTopBar {
+    width: 100%;
+}
+.property-item .body-right {
+    width: 30%;
+    min-height: 145px;
+}
+.grid-view .hidden-gird-cell {
+    display: none !important;
+}
+.add-sort-table .row-sort, .add-sort-table .row-remove, .header-detail .item-price .price-start, .header-detail .table-cell, .agency-block .agency-body-left, .agency-block .agency-body-right, .article-detail table > tbody > tr > th, .comments-block table > tbody > tr > th, .article-detail table > tbody > tr > td, .comments-block table > tbody > tr > td, .property-item .item-body, .property-item .table-cell, .property-item .cell, .property-item-v2 .figure-block, .property-item-v2 .item-body, .services-module.style3 .service-block .block-icon, .services-module.style3 .service-block .block-content, .package-block .package-price span, .label-wrap .label, .label-featured {
+    vertical-align: top !important;
+}
+.header-section .header-right, .header-section-4 .header-right, .header-bottom .header-right, .header-section-6-left-menu .main-nav, .navi > ul .has-child > a:after, .auto-complete .search-footer .search-result-view, .page-title .page-title-right, .module-half .advance-trigger-wrap #save_search_click, .board-header .board-header-right, .msg-attachment, .pkgs-status .pkg-status-right, .steps-nav .btn-right, .account-block .account-block-right, .invoice-list .btn-invoice, .invoice-header .invoice-date, .invoice-contact .invoice-contact-right, .area-title .title-right, .my-profile-search .profile-top-right, .header-detail .header-right, .form-small .head-right, .yelp-category .yelp-cat-list .cat-list-right, .detail-title .title-right, .floor-title-block .floor-price, .print-header-detail .print-header-detail-right, .accord-block .accord-tab ul, .profile-description .profile-description-right, .agency-description .profile-description-right, .filter-inputs, .lightbox-arrow-right, .article-footer .article-footer-right, .comment-navigation .nav-next, .houzez-energy-table dd, .item-foot .item-foot-right, .list-grid-area, .property-item .body-right, .property-item-v2 .item-date, .property-item-v2 .item-price-block, .parallax-property-caption-wrap.right .parallax-property-caption, .widget-calculate .morg-result .show-morg, .rating-rtl, .alignright, a img.alignright {
+    float: right;
+}
+.input-icon, .input-icon input, .search-location, .loader-ripple, .map-info-box, .actions li, #header-section .container, .header-section, .header-section-4, .header-section .logo img, .header-section-4 .logo img, .header-section-2, .header-section-3, .header-section-5, .header-mobile > .container, .navi > ul > li, .navi > ul .sub-menu li, .mobile-nav .nav-trigger, .mobile-nav .nav-dropdown ul, .mobile-nav .nav-dropdown li, .account-action, .account-action .user-image, .account-dropdown > ul, .account-dropdown > ul > li, .sticky_nav .header-transparent, .header-section-4.nav-right .container, .header-section-1.nav-right .container, .splash-header.nav-right .container, .header-section-4.nav-right .header-left, .header-section-1.nav-right .header-left, .splash-header.nav-right .header-left, .top-bar, .top-bar .top-bar-left, .top-bar .top-bar-right, .top-contact .top-bar-phone .fa, .top-contact .top-bar-contact .fa, .top-drop-downs > li, .splash-search, .banner-search-main .form-group .bootstrap-select.open, .banner-search-tabs .search-tab-inner, .auto-complete .media, .advanced-search, .advanced-search-mobile, .advanced-search-mobile .single-search, .advanced-search-mobile .advance-fields, .search-expand-btn, #splash-section, #splash-section .splash-inner-content, #section-body, .header-media-wrap, .header-media, .figure-block, .list-search form, #section-body.houzez-body-half .property-listing, .user-dashboard-right, .board-panel-menu, .board-panel-menu > li, .board-panel-menu > li a, .board-header, .dashboard-content-area, .msg-type-block, .steps-progress-main .steps-progress span, .my-property .my-actions, .saved-search-list .saved-search-block, .add-title-tab, .add-title-tab .add-expand:before, .file-upload-block, .gallery-thumb, .gallery-thumb img, .single-input-search, .header-detail .label-wrap, .detail-top, .detail-top .tab-content, .detail-top.detail-top-full .container, .detail-top.detail-top-full .label, .detail-top.detail-top-full .header-detail .actions, .detail-media, .detail-media #gallery, .media-tabs-list li, .detail-slider-nav-wrap .item, #singlePropertyMap, .agent-media .media-left, .detail-bar .detail-content-tabber, .detail-sub-title, .video-block, .agent-info-block .agent-thumb, .plan-tabs li, .print-banner .print-main-image, .accord-block .accord-tab, .profile-detail-block .profile-image, .team-block, .lightbox-popup, .lightbox-popup .popup-inner, .lightbox-left, .lightbox-header, .gallery-area, .gallery-area .gallery-inner, .lightbox-arrow, #houzez-gmap-main, #houzez-listing-map-vc, #listing-map, #houzez-listing-map, #houzez_ajax_container .map-notfound, .gallery-item, .compare-thumb-main .compare-thumb, .comments-block .media-body .reply .fa, .bypostauthor, #transportation, #supermarkets, #schools, #libraries, #pharmacies, #hospitals, #transportation .icon, #supermarkets .icon, #schools .icon, #libraries .icon, #pharmacies .icon, #hospitals .icon, .class-energy, .class-energy-indicator, .item-thumb, figure, .item-body .table-cell, .grid-view .property-item-v2 .body-inner, .grid-view .property-item-v2 .item-body-top, .grid-view .property-item-v2 .item-body-bottom, .property-item.item-grid, .property-item.item-grid .phone, .property-item-v2 .item-body, .property-item-v2.item-grid .body-inner, .property-item-v2.item-grid .item-body-top, .property-item-v2.item-grid .item-body-bottom, .parallax-properties-media, .services-module .service-block, .agents-block, .partner-block, .location-block, .package-block, .banner-video, .banner-parallax, .banner-module, .banner-module .owl-item, .banner-slider .banner-link, .widget-calculate .form-group, .widget-categories li, .widget_categories li, .widget_archive li, .widget_meta li, .widget_recent_entries li, .widget_pages li, .widget-pages li, .widget_recent_comments li, .widget_nav_menu li, .widget-categories a, .widget_categories a, .widget_archive a, .widget_meta a, .widget_recent_entries a, .widget_pages a, .widget-pages a, .widget_recent_comments a, .widget_nav_menu a, .widget_search form div, .widget-change .body-inner > .btn, .widget_houzez_twitter .owl-theme .owl-nav [class*='owl-'], .footer-widget.widget_search form div, .footer .read .fa, .rating-wrap, .rating-container .rating, .rating-container .caption .label, .ihf-share-btn-more .fa-share {
+    position: relative;
+}
+
+.grid-view .property-item .info-row {
+	text-align: left;
+}
+.price .item-price {
+	font-size: 18px;
+	line-height: 18px;
+	font-weight: 500;
+	margin: 0 0 7px;
+}
+
+.grid-view .property-item .item-body .phone {
+	position: relative !important;
+}
+.grid-view .property-item .info-row {
+	text-align: left;
+}
+.item-body .info-row + .info-row {
+	margin-top: 10px;
+}
+.search-expandable, .splash-half .splash-footer, .steps-nav, .detail-sub-title:before, .print-banner .qr-image, .team-caption-before .team-caption-inner, .lightbox-slide-nav, .item-body .phone, .property-item-v2 .item-body-bottom, .banner-slider .owl-dots {
+	bottom: 0;
+}
+.input-icon-right:before, .search-location .location-trigger, .mapPlaceholder, .slider-placeholder, .navi .houzez-megamenu-inner ul, .mobile-nav .nav-dropdown li .expand-me, .menu-right-no-user .navi > ul > li:nth-last-child(-n+1) ul, .account-dropdown, .property-menu-wrap, .header-section-4.nav-right .header-right, .header-section-1.nav-right .header-right, .splash-header.nav-right .header-right, .modal-header .close, .auto-complete, .search-expandable, #splash-section .splash-inner-media, #save_search_click, .splash-half .splash-footer, .steps-nav, .my-property .dropdown-menu, .add-title-tab .add-expand, .file-upload-block .btn, .single-input-search button, .detail-top .tab-pane .view-popup, .detail-top.detail-top-full #gallery:before, .detail-top.detail-top-full .media-tabs, .detail-sub-title:before, .print-banner .qr-image, .team-caption, .team-caption .link-block, .team-caption-inner, #lightbox-popup-main, .lightbox-popup .popup-inner .expand-icon, .lightbox-right, .lightbox-header .header-actions, .lightbox-slide-nav, .lightbox-nav-title, .mapfull, .compare-panel, #transportation span, #supermarkets span, #schools span, #libraries span, #pharmacies span, #hospitals span, .item-thumb .hover-effect:after, figure .hover-effect:after, .item-body .phone, .sort-tab .dropdown-menu, .property-item-v2 .item-body-top, .property-item-v2 .item-body-bottom, .banner-parallax .banner-bg-wrap, .banner-inner:before, .banner-video-inner:before, .banner-slider .owl-nav .owl-next, .banner-slider .owl-dots, .widget-categories .cat-count, .widget_categories .cat-count, .widget_archive .cat-count, .widget_meta .cat-count, .widget_recent_entries .cat-count, .widget_pages .cat-count, .widget-pages .cat-count, .widget_recent_comments .cat-count, .widget_nav_menu .cat-count, .widget_search form button, .footer-widget.widget_search form button, .widget-instagramm-slider .owl-nav, .slick-next, .rating-container .caption, .rating-rtl .filled-stars {
+	right: 0;
+}
+#email_messages, .input-icon:before, .search-location .location-trigger, .ui-slider .ui-slider-handle, .ui-slider .ui-slider-handle:before, .loader-ripple div, .mapPlaceholder, .slider-placeholder, .mapPlaceholder .loader-inner, .slider-placeholder .loader-inner, .mapPlaceholder .loader-ripple, .slider-placeholder .loader-ripple, .share_tooltip, .tooltip_left, .tooltip_left:after, .navi > ul ul, .navi > ul .houzez-megamenu-inner, .mobile-nav .nav-dropdown, .mobile-nav .nav-dropdown li .expand-me, .account-action .user-image .user-alert, .account-dropdown, .account-dropdown > ul > li .msg-alert, .header-section-4.nav-right .header-right, .header-section-1.nav-right .header-right, .splash-header.nav-right .header-right, .modal-header .close, .auto-complete, .auto-complete .search-view, .search-expandable, .search-expand-btn:after, #splash-section .splash-inner-media, #save_search_click, .splash-half .splash-search, .splash-half .splash-footer, .user-dashboard-left, .dashboard-bar, .board-panel-menu > li .msg-alert, .msg-type-block .arrow, .msg-type-block .arrow:after, .saved-search-list .saved-search-block .remove-search, .saved-search-list .saved-search-block .btn-primary, .add-title-tab .add-expand, .file-upload-block .btn, .gallery-thumb .icon, .single-input-search button, .form-media, .detail-top .tab-pane .view-popup, .detail-top.detail-top-full #gallery:before, .detail-top.detail-top-full .media-tabs-up, .detail-top.detail-top-full .media-tabs-up .label-wrap, .detail-top.detail-top-full .media-detail-down, .detail-media .label-wrap, .media-tabs, .detail-slider .banner-link, .form-small .ajax-loader, .agent-media input[type='checkbox'], .detail-bar .detail-tabs.detail-tabs-vertical, .detail-sub-title:before, .video-block .play-icon, .agent-info-block .agent-thumb input[type='checkbox'], .print-banner .qr-image, .profile-detail-block .profile-image .company-logo, .team-caption, .team-caption .link-block, .team-caption-inner, .lightbox-popup .popup-inner .expand-icon, .lightbox-right, .lightbox-header .header-actions, .lightbox-slide-nav, .lightbox-nav-title, #houzez-gmap-main .map-arrows-actions, #houzez-gmap-main .map-next-prev-actions, #houzez-gmap-main .map-zoom-actions, .map-notfound, .panel-btn, .compare-thumb-main .btn-trash, .bypostauthor .comment-banner, #transportation img, #supermarkets img, #schools img, #libraries img, #pharmacies img, #hospitals img, #transportation span, #supermarkets span, #schools span, #libraries span, #pharmacies span, #hospitals span, .indicator-energy, .indicator-energy:before, .list-loading, .item-thumb .label-featured, figure .label-featured, .item-thumb .actions, figure .actions, .item-thumb .price, figure .price, .item-thumb .item-price-block, figure .item-price-block, .item-thumb .hover-effect:before, figure .hover-effect:before, .item-thumb .hover-effect:after, figure .hover-effect:after, .item-body .phone, .grid-view .property-item-v2 .item-price-block, .property-item-v2 .item-body-top, .property-item-v2 .item-body-bottom, .property-item-v2.item-grid .item-price-block, .property-item-grid .item-caption, .parallax-property-caption-wrap, .testimonial-carousel.owl-theme .owl-nav [class*='owl-'], .banner-video .banner-video-inner, .banner-parallax .banner-bg-wrap, .banner-inner:before, .banner-caption, .banner-video-inner, .banner-video-inner:before, .banner-module .caption-desktop .price, .banner-module .slider-caption, .banner-module .slider-caption .label-wrap, .banner-slider .owl-dots, .team-block-mobile, .widget-calculate .field-icon, .widget-categories a:before, .widget_categories a:before, .widget_archive a:before, .widget_meta a:before, .widget_recent_entries a:before, .widget_pages a:before, .widget-pages a:before, .widget_recent_comments a:before, .widget_nav_menu a:before, .widget-categories .cat-count, .widget_categories .cat-count, .widget_archive .cat-count, .widget_meta .cat-count, .widget_recent_entries .cat-count, .widget_pages .cat-count, .widget-pages .cat-count, .widget_recent_comments .cat-count, .widget_nav_menu .cat-count, .widget_search form button, .widget-change .body-inner > .btn .fa, .footer-widget.widget_search form button, .widget-instagramm-slider .owl-nav .owl-prev, .widget-instagramm-slider .owl-nav .owl-next, .owl-theme .owl-nav [class*=owl-], label.error, .label.error, label + .bootstrap-select .success, .label + .bootstrap-select .success, .label-left, .label-right, .rating-container .filled-stars, .rating-container .caption, .rating-container .caption .label:before, .rating-container .caption .label:after, #ihf-main-container .chosen-container-single .chosen-single:after {
+	position: absolute;
+}
+.text-right {
+	text-align: right;
+}
+
+.btn-primary, .label-primary, .scrolltop-btn {
+	color: #fff;
+	background-color: #00AEEF;
+	border-color: #00AEEF;
+}
+
+.property-item .cell, .property-item-v2 .figure-block, .property-item-v2 .item-body, .services-module.style3 .service-block .block-icon, .services-module.style3 .service-block .block-content, .package-block .package-price span, .label-wrap .label, .label-featured {
+	vertical-align: top !important;
+}
+
+.table-cell, .header-section-2 .logo, .header-section-2 .header-top-social, .header-section-2 .header-top-call, .header-section-3 .logo, .header-section-3 .header-top-social, .header-section-3 .header-contact, .navi .houzez-megamenu-inner > .sub-menu > li, .splash-search .search-col, .banner-search-main .form-group .bootstrap-select, .banner-search-main .form-group .search, .banner-search-main .form-group .search-btn, .banner-search-tabs .search-tab, .advanced-search-mobile .single-search-inner, .msg-to-agent-block .msg-agent-left, .msg-to-agent-block .msg-agent-status, .my-property .my-description, .my-property .my-actions, .detail-bar .detail-tabs li, .detail-bar-full .detail-features-left, .detail-bar-full .detail-features-right, .filter-inputs > ul > li, .agency-block .agency-body-left, .agency-block .agency-body-right, .pay-step-block, .property-item .item-body, .property-item .cell, .property-item-v2 .figure-block, .property-item-v2 .item-body, .houzez-module .module-title-nav div, .services-module.style3 .service-block .block-icon, .services-module.style3 .service-block .block-content, .callto-action div, .post-card-item .caption-table .caption-left, .post-card-item .caption-table .file-type, .post-card-item .caption-table .thumb-caption .comment-count, .post-card-item .thumb-caption .caption-table .comment-count, .post-card-author .author-image, .post-card-author .author-name {
+	display: table-cell;
+}.grid-view .property-item .item-body .amenities {
+	height: auto;
+}
+.grid-view .property-item .info-row {
+	text-align: left;
+}
+.item-body .amenities {
+	min-height: 40px;
+}
+.property-item .cell + .cell {
+	text-align: right;
+}
+.add-sort-table .row-sort, .add-sort-table .row-remove, .header-detail .item-price .price-start, .header-detail .table-cell, .agency-block .agency-body-left, .agency-block .agency-body-right, .article-detail table > tbody > tr > th, .comments-block table > tbody > tr > th, .article-detail table > tbody > tr > td, .comments-block table > tbody > tr > td, .property-item .item-body, .property-item .table-cell, .property-item .cell, .property-item-v2 .figure-block, .property-item-v2 .item-body, .services-module.style3 .service-block .block-icon, .services-module.style3 .service-block .block-content, .package-block .package-price span, .label-wrap .label, .label-featured {
+	vertical-align: top !important;
+}
+.table-cell, .header-section-2 .logo, .header-section-2 .header-top-social, .header-section-2 .header-top-call, .header-section-3 .logo, .header-section-3 .header-top-social, .header-section-3 .header-contact, .navi .houzez-megamenu-inner > .sub-menu > li, .splash-search .search-col, .banner-search-main .form-group .bootstrap-select, .banner-search-main .form-group .search, .banner-search-main .form-group .search-btn, .banner-search-tabs .search-tab, .advanced-search-mobile .single-search-inner, .msg-to-agent-block .msg-agent-left, .msg-to-agent-block .msg-agent-status, .my-property .my-description, .my-property .my-actions, .detail-bar .detail-tabs li, .detail-bar-full .detail-features-left, .detail-bar-full .detail-features-right, .filter-inputs > ul > li, .agency-block .agency-body-left, .agency-block .agency-body-right, .pay-step-block, .property-item .item-body, .property-item .cell, .property-item-v2 .figure-block, .property-item-v2 .item-body, .houzez-module .module-title-nav div, .services-module.style3 .service-block .block-icon, .services-module.style3 .service-block .block-content, .callto-action div, .post-card-item .caption-table .caption-left, .post-card-item .caption-table .file-type, .post-card-item .caption-table .thumb-caption .comment-count, .post-card-item .thumb-caption .caption-table .comment-count, .post-card-author .author-image, .post-card-author .author-name {
+	display: table-cell;
+}
+.grid-view .property-item .item-body .phone {
+	position: relative !important;
+}
+.search-expandable, .splash-half .splash-footer, .steps-nav, .detail-sub-title:before, .print-banner .qr-image, .team-caption-before .team-caption-inner, .lightbox-slide-nav, .item-body .phone, .property-item-v2 .item-body-bottom, .banner-slider .owl-dots {
+	bottom: 0;
+}.item-foot {
+	padding: 14px 20px;
+	border-top: 1px solid #e5e5e5;
+	background-color: #fff;
+}
+.header-mobile:before, .navi > ul:before, .auto-complete .search-footer:before, .board-header:before, .msg-type-block .msg-attachment-row:before, .pkgs-status li:before, .steps-nav:before, .account-block:before, .invoice-header:before, .invoice-contact:before, .area-title:before, .my-property .media-body:before, .add-tab-content .add-tab-row:before, .my-profile-search:before, .header-detail:before, .media-tabs:before, .form-small .agent-media-head:before, .yelp-category .yelp-cat-list li:before, .detail-title:before, .document-list li:before, .plan-tabber .tab-pane:before, .floor-title-block:before, .print-header:before, .print-header-detail:before, .accord-block .accord-tab:before, .profile-tabs:before, .property-filter-wrap:before, .lightbox-popup .popup-inner:before, .lightbox-header:before, .lightbox-slide-nav:before, .article-footer:before, .comment-navigation:before, .info-title:before, .method-row:before, .pkg-total-list li:before, .item-foot:before, .property-listing:before, .property-item-v2 .item-body-top:before, .property-item-v2 .item-body-bottom:before, .item-caption .item-caption-list:before, .widget-download li:before, .widget-calculate .morg-result:before, .widget-categories ul:before, .widget_categories ul:before, .widget_archive ul:before, .widget_meta ul:before, .widget_recent_entries ul:before, .widget_pages ul:before, .widget-pages ul:before, .widget_recent_comments ul:before, .widget_nav_menu ul:before, .widget-categories li:before, .widget_categories li:before, .widget_archive li:before, .widget_meta li:before, .widget_recent_entries li:before, .widget_pages li:before, .widget-pages li:before, .widget_recent_comments li:before, .widget_nav_menu li:before, .header-mobile:after, .navi > ul:after, .auto-complete .search-footer:after, .board-header:after, .msg-type-block .msg-attachment-row:after, .pkgs-status li:after, .steps-nav:after, .account-block:after, .invoice-header:after, .invoice-contact:after, .area-title:after, .my-property .media-body:after, .add-tab-content .add-tab-row:after, .my-profile-search:after, .header-detail:after, .media-tabs:after, .form-small .agent-media-head:after, .yelp-category .yelp-cat-list li:after, .detail-title:after, .document-list li:after, .plan-tabber .tab-pane:after, .floor-title-block:after, .print-header:after, .print-header-detail:after, .accord-block .accord-tab:after, .profile-tabs:after, .property-filter-wrap:after, .lightbox-popup .popup-inner:after, .lightbox-header:after, .lightbox-slide-nav:after, .article-footer:after, .comment-navigation:after, .info-title:after, .method-row:after, .pkg-total-list li:after, .item-foot:after, .property-listing:after, .property-item-v2 .item-body-top:after, .property-item-v2 .item-body-bottom:after, .item-caption .item-caption-list:after, .widget-download li:after, .widget-calculate .morg-result:after, .widget-categories ul:after, .widget_categories ul:after, .widget_archive ul:after, .widget_meta ul:after, .widget_recent_entries ul:after, .widget_pages ul:after, .widget-pages ul:after, .widget_recent_comments ul:after, .widget_nav_menu ul:after, .widget-categories li:after, .widget_categories li:after, .widget_archive li:after, .widget_meta li:after, .widget_recent_entries li:after, .widget_pages li:after, .widget-pages li:after, .widget_recent_comments li:after, .widget_nav_menu li:after {
+    content: " ";
+    display: table;
+}
+.logo, .header-section .header-left, .header-section-4 .header-left, .header-section .header-left .navi, .header-section-4 .header-left .navi, .header-bottom .header-nav, .header-section-3 .contact-block, .header-section-6-wrap, .header-mobile .header-logo, .header-mobile .header-user, .header-mobile .mobile-nav, .navi > ul > li, .mobile-nav, .top-bar .top-bar-left, .top-bar .top-bar-right, .modal-header ul, .modal-header .modal-title, .login-tabs li, .auto-complete .search-footer .search-count, .advanced-search .btn.btn-secondary i, .advanced-search .btn.btn-primary i, .advanced-search .btn.btn-default i, .page-title .page-title-left, .board-header .board-header-left, .pkgs-status .pkg-status-left, .steps-nav .btn-left, .account-block .account-block-left, .invoice-header .invoice-head-left, .invoice-contact .invoice-contact-left, .area-title .title-left, .my-profile-search .profile-top-left, .header-detail .header-left, .form-small .head-left, .yelp-category .yelp-cat-list .cat-list-left, .detail-title .title-left, .floor-title-block .floor-title, .print-header .print-header-left, .print-header-detail .print-header-detail-left, .accord-block .accord-tab h3, .profile-description .profile-description-left, .agency-description .profile-description-left, .profile-tabs li, .profile-agents .profile-description-top, .filter-title, .lightbox-left, .lightbox-arrow-left, .article-footer .author-meta, .gallery-item, .compare-thumb-main .compare-thumb, .compare-thumb-main .thumb-inner-empty, .comment-navigation .nav-previous, #transportation, #supermarkets, #schools, #libraries, #pharmacies, #hospitals, .info-title .info-title-left, .method-select, .method-type, .houzez-energy-table dt, .item-foot .item-foot-left, .grid-view .item-wrap, .property-item .body-left, .property-item-v2 .item-title, .property-item-v2 .item-amenities, .item-caption .item-caption-list li, .parallax-property-caption-wrap.left .parallax-property-caption, .module-item, .widget-calculate .morg-result #mortgage_mwbi, .flickr-thumbs a, .instagramm-thumbs a, .btn-social .fa, .alignleft, a img.alignleft {
+    float: left;
+}
+.item-foot p {
+	font-size: 12px !important;
+	line-height: 20px !important;
+	margin: 0 !important;
+}
+.item-foot p {
+	color: #9b9b9b;
+}
+.item-foot i {
+	margin-right: 5px;
+}
+.item-foot p {
+	color: #9b9b9b;
+}
+.fa-user:before {
+	content: "\f007";
+}.fa-user:before {
+	content: "\f007";
+}.item-foot a {
+	color: #9b9b9b;
+}
+
+.item-foot .item-foot-right, .list-grid-area, .property-item .body-right, .property-item-v2 .item-date, .property-item-v2 .item-price-block, .parallax-property-caption-wrap.right .parallax-property-caption, .widget-calculate .morg-result .show-morg, .rating-rtl, .alignright, a img.alignright {
+	float: right;}
+
+	.item-foot i {
+    margin-right: 5px;
+}
+
+.fa-calendar:before {
+	content: "\f073";
+}
+
+.property-item {
+	padding: 8px;
+	background-color: #fff;
+}.figure-block {
+	z-index: 0;
+}
+.grid-view .label-left, .grid-view .label-right {
+	max-width: 240px;
+}
+.property-item .label-wrap {
+	margin-bottom: 5px;
+}
+.hover-effect, .field-group input, .search-location .location-trigger, .ui-slider .ui-slider-handle:before, .share_tooltip, .splash-header, .navi > ul .sub-menu li a, .navi > ul ul, .navi > ul .houzez-megamenu-inner, .mobile-nav .nav-dropdown li .expand-me, .account-action .user-image img, .account-action .user-image .user-alert, .account-dropdown > ul > li a, .account-dropdown > ul > li .msg-alert, .property-menu a, .top-bar .dropdown-menu > li, .login-register-block .back, .auto-complete .search-view, .advanced-search .btn.btn-secondary, .advanced-search .btn.btn-primary, .advanced-search .btn.btn-default, .search-expandable .field-expand, .figure-block img, .board-panel-menu > li a, .board-panel-menu > li .msg-alert, .board-panel-menu > li.active .sub-menu, .messages-area .media-object, .msg-to-agent-block .media-object, .msg-type-block .arrow, .msg-type-block .arrow:after, .steps-progress-main .steps-progress span, .account-block .my-avatar .profile-img-info, .submit-form-wrap .form-step:first-child, .my-property .dropdown-menu a, .add-tab-content .additional-block button, .single-input-search button:before, .header-detail .item-price, .header-detail .item-sub-price, .form-media .media-left a, .detail-top.detail-top-full .header-detail .price-start, .media-tabs-list li > a, .agent-media .media-left a, .detail-bar .detail-tabs.detail-tabs-vertical, .detail-bar .detail-tabs.detail-tabs-vertical li, .property-reviews .add-rating label, .print-header-detail-right .item-price, .print-header-detail-right .item-sub-price, .print-logo span, .print-logo .tag-line, .agent-listing .media-left figure, .agency-block .social-top, .agency-block.item-grid .media-left, .agency-block.item-grid .media-body, .agency-block.item-grid .agency-body-left, .agency-block.item-grid .agency-body-right, .agency-block.item-grid .social-bottom, .article-footer .meta-tags a, .pay-step-block a, .pay-step-block > span, .membership-content .btn-submit, .stripe_visible_btn, .class-energy-indicator span, .item-thumb .price .item-price, figure .price .item-price, .item-thumb .price .item-sub-price, figure .price .item-sub-price, .item-thumb .hover-effect:before, figure .hover-effect:before, .price .item-price, .price .item-sub-price, .tabs a, .property-listing.list-view .hide-on-grid, .grid-view .figure-block, .grid-view .item-thumb, .grid-view figure, .grid-view .property-item, .grid-view .property-item .table-cell, .grid-view .property-item-v2 .figure-block, .grid-view .property-item-v2 .item-thumb, .grid-view .property-item-v2 figure, .grid-view .property-item-v2 .item-body, .grid-view .hide-on-list, .property-item, .property-item .body-left, .property-item .body-right, .property-item.item-grid, .property-item.item-grid .item-thumb, .property-item.item-grid figure, .property-item.item-grid .body-left, .property-item.item-grid .body-right, .property-item.item-grid .item-body, .property-item-v2.item-grid .figure-block, .property-item-v2.item-grid .item-thumb, .property-item-v2.item-grid figure, .property-item-v2.item-grid .item-body, .item-amenities li span, .item-price-block span, .post-card-description .post-card-title, .post-card-description h3, .post-card-author .author-name span, .location-block a, .banner-slider .banner-link, .widget .media-left a, .widget-categories li, .widget_categories li, .widget_archive li, .widget_meta li, .widget_recent_entries li, .widget_pages li, .widget-pages li, .widget_recent_comments li, .widget_nav_menu li, .widget-reviews .media-left a, .reviews-list .media-left a, .widget_recent_entries .post-date, .widget_recent_comments .recentcomments a, .widget_search form button:before, .widget-news .media-left a, .widget-news .media-right a, .footer-widget.widget_search form button:before, .owl-theme .owl-dots .owl-dot span, .fave-load-more a, .add-rating .caption .label, .screen-reader-text:focus, .aligncenter, div.aligncenter, a img.aligncenter, .f7-form-control, input.wpcf7-form-control[type='text'], input.wpcf7-form-control[type='email'], input.wpcf7-form-control[type='password'], input.wpcf7-form-control[type='tel'], textarea.wpcf7-form-control, .post-password-form input[type='password'], .wpcf7-form .wpcf7-form-control-wrap, .idx-form-control, #ihf-main-container .form-control, .dsidx-resp-area input[type='text'], .dsidx-resp-area input[type='password'], .dsidx-resp-area input[type='email'], .dsidx-resp-area select, .dsidx-resp-area textarea, .ihf-grid-result-address, #ihf-main-container #ihf-main-search-form .text-danger {
+	display: block;
+}
+.label-right {
+	right: 12px;
+	text-align: right;
+}
+.label-left, .label-right {
+	top: 12px;
+	z-index: 3;
+}
+.label-wrap {
+	line-height: normal;
+}
+.table-cell, .actions li, .header-section-2 .logo, .header-section-2 .header-top-social, .header-section-2 .header-top-call, .header-section-3 .logo, .header-section-3 .header-top-social, .header-section-3 .header-contact, .account-action .user-image, .splash-search .search-col, .banner-search-main .form-group .bootstrap-select, .banner-search-main .form-group .search, .banner-search-main .form-group .search-btn, .search-long .search, .search-long .search-btn, .search-long .advance-btn-holder, .search-long .input-search, .search-long .bootstrap-select, .search-long .search-location, .advanced-search-mobile .single-search-inner, .all-msgs-list th, .all-msgs-list td, .msg-to-agent-block .msg-agent-status, .steps-progress-main .steps-progress, .steps-nav .btn-left span, .steps-nav .btn-right span, .invoice-list th, .invoice-list td, .my-property .my-description .label, .my-property .my-actions, .pay-options td, .add-tab-content .additional-block td, .agent-info-table > tbody > tr > td, .header-detail h1 .actions span, .detail-bar .detail-tabs li, .yelp-cat-icon, .table-multi-properties th, .table-multi-properties td, .walkscore_details img, .walkscore_details span, .profile-social a, .agency-social a, .profile-tabs li, .team-social a, .lightbox-header .header-title img, #houzez-gmap-main .map-btn, #houzez-gmap-main .map-search, .tabs, .sort-tab, .callto-action div, .post-card-author .author-image, .post-card-author .author-name, .banner-module .caption-mobile .btn-detail, .widget .rating .star-text-left, .widget .rating p, .label-wrap, .view-btn, .rating-wrap, .rating-wrap .rating-container, .rating-container .clear-rating, .post-password-form input[type='submit'], .wpcf7-submit, .idx-btn, #ihf-main-container .btn, #ihf-main-container .btn-primary, #ihf-main-container .ihf-map-search-refine-link, #ihf-main-container .ihf-advanced-search-launch, .dsidx-resp-area-submit input[type='submit'], #ihf-main-container .chosen-container-single .chosen-single:after {
+	vertical-align: middle !important;
+}
+.list-inline > li, .actions li, .actions li > span, .share_tooltip a, .header-top-social li, .header-section-5 .header-top, .header-mobile .user-icon, .navi a, .navi > ul .has-child > a:after, .mobile-nav .nav-trigger, .mobile-nav .nav-dropdown a, .account-action > li, .account-action .user-image, .property-menu li, .top-contact li, .top-drop-downs > li, .auto-complete .amenities li, .search-expand-btn, #save_search_click:after, .board-panel-menu .sub-menu a:before, .all-msgs-list a, .msgs-list .message-date span, .steps-progress-main .steps-progress, .my-property .my-description .label, .add-tab-content .additional-block .sort-additional-row, .add-tab-content .additional-block .remove-additional-row, .add-attachment .attach-actions li, .media-drag-drop .icon-cloud-upload, .header-detail h1 .actions span, .form-media, .media-tabs-list li, .yelp-category .yelp-cat-list .time-review, .yelp-cat-icon, .walkscore_details img, .walkscore_details span, .detail-amenities-list li, .agent-info-block .agent-thumb, .agent-info-block .agent-info li, .plan-tabs li, .print-detail .agent-media li, .print-detail .accord-tab li, .print-logo, .accord-block .accord-tab li, .profile-social li, .agency-social li, .profile-social a, .agency-social a, .team-social li, .team-social a, .lightbox-header .header-title img, .gallery-area .lightbox-slide img, #houzez-gmap-main .map-btn, #houzez-gmap-main .map-search, .article-footer .meta-tags li, .author-meta li, .page-pagination a, .class-energy-indicator, .list-loading-bar, .item-body .date p, .tabs li, .item-amenities li, .item-date li, .pagination-main .pagination li, .caption-above .detail h3, .caption-bottom .detail h3, .testimonial-item .auther-thumb, .agents-block .auther-thumb, .partner-block .auther-thumb, .package-block .package-price span, .package-block .btn, .banner-module .slider-caption, .widget .rating p, .widget_tag_cloud .tagcloud a, .footer-widget.widget_tag_cloud .tagcloud a, .footer .social li, .footer-bottom .navi li, .label-wrap, .label-wrap .label, .rating-wrap, .rating-wrap .rating-container, .rating-container .rating, .rating-container .star, .post-password-form input[type='submit'], .wpcf7-submit, .idx-btn, #ihf-main-container .btn, #ihf-main-container .btn-primary, #ihf-main-container .ihf-map-search-refine-link, #ihf-main-container .ihf-advanced-search-launch, .dsidx-resp-area-submit input[type='submit'], .ihf-grid-result-basic-info-container > div, #ihf-main-container .chosen-container-single .chosen-single:after {
+	display: inline-block;
+}
+#email_messages, .input-icon:before, .search-location .location-trigger, .ui-slider .ui-slider-handle, .ui-slider .ui-slider-handle:before, .loader-ripple div, .mapPlaceholder, .slider-placeholder, .mapPlaceholder .loader-inner, .slider-placeholder .loader-inner, .mapPlaceholder .loader-ripple, .slider-placeholder .loader-ripple, .share_tooltip, .tooltip_left, .tooltip_left:after, .navi > ul ul, .navi > ul .houzez-megamenu-inner, .mobile-nav .nav-dropdown, .mobile-nav .nav-dropdown li .expand-me, .account-action .user-image .user-alert, .account-dropdown, .account-dropdown > ul > li .msg-alert, .header-section-4.nav-right .header-right, .header-section-1.nav-right .header-right, .splash-header.nav-right .header-right, .modal-header .close, .auto-complete, .auto-complete .search-view, .search-expandable, .search-expand-btn:after, #splash-section .splash-inner-media, #save_search_click, .splash-half .splash-search, .splash-half .splash-footer, .user-dashboard-left, .dashboard-bar, .board-panel-menu > li .msg-alert, .msg-type-block .arrow, .msg-type-block .arrow:after, .saved-search-list .saved-search-block .remove-search, .saved-search-list .saved-search-block .btn-primary, .add-title-tab .add-expand, .file-upload-block .btn, .gallery-thumb .icon, .single-input-search button, .form-media, .detail-top .tab-pane .view-popup, .detail-top.detail-top-full #gallery:before, .detail-top.detail-top-full .media-tabs-up, .detail-top.detail-top-full .media-tabs-up .label-wrap, .detail-top.detail-top-full .media-detail-down, .detail-media .label-wrap, .media-tabs, .detail-slider .banner-link, .form-small .ajax-loader, .agent-media input[type='checkbox'], .detail-bar .detail-tabs.detail-tabs-vertical, .detail-sub-title:before, .video-block .play-icon, .agent-info-block .agent-thumb input[type='checkbox'], .print-banner .qr-image, .profile-detail-block .profile-image .company-logo, .team-caption, .team-caption .link-block, .team-caption-inner, .lightbox-popup .popup-inner .expand-icon, .lightbox-right, .lightbox-header .header-actions, .lightbox-slide-nav, .lightbox-nav-title, #houzez-gmap-main .map-arrows-actions, #houzez-gmap-main .map-next-prev-actions, #houzez-gmap-main .map-zoom-actions, .map-notfound, .panel-btn, .compare-thumb-main .btn-trash, .bypostauthor .comment-banner, #transportation img, #supermarkets img, #schools img, #libraries img, #pharmacies img, #hospitals img, #transportation span, #supermarkets span, #schools span, #libraries span, #pharmacies span, #hospitals span, .indicator-energy, .indicator-energy:before, .list-loading, .item-thumb .label-featured, figure .label-featured, .item-thumb .actions, figure .actions, .item-thumb .price, figure .price, .item-thumb .item-price-block, figure .item-price-block, .item-thumb .hover-effect:before, figure .hover-effect:before, .item-thumb .hover-effect:after, figure .hover-effect:after, .item-body .phone, .grid-view .property-item-v2 .item-price-block, .property-item-v2 .item-body-top, .property-item-v2 .item-body-bottom, .property-item-v2.item-grid .item-price-block, .property-item-grid .item-caption, .parallax-property-caption-wrap, .testimonial-carousel.owl-theme .owl-nav [class*='owl-'], .banner-video .banner-video-inner, .banner-parallax .banner-bg-wrap, .banner-inner:before, .banner-caption, .banner-video-inner, .banner-video-inner:before, .banner-module .caption-desktop .price, .banner-module .slider-caption, .banner-module .slider-caption .label-wrap, .banner-slider .owl-dots, .team-block-mobile, .widget-calculate .field-icon, .widget-categories a:before, .widget_categories a:before, .widget_archive a:before, .widget_meta a:before, .widget_recent_entries a:before, .widget_pages a:before, .widget-pages a:before, .widget_recent_comments a:before, .widget_nav_menu a:before, .widget-categories .cat-count, .widget_categories .cat-count, .widget_archive .cat-count, .widget_meta .cat-count, .widget_recent_entries .cat-count, .widget_pages .cat-count, .widget-pages .cat-count, .widget_recent_comments .cat-count, .widget_nav_menu .cat-count, .widget_search form button, .widget-change .body-inner > .btn .fa, .footer-widget.widget_search form button, .widget-instagramm-slider .owl-nav .owl-prev, .widget-instagramm-slider .owl-nav .owl-next, .owl-theme .owl-nav [class*=owl-], label.error, .label.error, label + .bootstrap-select .success, .label + .bootstrap-select .success, .label-left, .label-right, .rating-container .filled-stars, .rating-container .caption, .rating-container .caption .label:before, .rating-container .caption .label:after, #ihf-main-container .chosen-container-single .chosen-single:after {
+	position: absolute;
+}
+
+.pagination-main .pagination {
+	font-size: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+	text-align: center;
+}
+
+
+.pagination-main .pagination li {
+	margin-right: 1px !important;
+}
+.list-inline > li, .actions li, .actions li > span, .share_tooltip a, .header-top-social li, .header-section-5 .header-top, .header-mobile .user-icon, .navi a, .navi > ul .has-child > a:after, .mobile-nav .nav-trigger, .mobile-nav .nav-dropdown a, .account-action > li, .account-action .user-image, .property-menu li, .top-contact li, .top-drop-downs > li, .auto-complete .amenities li, .search-expand-btn, #save_search_click:after, .board-panel-menu .sub-menu a:before, .all-msgs-list a, .msgs-list .message-date span, .steps-progress-main .steps-progress, .my-property .my-description .label, .add-tab-content .additional-block .sort-additional-row, .add-tab-content .additional-block .remove-additional-row, .add-attachment .attach-actions li, .media-drag-drop .icon-cloud-upload, .header-detail h1 .actions span, .form-media, .media-tabs-list li, .yelp-category .yelp-cat-list .time-review, .yelp-cat-icon, .walkscore_details img, .walkscore_details span, .detail-amenities-list li, .agent-info-block .agent-thumb, .agent-info-block .agent-info li, .plan-tabs li, .print-detail .agent-media li, .print-detail .accord-tab li, .print-logo, .accord-block .accord-tab li, .profile-social li, .agency-social li, .profile-social a, .agency-social a, .team-social li, .team-social a, .lightbox-header .header-title img, .gallery-area .lightbox-slide img, #houzez-gmap-main .map-btn, #houzez-gmap-main .map-search, .article-footer .meta-tags li, .author-meta li, .page-pagination a, .class-energy-indicator, .list-loading-bar, .item-body .date p, .tabs li, .item-amenities li, .item-date li, .pagination-main .pagination li, .caption-above .detail h3, .caption-bottom .detail h3, .testimonial-item .auther-thumb, .agents-block .auther-thumb, .partner-block .auther-thumb, .package-block .package-price span, .package-block .btn, .banner-module .slider-caption, .widget .rating p, .widget_tag_cloud .tagcloud a, .footer-widget.widget_tag_cloud .tagcloud a, .footer .social li, .footer-bottom .navi li, .label-wrap, .label-wrap .label, .rating-wrap, .rating-wrap .rating-container, .rating-container .rating, .rating-container .star, .post-password-form input[type='submit'], .wpcf7-submit, .idx-btn, #ihf-main-container .btn, #ihf-main-container .btn-primary, #ihf-main-container .ihf-map-search-refine-link, #ihf-main-container .ihf-advanced-search-launch, .dsidx-resp-area-submit input[type='submit'], .ihf-grid-result-basic-info-container > div, #ihf-main-container .chosen-container-single .chosen-single:after {
+	display: inline-block;
+}
+.pagination-main .pagination li:first-child a {
+	border-radius: 0;
+}
+.pagination >li:first-child >a, .pagination >li:first-child >span {
+	margin-left: 0;
+	border-bottom-left-radius: 4px;
+	border-top-left-radius: 4px;
+}
+a, .blue, .text-primary, .btn-link, .item-body h2, .detail h3, .breadcrumb li a, .fave-load-more a, .sort-tab .btn, .sort-tab .fave-load-more a, .fave-load-more .sort-tab a, .pagination-main .pagination a, .team-caption-after .team-name a:hover, .team-caption-after .team-designation a:hover, .agent-media .view, .my-property-menu a.active, .my-property-menu a:hover, .search-panel .advance-trigger {
+	color: #00AEEF;
+}
+.pagination-main .pagination a {
+	font-size: 15px;
+	line-height: 28px;
+	margin: 0;
+	font-weight: 500;
+}
+.pagination-main .pagination a {
+	min-width: 40px;
+	height: 40px;
+	color: #00aeef;
+}
+
+.pagination >.disabled >a, .pagination >.disabled >a:focus, .pagination >.disabled >a:hover, .pagination >.disabled >span, .pagination >.disabled >span:focus, .pagination >.disabled >span:hover {
+	color: #777;
+	background-color: #fff;
+	border-color: #ddd;
+	cursor: not-allowed;
+}
+.pagination >li >a, .pagination >li >span {
+	position: relative;
+	float: left;
+	padding: 6px 12px;
+	line-height: 1.42857;
+	text-decoration: none;
+	color: #00aeef;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	margin-left: -1px;
+}
+.fa-angle-left:before {
+	content: "\f104";
+}
+.fa-angle-left:before {
+	content: "\f104";
+}
+
+
+.label-primary, .fave-load-more a, .widget_tag_cloud .tagcloud a, .pagination-main .pagination li.active a, .other-features .btn.btn-secondary, .my-menu .active am {
+    font-weight: 500;
+}
+#sidebar .widget_tag_cloud .tagcloud a, .article-footer .meta-tags a, .pagination-main .pagination li.active a, .other-features .btn.btn-secondary, .my-menu .active a, .houzez-module .module-title-nav .module-nav .btn, .houzez-module .module-title-nav .module-nav .fave-load-more a, .fave-load-more .houzez-module .module-title-nav .module-nav a {
+    color: #fff;
+    background-color: #00AEEF;
+    border: 1px solid #00AEEF;
+}
+.pagination-main .pagination li.active a {
+    color: #fff;
+    background-color: #00aeef;
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
+
+.pagination-main .pagination li.active a, .other-features .btn.btn-secondary, .my-menu .active a, .houzez-module .module-title-nav .module-nav .btn, .houzez-module .module-title-nav .module-nav .fave-load-more a, .fave-load-more .houzez-module .module-title-nav .module-nav a {
+	color: #fff;
+	background-color: #00AEEF;
+	border: 1px solid #00AEEF;
+}
+.pagination-main .pagination li.active a {
+	color: #fff;
+	background-color: #00aeef;
+}
+
+.pagination {
+	display: inline-block;
+	padding-left: 0;
+	margin: 20px 0;
+	border-radius: 4px;
+}
+.pagination-main .pagination li:first-child a {
+	border-radius: 0;
+}
+.pagination >li:first-child >a, .pagination >li:first-child >span {
+	margin-left: 0;
+	border-bottom-left-radius: 4px;
+	border-top-left-radius: 4px;
+}
+
+.pagination-main .pagination a {
+	font-size: 15px;
+	line-height: 28px;
+	margin: 0;
+	font-weight: 500;
+}
+.pagination-main .pagination a {
+	min-width: 40px;
+	height: 40px;
+	color: #00aeef;
+}
+.pagination >.disabled >a, .pagination >.disabled >a:focus, .pagination >.disabled >a:hover, .pagination >.disabled >span, .pagination >.disabled >span:focus, .pagination >.disabled >span:hover {
+	color: #777;
+	background-color: #fff;
+	border-color: #ddd;
+	cursor: not-allowed;
+}
+.pagination >li >a, .pagination >li >span {
+	position: relative;
+	float: left;
+	padding: 6px 12px;
+	line-height: 1.42857;
+	text-decoration: none;
+	color: #00aeef;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	margin-left: -1px;
+}
+
+
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+	display: block;
+}.sidebar-white .widget:not(.widget-range) {
+	padding: 20px !important;
+	background-color: #fff;
+}
+.sidebar-white .widget {
+	border: none !important;
+}.widget-top {
+	margin-bottom: 17px;
+}
+#sidebar .widget-title, .footer-widget .widget-title, .services-module .service-block h3, h4, .article-detail h4, h5, .article-detail h5, h6, .article-detail h6, .item-body h2, .item-body .property-title, .post-card-description h3, .post-card-description .post-card-title, .my-property .my-heading, .module-title h2, .houzez-module .module-title-nav h2 {
+	font-family: Roboto;
+	font-weight: 500;
+	text-transform: inherit;
+	text-align: inherit;
+}
+#sidebar .widget-title {
+	font-size: 16px;
+	line-height: 24px;
+	margin: 0 0 20px 0;
+	font-weight: 700;
+}
+
+.advance-search-header, .advanced-search-mobile, .advanced-search-mobile .single-search .form-control, .search-expandable .advanced-search {
+	background-color: #004274;
+}
+.advanced-search {
+	padding: 10px 0;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+.input-icon, .input-icon input, .search-location, .loader-ripple, .map-info-box, .actions li, #header-section .container, .header-section, .header-section-4, .header-section .logo img, .header-section-4 .logo img, .header-section-2, .header-section-3, .header-section-5, .header-mobile > .container, .navi > ul > li, .navi > ul .sub-menu li, .mobile-nav .nav-trigger, .mobile-nav .nav-dropdown ul, .mobile-nav .nav-dropdown li, .account-action, .account-action .user-image, .account-dropdown > ul, .account-dropdown > ul > li, .sticky_nav .header-transparent, .header-section-4.nav-right .container, .header-section-1.nav-right .container, .splash-header.nav-right .container, .header-section-4.nav-right .header-left, .header-section-1.nav-right .header-left, .splash-header.nav-right .header-left, .top-bar, .top-bar .top-bar-left, .top-bar .top-bar-right, .top-contact .top-bar-phone .fa, .top-contact .top-bar-contact .fa, .top-drop-downs > li, .splash-search, .banner-search-main .form-group .bootstrap-select.open, .banner-search-tabs .search-tab-inner, .auto-complete .media, .advanced-search, .advanced-search-mobile, .advanced-search-mobile .single-search, .advanced-search-mobile .advance-fields, .search-expand-btn, #splash-section, #splash-section .splash-inner-content, #section-body, .header-media-wrap, .header-media, .figure-block, .list-search form, #section-body.houzez-body-half .property-listing, .user-dashboard-right, .board-panel-menu, .board-panel-menu > li, .board-panel-menu > li a, .board-header, .dashboard-content-area, .msg-type-block, .steps-progress-main .steps-progress span, .my-property .my-actions, .saved-search-list .saved-search-block, .add-title-tab, .add-title-tab .add-expand:before, .file-upload-block, .gallery-thumb, .gallery-thumb img, .single-input-search, .header-detail .label-wrap, .detail-top, .detail-top .tab-content, .detail-top.detail-top-full .container, .detail-top.detail-top-full .label, .detail-top.detail-top-full .header-detail .actions, .detail-media, .detail-media #gallery, .media-tabs-list li, .detail-slider-nav-wrap .item, #singlePropertyMap, .agent-media .media-left, .detail-bar .detail-content-tabber, .detail-sub-title, .video-block, .agent-info-block .agent-thumb, .plan-tabs li, .print-banner .print-main-image, .accord-block .accord-tab, .profile-detail-block .profile-image, .team-block, .lightbox-popup, .lightbox-popup .popup-inner, .lightbox-left, .lightbox-header, .gallery-area, .gallery-area .gallery-inner, .lightbox-arrow, #houzez-gmap-main, #houzez-listing-map-vc, #listing-map, #houzez-listing-map, #houzez_ajax_container .map-notfound, .gallery-item, .compare-thumb-main .compare-thumb, .comments-block .media-body .reply .fa, .bypostauthor, #transportation, #supermarkets, #schools, #libraries, #pharmacies, #hospitals, #transportation .icon, #supermarkets .icon, #schools .icon, #libraries .icon, #pharmacies .icon, #hospitals .icon, .class-energy, .class-energy-indicator, .item-thumb, figure, .item-body .table-cell, .grid-view .property-item-v2 .body-inner, .grid-view .property-item-v2 .item-body-top, .grid-view .property-item-v2 .item-body-bottom, .property-item.item-grid, .property-item.item-grid .phone, .property-item-v2 .item-body, .property-item-v2.item-grid .body-inner, .property-item-v2.item-grid .item-body-top, .property-item-v2.item-grid .item-body-bottom, .parallax-properties-media, .services-module .service-block, .agents-block, .partner-block, .location-block, .package-block, .banner-video, .banner-parallax, .banner-module, .banner-module .owl-item, .banner-slider .banner-link, .widget-calculate .form-group, .widget-categories li, .widget_categories li, .widget_archive li, .widget_meta li, .widget_recent_entries li, .widget_pages li, .widget-pages li, .widget_recent_comments li, .widget_nav_menu li, .widget-categories a, .widget_categories a, .widget_archive a, .widget_meta a, .widget_recent_entries a, .widget_pages a, .widget-pages a, .widget_recent_comments a, .widget_nav_menu a, .widget_search form div, .widget-change .body-inner > .btn, .widget_houzez_twitter .owl-theme .owl-nav [class*='owl-'], .footer-widget.widget_search form div, .footer .read .fa, .rating-wrap, .rating-container .rating, .rating-container .caption .label, .ihf-share-btn-more .fa-share {
+    position: relative;
+}
+
+.advance-search-header, .advanced-search-mobile, .advanced-search-mobile .single-search .form-control, .search-expandable .advanced-search {
+	background-color: #004274;
+}
+.advanced-search {
+	width: fit-content;
+	padding: 10px 0;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.input-icon, .input-icon input, .search-location, .loader-ripple, .map-info-box, .actions li, #header-section .container, .header-section, .header-section-4, .header-section .logo img, .header-section-4 .logo img, .header-section-2, .header-section-3, .header-section-5, .header-mobile > .container, .navi > ul > li, .navi > ul .sub-menu li, .mobile-nav .nav-trigger, .mobile-nav .nav-dropdown ul, .mobile-nav .nav-dropdown li, .account-action, .account-action .user-image, .account-dropdown > ul, .account-dropdown > ul > li, .sticky_nav .header-transparent, .header-section-4.nav-right .container, .header-section-1.nav-right .container, .splash-header.nav-right .container, .header-section-4.nav-right .header-left, .header-section-1.nav-right .header-left, .splash-header.nav-right .header-left, .top-bar, .top-bar .top-bar-left, .top-bar .top-bar-right, .top-contact .top-bar-phone .fa, .top-contact .top-bar-contact .fa, .top-drop-downs > li, .splash-search, .banner-search-main .form-group .bootstrap-select.open, .banner-search-tabs .search-tab-inner, .auto-complete .media, .advanced-search, .advanced-search-mobile, .advanced-search-mobile .single-search, .advanced-search-mobile .advance-fields, .search-expand-btn, #splash-section, #splash-section .splash-inner-content, #section-body, .header-media-wrap, .header-media, .figure-block, .list-search form, #section-body.houzez-body-half .property-listing, .user-dashboard-right, .board-panel-menu, .board-panel-menu > li, .board-panel-menu > li a, .board-header, .dashboard-content-area, .msg-type-block, .steps-progress-main .steps-progress span, .my-property .my-actions, .saved-search-list .saved-search-block, .add-title-tab, .add-title-tab .add-expand:before, .file-upload-block, .gallery-thumb, .gallery-thumb img, .single-input-search, .header-detail .label-wrap, .detail-top, .detail-top .tab-content, .detail-top.detail-top-full .container, .detail-top.detail-top-full .label, .detail-top.detail-top-full .header-detail .actions, .detail-media, .detail-media #gallery, .media-tabs-list li, .detail-slider-nav-wrap .item, #singlePropertyMap, .agent-media .media-left, .detail-bar .detail-content-tabber, .detail-sub-title, .video-block, .agent-info-block .agent-thumb, .plan-tabs li, .print-banner .print-main-image, .accord-block .accord-tab, .profile-detail-block .profile-image, .team-block, .lightbox-popup, .lightbox-popup .popup-inner, .lightbox-left, .lightbox-header, .gallery-area, .gallery-area .gallery-inner, .lightbox-arrow, #houzez-gmap-main, #houzez-listing-map-vc, #listing-map, #houzez-listing-map, #houzez_ajax_container .map-notfound, .gallery-item, .compare-thumb-main .compare-thumb, .comments-block .media-body .reply .fa, .bypostauthor, #transportation, #supermarkets, #schools, #libraries, #pharmacies, #hospitals, #transportation .icon, #supermarkets .icon, #schools .icon, #libraries .icon, #pharmacies .icon, #hospitals .icon, .class-energy, .class-energy-indicator, .item-thumb, figure, .item-body .table-cell, .grid-view .property-item-v2 .body-inner, .grid-view .property-item-v2 .item-body-top, .grid-view .property-item-v2 .item-body-bottom, .property-item.item-grid, .property-item.item-grid .phone, .property-item-v2 .item-body, .property-item-v2.item-grid .body-inner, .property-item-v2.item-grid .item-body-top, .property-item-v2.item-grid .item-body-bottom, .parallax-properties-media, .services-module .service-block, .agents-block, .partner-block, .location-block, .package-block, .banner-video, .banner-parallax, .banner-module, .banner-module .owl-item, .banner-slider .banner-link, .widget-calculate .form-group, .widget-categories li, .widget_categories li, .widget_archive li, .widget_meta li, .widget_recent_entries li, .widget_pages li, .widget-pages li, .widget_recent_comments li, .widget_nav_menu li, .widget-categories a, .widget_categories a, .widget_archive a, .widget_meta a, .widget_recent_entries a, .widget_pages a, .widget-pages a, .widget_recent_comments a, .widget_nav_menu a, .widget_search form div, .widget-change .body-inner > .btn, .widget_houzez_twitter .owl-theme .owl-nav [class*='owl-'], .footer-widget.widget_search form div, .footer .read .fa, .rating-wrap, .rating-container .rating, .rating-container .caption .label, .ihf-share-btn-more .fa-share {
+    position: relative;
+}
+
+.header-mobile:after, .navi > ul:after, .auto-complete .search-footer:after, .board-header:after, .msg-type-block .msg-attachment-row:after, .pkgs-status li:after, .steps-nav:after, .account-block:after, .invoice-header:after, .invoice-contact:after, .area-title:after, .my-property .media-body:after, .add-tab-content .add-tab-row:after, .my-profile-search:after, .header-detail:after, .media-tabs:after, .form-small .agent-media-head:after, .yelp-category .yelp-cat-list li:after, .detail-title:after, .document-list li:after, .plan-tabber .tab-pane:after, .floor-title-block:after, .print-header:after, .print-header-detail:after, .accord-block .accord-tab:after, .profile-tabs:after, .property-filter-wrap:after, .lightbox-popup .popup-inner:after, .lightbox-header:after, .lightbox-slide-nav:after, .article-footer:after, .comment-navigation:after, .info-title:after, .method-row:after, .pkg-total-list li:after, .item-foot:after, .property-listing:after, .property-item-v2 .item-body-top:after, .property-item-v2 .item-body-bottom:after, .item-caption .item-caption-list:after, .widget-download li:after, .widget-calculate .morg-result:after, .widget-categories ul:after, .widget_categories ul:after, .widget_archive ul:after, .widget_meta ul:after, .widget_recent_entries ul:after, .widget_pages ul:after, .widget-pages ul:after, .widget_recent_comments ul:after, .widget_nav_menu ul:after, .widget-categories li:after, .widget_categories li:after, .widget_archive li:after, .widget_meta li:after, .widget_recent_entries li:after, .widget_pages li:after, .widget-pages li:after, .widget_recent_comments li:after, .widget_nav_menu li:after {
+	clear: both;
+}
+.grid-view .item-wrap {
+	width: 50%;
+	margin-bottom: 10px;
+	padding-right: 4px;
+	padding-left: 4px;
+}
+
+.grid-view .property-item .table-cell{
+	display: block;  
+	 
+}
+
+.property-item .table-cell {
+	vertical-align: top !important;
+}
+.table-list{
+	width: 100%;
+}
+
+.hover-effect, .field-group input, .search-location .location-trigger, .ui-slider .ui-slider-handle:before, .share_tooltip, .splash-header, .navi > ul .sub-menu li a, .navi > ul ul, .navi > ul .houzez-megamenu-inner, .mobile-nav .nav-dropdown li .expand-me, .account-action .user-image img, .account-action .user-image .user-alert, .account-dropdown > ul > li a, .account-dropdown > ul > li .msg-alert, .property-menu a, .top-bar .dropdown-menu > li, .login-register-block .back, .auto-complete .search-view, .advanced-search .btn.btn-secondary, .advanced-search .btn.btn-primary, .advanced-search .btn.btn-default, .search-expandable .field-expand, .figure-block img, .board-panel-menu > li a, .board-panel-menu > li .msg-alert, .board-panel-menu > li.active .sub-menu, .messages-area .media-object, .msg-to-agent-block .media-object, .msg-type-block .arrow, .msg-type-block .arrow:after, .steps-progress-main .steps-progress span, .account-block .my-avatar .profile-img-info, .submit-form-wrap .form-step:first-child, .my-property .dropdown-menu a, .add-tab-content .additional-block button, .single-input-search button:before, .header-detail .item-price, .header-detail .item-sub-price, .form-media .media-left a, .detail-top.detail-top-full .header-detail .price-start, .media-tabs-list li > a, .agent-media .media-left a, .detail-bar .detail-tabs.detail-tabs-vertical, .detail-bar .detail-tabs.detail-tabs-vertical li, .property-reviews .add-rating label, .print-header-detail-right .item-price, .print-header-detail-right .item-sub-price, .print-logo span, .print-logo .tag-line, .agent-listing .media-left figure, .agency-block .social-top, .agency-block.item-grid .media-left, .agency-block.item-grid .media-body, .agency-block.item-grid .agency-body-left, .agency-block.item-grid .agency-body-right, .agency-block.item-grid .social-bottom, .article-footer .meta-tags a, .pay-step-block a, .pay-step-block > span, .membership-content .btn-submit, .stripe_visible_btn, .class-energy-indicator span, .item-thumb .price .item-price, figure .price .item-price, .item-thumb .price .item-sub-price, figure .price .item-sub-price, .item-thumb .hover-effect:before, figure .hover-effect:before, .price .item-price, .price .item-sub-price, .tabs a, .property-listing.list-view .hide-on-grid, .grid-view .figure-block, .grid-view .item-thumb, .grid-view figure, .grid-view .property-item, .grid-view .property-item .table-cell, .grid-view .property-item-v2 .figure-block, .grid-view .property-item-v2 .item-thumb, .grid-view .property-item-v2 figure, .grid-view .property-item-v2 .item-body, .grid-view .hide-on-list, .property-item, .property-item .body-left, .property-item .body-right, .property-item.item-grid, .property-item.item-grid .item-thumb, .property-item.item-grid figure, .property-item.item-grid .body-left, .property-item.item-grid .body-right, .property-item.item-grid .item-body, .property-item-v2.item-grid .figure-block, .property-item-v2.item-grid .item-thumb, .property-item-v2.item-grid figure, .property-item-v2.item-grid .item-body, .item-amenities li span, .item-price-block span, .post-card-description .post-card-title, .post-card-description h3, .post-card-author .author-name span, .location-block a, .banner-slider .banner-link, .widget .media-left a, .widget-categories li, .widget_categories li, .widget_archive li, .widget_meta li, .widget_recent_entries li, .widget_pages li, .widget-pages li, .widget_recent_comments li, .widget_nav_menu li, .widget-reviews .media-left a, .reviews-list .media-left a, .widget_recent_entries .post-date, .widget_recent_comments .recentcomments a, .widget_search form button:before, .widget-news .media-left a, .widget-news .media-right a, .footer-widget.widget_search form button:before, .owl-theme .owl-dots .owl-dot span, .fave-load-more a, .add-rating .caption .label, .screen-reader-text:focus, .aligncenter, div.aligncenter, a img.aligncenter, .f7-form-control, input.wpcf7-form-control[type='text'], input.wpcf7-form-control[type='email'], input.wpcf7-form-control[type='password'], input.wpcf7-form-control[type='tel'], textarea.wpcf7-form-control, .post-password-form input[type='password'], .wpcf7-form .wpcf7-form-control-wrap, .idx-form-control, #ihf-main-container .form-control, .dsidx-resp-area input[type='text'], .dsidx-resp-area input[type='password'], .dsidx-resp-area input[type='email'], .dsidx-resp-area select, .dsidx-resp-area textarea, .ihf-grid-result-address, #ihf-main-container #ihf-main-search-form .text-danger {
+    display: block;
+}
+
+.add-sort-table .row-sort, .add-sort-table .row-remove, .header-detail .item-price .price-start, .header-detail .table-cell, .agency-block .agency-body-left, .agency-block .agency-body-right, .article-detail table > tbody > tr > th, .comments-block table > tbody > tr > th, .article-detail table > tbody > tr > td, .comments-block table > tbody > tr > td, .property-item .item-body, .property-item .table-cell, .property-item .cell, .property-item-v2 .figure-block, .property-item-v2 .item-body, .services-module.style3 .service-block .block-icon, .services-module.style3 .service-block .block-content, .package-block .package-price span, .label-wrap .label, .label-featured {
+	vertical-align: top !important;
+}
+.grid-view .item-thumb, .grid-view figure {
+	height: auto;
+}
+.hover-effect {
+	overflow: hidden;
+	z-index: 0;
+}
+.sidebar-white .widget:not(.widget-range) {
+	padding: 20px !important;
+	background-color: #fff;
+}
+.sidebar-white .widget {
+	border: none !important;
+	border-top-color: initial !important;
+	border-top-style: none !important;
+	border-top-width: initial !important;
+	border-right-color: initial !important;
+	border-right-style: none !important;
+	border-right-width: initial !important;
+	border-bottom-color: initial !important;
+	border-bottom-style: none !important;
+	border-bottom-width: initial !important;
+	border-left-color: initial !important;
+	border-left-style: none !important;
+	border-left-width: initial !important;
+	border-image-source: initial !important;
+	border-image-slice: initial !important;
+	border-image-width: initial !important;
+	border-image-outset: initial !important;
+	border-image-repeat: initial !important;
+}
+#section-body {
+	padding-bottom: 40px;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+	display: block;
+}
