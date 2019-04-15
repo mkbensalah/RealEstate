@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import axios from 'axios'
 
 import Button from './hoc/Button';
 import Input from './hoc/Input';
@@ -115,15 +115,16 @@ class Register extends Component {
         for (let formElementIdentifier in this.state.orderForm) {
             formData[formElementIdentifier] = this.state.orderForm[formElementIdentifier].value;
         }
+        console.log(formData);
        
-        // axios.post( '/orders.json', order )
-        //     .then( response => {
-        //         this.setState( { loading: false } );
-        //         this.props.history.push( '/' );
-        //     } )
-        //     .catch( error => {
-        //         this.setState( { loading: false } );
-        //     } );
+        axios.get( 'http://localhost:5000/api/users/register', formData )
+            .then( response => {
+                this.setState( { loading: false } );
+                this.props.history.push( '/' );
+            } )
+            .catch( error => {
+                this.setState( { loading: false } );
+            } );
     }
 
     checkValidity(value, rules) {

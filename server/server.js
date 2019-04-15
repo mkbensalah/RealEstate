@@ -16,7 +16,7 @@ const app = express();
 const port = 5000;
 
 // echo msg for startup
-app.get("/", (req, res) => res.send("Node server running!"));
+app.get("/", (req, res) => res.json("Node server running!"));
 
 // configure middleware
 app.set("port", process.env.port || port); // set express to use this port
