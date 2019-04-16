@@ -4,7 +4,7 @@ exports.create = function (user, hached_password, done) {
   var userID = 0;
   console.log("at create");
   console.log(user);
-  var values = [user.username, user.mail, hached_password, user.tel];
+  var values = [user.username, user.email, hached_password, user.tel];
 
   db.get().query(
     "INSERT INTO user (name, email, password, tel) VALUES(?, ?, ?, ?)",

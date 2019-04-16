@@ -4,31 +4,35 @@ import React, { Component } from 'react';
 import Button from './hoc/Button';
 import Input from './hoc/Input';
 
+import axios from 'axios';
+
 class Register extends Component {
     state = {
         orderForm: {
-            name: {
+            username: {
                 elementType: 'input',
                 elementConfig: {
                     type: 'text',
                     placeholder: 'Your Name'
                 },
-                value: '',
+                value: 'mr costume',
                 validation: {
                     required: true
                 },
                 valid: false,
                 touched: false
             },
-            street: {
+            phone: {
                 elementType: 'input',
                 elementConfig: {
-                    type: 'text',
-                    placeholder: 'Street'
+                    type: 'number',
+                    placeholder: 'Phone number'
                 },
-                value: '',
+                value: 23232323,
                 validation: {
-                    required: true
+                    required: true,
+                    minLength: 8,
+                    maxLength: 8,
                 },
                 valid: false,
                 touched: false
@@ -36,26 +40,26 @@ class Register extends Component {
             zipCode: {
                 elementType: 'input',
                 elementConfig: {
-                    type: 'text',
+                    type: 'number',
                     placeholder: 'ZIP Code'
                 },
-                value: '',
+                value: 6180,
                 validation: {
                     required: true,
-                    minLength: 5,
-                    maxLength: 5,
+                    minLength: 4,
+                    maxLength: 4,
                     isNumeric: true
                 },
                 valid: false,
                 touched: false
             },
-            country: {
+            address: {
                 elementType: 'input',
                 elementConfig: {
                     type: 'text',
-                    placeholder: 'Country'
+                    placeholder: 'Address'
                 },
-                value: '',
+                value: 'Ariana',
                 validation: {
                     required: true
                 },
@@ -68,7 +72,7 @@ class Register extends Component {
                     type: 'email',
                     placeholder: 'Your E-Mail'
                 },
-                value: '',
+                value: "mr.android@gmail.com",
                 validation: {
                     required: true,
                     isEmail: true
@@ -82,19 +86,19 @@ class Register extends Component {
                     type: 'password',
                     placeholder: 'Your Password'
                 },
-                value: '',
+                value: '123456',
                 validation: {
                     required: true
                 },
                 valid: false,
                 touched: false
             },
-            account: {
+            account_type: {
                 elementType: 'select',
                 elementConfig: {
                     options: [
-                        {value: 'client', displayValue: 'Client'},
-                        {value: 'agency', displayValue: 'Agency'}
+                        { value: 'client', displayValue: 'Client' },
+                        { value: 'agency', displayValue: 'Agency' }
                     ]
                 },
                 value: '',
@@ -102,28 +106,41 @@ class Register extends Component {
                 valid: true
             }
 
-            
+
         },
-        formIsValid: false,
+        formIsValid: true,
         loading: false
     }
 
-    orderHandler = ( event ) => {
+    orderHandler = (event) => {
         event.preventDefault();
-        this.setState( { loading: true } );
+        this.setState({ loading: true });
         const formData = {};
         for (let formElementIdentifier in this.state.orderForm) {
             formData[formElementIdentifier] = this.state.orderForm[formElementIdentifier].value;
         }
-       
-        // axios.post( '/orders.json', order )
-        //     .then( response => {
-        //         this.setState( { loading: false } );
-        //         this.props.history.push( '/' );
-        //     } )
-        //     .catch( error => {
-        //         this.setState( { loading: false } );
-        //     } );
+
+        var newUser = {
+            account_type: "client",
+            username: this.state.orderForm.username.value,
+            email: this.state.orderForm.email.value,
+            password: this.state.orderForm.password.value,
+            tel: this.state.orderForm.phone.value,
+            cin: this.state.orderForm.zipCode.value
+        }
+
+        console.log(newUser);
+
+        axios.post('http://localhost:5000/api/users/register', newUser)
+            .then(response => {
+                this.setState({ loading: false });
+                // this.props.history.push('/');
+                console.log(response.data);
+            })
+            .catch(error => {
+                this.setState({ loading: false });
+                console.log(error);
+            });
     }
 
     checkValidity(value, rules) {
@@ -131,7 +148,7 @@ class Register extends Component {
         if (!rules) {
             return true;
         }
-        
+
         if (rules.required) {
             isValid = value.trim() !== '' && isValid;
         }
@@ -161,22 +178,22 @@ class Register extends Component {
         const updatedOrderForm = {
             ...this.state.orderForm
         };
-        const updatedFormElement = { 
+        const updatedFormElement = {
             ...updatedOrderForm[inputIdentifier]
         };
         updatedFormElement.value = event.target.value;
         updatedFormElement.valid = this.checkValidity(updatedFormElement.value, updatedFormElement.validation);
         updatedFormElement.touched = true;
         updatedOrderForm[inputIdentifier] = updatedFormElement;
-        
+
         let formIsValid = true;
         for (let inputIdentifier in updatedOrderForm) {
             formIsValid = updatedOrderForm[inputIdentifier].valid && formIsValid;
         }
-        this.setState({orderForm: updatedOrderForm, formIsValid: formIsValid});
+        this.setState({ orderForm: updatedOrderForm, formIsValid: formIsValid });
     }
 
-    render () {
+    render() {
         const formElementsArray = [];
         for (let key in this.state.orderForm) {
             formElementsArray.push({
@@ -187,7 +204,7 @@ class Register extends Component {
         let form = (
             <form onSubmit={this.orderHandler}>
                 {formElementsArray.map(formElement => (
-                    <Input 
+                    <Input
                         key={formElement.id}
                         elementType={formElement.config.elementType}
                         elementConfig={formElement.config.elementConfig}
@@ -200,7 +217,7 @@ class Register extends Component {
                 <Button btnType="Success" disabled={!this.state.formIsValid}>REGISTER</Button>
             </form>
         );
-       
+
         return (
             <div className="ContactData">
                 <h4>Enter your Contact Data</h4>
