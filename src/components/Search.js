@@ -10,7 +10,7 @@ export default class Search extends Component {
                         <form className="form-search col-md-12" >
                             <div className="row  align-items-end">
                                 <div className="col-md-3">
-                                    <label for="list-types">Listing Types</label>
+                                    <label htmlFor="list-types">Listing Types</label>
                                     <div className="select-wrap">
                                         <span className="icon icon-arrow_drop_down"></span>
                                         <select name="list-types" id="list-types" className="form-control d-block rounded-0">
@@ -21,7 +21,7 @@ export default class Search extends Component {
                                     </div>
                                 </div>
                                 <div className="col-md-3">
-                                    <label for="offer-types">Offer Type</label>
+                                    <label htmlFor="offer-types">Offer Type</label>
                                     <div className="select-wrap">
                                         <span className="icon icon-arrow_drop_down"></span>
                                         <select name="offer-types" id="offer-types" className="form-control d-block rounded-0">
@@ -32,7 +32,7 @@ export default class Search extends Component {
                                     </div>
                                 </div>
                                 <div className="col-md-3">
-                                    <label for="select-city">Select City</label>
+                                    <label htmlFor="select-city">Select City</label>
                                     <div className="select-wrap">
                                         <span className="icon icon-arrow_drop_down"></span>
                                         <select name="select-city" id="select-city" className="form-control d-block rounded-0">

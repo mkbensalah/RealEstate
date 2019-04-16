@@ -1,13 +1,16 @@
 const express = require("express");
 const db = require("./helpers/db-setup");
 const bodyParser = require("body-parser");
+const cookieParser = require("cookie-parser");
 const path = require("path");
 const passport = require("passport");
 
 // import routes
 const users = require("./routes/api/users");
 const profiles = require("./routes/api/profiles");
-const offre = require("./routes/api/offre");
+const offres = require("./routes/api/offre");
+const services = require("./routes/api/services");
+const properties = require("./routes/api/properties");
 
 // custom entrypoint
 const app = express();
@@ -16,12 +19,13 @@ const app = express();
 const port = 5000;
 
 // echo msg for startup
-app.get("/", (req, res) => res.json("Node server running!"));
+app.get("/", (req, res) => res.send("Node server running!"));
 
 // configure middleware
 app.set("port", process.env.port || port); // set express to use this port
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json()); // parse form data client
+app.use(cookieParser()); // parse form data client
 app.use(express.static(path.join(__dirname, "public"))); // configure express to use public folder
 
 // passport middleware init
@@ -32,8 +36,10 @@ require("./config/passport")(passport);
 
 // use routes
 app.use("/api/users", users);
-app.use("/api/profiles", profiles);
-app.use("/api/offre", offre);
+app.use("/api/profile", profiles);
+app.use("/api/offre", offres);
+app.use("/api/service", services);
+app.use("/api/property", properties);
 
 // connect to mysql db
 db.connect(db.MODE_PRODUCTION, function (err) {
