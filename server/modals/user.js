@@ -1,7 +1,4 @@
 var db = require("../helpers/db-setup");
-var userID=0;
-
-
 // add user to db
 exports.create = function (user, hached_password, done) {
   var userID = 0;
@@ -10,7 +7,7 @@ exports.create = function (user, hached_password, done) {
   var values = [user.username, user.mail, hached_password, user.tel];
 
   db.get().query(
-    "INSERT INTO user (name, email, password, tel) VALUES(?, ?,?,?)",
+    "INSERT INTO user (name, email, password, tel) VALUES(?, ?, ?, ?)",
     values,
     function (err, result) {
       if (err) {
@@ -23,7 +20,7 @@ exports.create = function (user, hached_password, done) {
       // to check wheather the account type is client or agency 
       console.log(user.account_type)
       if (user.account_type == 'client') {
-        console.log(userID);
+        // console.log(userID);
         db.get().query(
           "INSERT INTO client (CIN, userid) VALUES(?, ?)",
           [user.cin, userID],
@@ -33,7 +30,6 @@ exports.create = function (user, hached_password, done) {
               return done(err);
             }
             done(null, userID);
-      done(null, userID);
           }
         );
       }
@@ -52,9 +48,6 @@ exports.create = function (user, hached_password, done) {
       }
     }
   );
-
-
-
 
 };
 

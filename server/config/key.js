@@ -5,6 +5,7 @@ module.exports = {
     password: "qhMY6kAAf9",
     database: "8Eg172KG7R"
   },
+  // used to sign tokens
   secretKey: "Real Estate"
 };
 

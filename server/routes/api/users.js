@@ -4,13 +4,37 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const keys = require("../../config/key");
 
+// auth middleware
+const passport = require("passport");
+
 // request data modal
 var userModal = require("../../modals/user");
+
+
+const checkAuthorization = function (req, res, done) {
+  passport.authenticate('jwt', { session: false });
+  // 1. See if there is a token on the request...if not, reject immediately
+  //
+  const userJWT = req.cookies.realEstateAccessJwt
+  if (!userJWT) {
+    res.status(401).json({ msg: 'Invalid or missing authorization token' });
+  }
+  done()
+}
 
 // @route   GET api/users/test
 // @desc    Tests user routes
 // @access  Public
-router.get("/test", (req, res) => res.json({ msg: "test user works fine!" }));
+router.get("/test", (req, res) => {
+
+  // const cookieOptions = {
+  //   httpOnly: true,
+  //   expires: 0
+  // }
+  // res.cookie('realEstateAccessJwt', "token", cookieOptions)
+  res.json({ msg: "test user works fine!" })
+
+});
 
 // @route   POST api/users/login
 // @desc    sign in user
@@ -40,7 +64,14 @@ router.post("/login", (req, res) => {
           // sign the token  
           jwt.sign(payload, keys.secretKey, { expiresIn: 3600 }, (err, token) => {
             if (err) throw err
-            else res.json({ success: true, token: 'Bearer ' + token }); // Bearer encryption
+            else {
+              const cookieOptions = {
+                httpOnly: true,
+                expires: 0
+              }
+              res.cookie('realEstateAccessJwt', token, cookieOptions)
+              res.json({ success: true, token: 'Bearer ' + token }); // Bearer encryption
+            }
           });
         }
         else return res.status(400).json({ msg: "Password not correct" });
@@ -49,12 +80,25 @@ router.post("/login", (req, res) => {
   });
 });
 
+// @route   GET api/users/logout
+// @desc    Sign out the user
+// @access  Private
+router.get("/logout", checkAuthorization, (req, res) => {
+
+  const userJWT = req.cookies;
+  res.clearCookie('realEstateAccessJwt');
+  const userJWTafter = req.cookies;
+  res.json({
+    before: userJWT,
+    after: userJWTafter
+  })
+})
 
 // @route   POST api/users/register
 // @desc    register user
 // @access  Public
-router.get("/register", (req, res) => {
-  userModal.findByEmail(req.query.mail, function (err, rows) {
+router.post("/register", (req, res) => {
+  userModal.findByEmail(req.body.email, function (err, rows) {
     if (rows !== undefined && rows.length > 0) {
       return res
         .status(400)
@@ -66,7 +110,7 @@ router.get("/register", (req, res) => {
           if (err) throw err;
           else {
             const newUser = userModal.create(
-              req.query,
+              req.body,
               hash,
               function (err, insertId) {
                 res.json({ msg: `Succeed! user added with id# ${insertId}` });
@@ -78,5 +122,7 @@ router.get("/register", (req, res) => {
     }
   });
 });
+
+
 
 module.exports = router;
