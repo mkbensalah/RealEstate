@@ -20,6 +20,7 @@ const app = express();
 const port = 5000;
 
 // Access-Control-Allow-Origin: http://localhost:5000/*
+// only for development
 app.use(cors());
 
 // echo msg for startup

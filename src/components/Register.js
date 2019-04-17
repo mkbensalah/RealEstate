@@ -15,7 +15,7 @@ class Register extends Component {
                     type: 'text',
                     placeholder: 'Your Name'
                 },
-                value: 'mr costume',
+                value: '',
                 validation: {
                     required: true
                 },
@@ -28,7 +28,7 @@ class Register extends Component {
                     type: 'number',
                     placeholder: 'Phone number'
                 },
-                value: 23232323,
+                value: '',
                 validation: {
                     required: true,
                     minLength: 8,
@@ -43,7 +43,7 @@ class Register extends Component {
                     type: 'number',
                     placeholder: 'ZIP Code'
                 },
-                value: 6180,
+                value: '',
                 validation: {
                     required: true,
                     minLength: 4,
@@ -59,7 +59,7 @@ class Register extends Component {
                     type: 'text',
                     placeholder: 'Address'
                 },
-                value: 'Ariana',
+                value: '',
                 validation: {
                     required: true
                 },
@@ -72,7 +72,7 @@ class Register extends Component {
                     type: 'email',
                     placeholder: 'Your E-Mail'
                 },
-                value: "mr.android@gmail.com",
+                value: "",
                 validation: {
                     required: true,
                     isEmail: true
@@ -86,7 +86,7 @@ class Register extends Component {
                     type: 'password',
                     placeholder: 'Your Password'
                 },
-                value: '123456',
+                value: '',
                 validation: {
                     required: true
                 },
