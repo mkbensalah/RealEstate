@@ -3,6 +3,9 @@ const router = express.Router();
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const keys = require("../../config/key");
+const { body, check } = require('express-validator/check');
+const { sanitizeBody } = require('express-validator/filter');
+
 
 // auth middleware
 const passport = require("passport");
@@ -97,7 +100,16 @@ router.get("/logout", checkAuthorization, (req, res) => {
 // @route   POST api/users/register
 // @desc    register user
 // @access  Public
-router.post("/register", (req, res) => {
+router.post("/register",[
+  body('email')
+    .isEmail()
+    .normalizeEmail(),
+  body('password')
+    .not().isEmpty()
+    .trim()
+    .escape(),
+  sanitizeBody('notifyOnReply').toBoolean()
+] ,(req, res) => {
   userModal.findByEmail(req.body.email, function (err, rows) {
     if (rows !== undefined && rows.length > 0) {
       return res

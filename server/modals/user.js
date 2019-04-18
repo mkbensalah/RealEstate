@@ -4,10 +4,10 @@ exports.create = function (user, hached_password, done) {
   var userID = 0;
   console.log("at create");
   console.log(user);
-  var values = [user.username, user.email, hached_password, user.tel];
+  var values = [user.username, user.email, user.state, user.tel, hached_password];
 
   db.get().query(
-    "INSERT INTO user (name, email, password, tel) VALUES(?, ?, ?, ?)",
+    "INSERT INTO user (name, email, state, tel, password) VALUES(?, ?, ?, ?, ?)",
     values,
     function (err, result) {
       if (err) {
@@ -22,8 +22,8 @@ exports.create = function (user, hached_password, done) {
       if (user.account_type == 'client') {
         // console.log(userID);
         db.get().query(
-          "INSERT INTO client (CIN, userid) VALUES(?, ?)",
-          [user.cin, userID],
+          "INSERT INTO client (CIN) VALUES(?)",
+          [user.cin],
           function (err, result) {
             if (err) {
               console.log(err);
@@ -35,8 +35,8 @@ exports.create = function (user, hached_password, done) {
       }
       else {
         db.get().query(
-          "INSERT INTO agence (num_patente, description ,iduser) VALUES(?, ?,?)",
-          [user.patente_num, user.about, userID],
+          "INSERT INTO agence (num_patente, description) VALUES(?, ?)",
+          [user.patente_num, user.about],
           function (err, result) {
             if (err) {
               console.log(err);
