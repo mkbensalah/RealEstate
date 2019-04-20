@@ -25,8 +25,8 @@ export default class Header extends Component {
 						<li><a href="index.html">Support</a></li>
 						<li><a href="index.html">AboutUs</a></li>
 						<li><a href="index.html">Contact</a></li>
-						<li><button  className="bn" onClick={this.props.ordered}>Register</button></li>
-						<li><button className="bn" >Login</button></li>
+						<li><button  className="bn" onClick={() => this.props.ordered('register')}>Register</button></li>
+						<li><button className="bn" onClick={() => this.props.ordered('login')}>Login</button></li>
 					</ul>
 				</div>
 			</div>

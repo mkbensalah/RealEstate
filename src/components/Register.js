@@ -66,6 +66,7 @@ class Register extends Component {
                 elementType: 'select',
                 elementConfig: {
                     options: [
+                        { value: 'type', displayValue: 'Type' },
                         { value: 'client', displayValue: 'Client' },
                         { value: 'agency', displayValue: 'Agency' }
                     ]
@@ -253,6 +254,7 @@ class Register extends Component {
             .then(response => {
                 this.setState({ loading: false });
                 // this.props.history.push('/');
+                this.props.red();
             //    console.log(response.data);
             })
             .catch(error => {

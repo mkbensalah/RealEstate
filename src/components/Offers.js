@@ -23,9 +23,9 @@ class Offers extends Component {
                             <div className="row">
                                 <div className="col-sm-12">
                                     <ol className="breadcrumb" style={{ float: 'left' }}>
-                                        <li itemscope=""  >
-                                            <a itemprop="url" href="http://localhost:3000/">
-                                                <span itemprop="title">Home</span>
+                                        <li itemScope=""  >
+                                            <a itemProp="url" href="http://localhost:3000/">
+                                                <span itemProp="title">Home</span>
                                             </a>
                                         </li>
                                         <li>For Sale</li>
@@ -44,18 +44,18 @@ class Offers extends Component {
                                                     <option value="featured_first">Featured First</option>
 
                                                     <option value="a_date">Date Old to New</option>
-                                                    <option selected="" value="d_date">Date New to Old</option>
+                                                    <option defaultValue="" value="d_date">Date New to Old</option>
                                                 </select>
                                                 <div className="btn-group bootstrap-select">
                                                     <button type="button" className="btn dropdown-toggle btn-default" data-toggle="dropdown" data-id="sort_properties" title="Date New to Old"><span className="filter-option pull-left">Date New to Old</span>&nbsp;<span className="fa fa-sort"></span></button>
                                                     <div className="dropdown-menu open">
                                                         <ul className="dropdown-menu inner" role="menu">
-                                                            <li data-original-index="0"><a tabindex="0" data-tokens="null" href="i.html"><span className="text">Default Order</span><span className="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                                            <li data-original-index="1"><a tabindex="0" data-tokens="null" href="i.html"><span className="text">Price (Low to High)</span><span className="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                                            <li data-original-index="2"><a tabindex="0" data-tokens="null" href="i.html"><span className="text">Price (High to Low)</span><span className="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                                            <li data-original-index="3"><a tabindex="0" data-tokens="null" href="i.html"><span className="text">Featured First</span><span className="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                                            <li data-original-index="4"><a tabindex="0" data-tokens="null" href="i.html"><span className="text">Date Old to New</span><span className="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                                            <li data-original-index="5" className="selected"><a tabindex="0" data-tokens="null" href="i.html"><span className="text">Date New to Old</span><span className="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                                            <li data-original-index="0"><a tabIndex="0" data-tokens="null" href="i.html"><span className="text">Default Order</span><span className="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                                            <li data-original-index="1"><a tabIndex="0" data-tokens="null" href="i.html"><span className="text">Price (Low to High)</span><span className="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                                            <li data-original-index="2"><a tabIndex="0" data-tokens="null" href="i.html"><span className="text">Price (High to Low)</span><span className="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                                            <li data-original-index="3"><a tabIndex="0" data-tokens="null" href="i.html"><span className="text">Featured First</span><span className="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                                            <li data-original-index="4"><a tabIndex="0" data-tokens="null" href="i.html"><span className="text">Date Old to New</span><span className="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                                            <li data-original-index="5" className="selected"><a tabIndex="0" data-tokens="null" href="i.html"><span className="text">Date New to Old</span><span className="glyphicon glyphicon-ok check-mark"></span></a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
