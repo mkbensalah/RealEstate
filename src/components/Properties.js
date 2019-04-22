@@ -17,9 +17,9 @@ import React, { Component } from 'react';
 
 export default class Properties extends Component {
 
-state ={ 
-    sale : null
-}
+    state = {
+        sale: null
+    }
 
 
     // componentDidMount () {
@@ -39,11 +39,11 @@ state ={
 
     render() {
 
-//const te = this.state.sale;
+        //const te = this.state.sale;
 
         return (
             <section className="sectionpadding10050 featured-properties-area">
-            
+
             </section>
 
         )
