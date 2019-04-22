@@ -36,13 +36,13 @@ export default class AdvancedSearch extends Component {
                                                             <div className="dropdown-menu open">
                                                                 <ul className="dropdown-menu inner" role="menu">
                                                                     <li data-original-index="0" className="selected">
-                                                                        <a tabindex="0" data-tokens="null" href="in.html">
+                                                                        <a tabIndex="0" data-tokens="null" href="in.html">
                                                                             <span className="text">All Cities</span>
                                                                             <span className="glyphicon glyphicon-ok check-mark">
                                                                             </span>
                                                                         </a>
                                                                     </li>
-                                                                    <li data-original-index="1"><a tabindex="0" href="in.html">
+                                                                    <li data-original-index="1"><a tabIndex="0" href="in.html">
                                                                         <span className="text">
                                                                             Tunis</span>
                                                                         <span className="glyphicon glyphicon-ok check-mark">
@@ -71,20 +71,20 @@ export default class AdvancedSearch extends Component {
                                                                 <span className="filter-option pull-left">All Areas</span>&nbsp;<span className="fa fa-sort"></span>
                                                             </button><div className="dropdown-menu open"><ul className="dropdown-menu inner" role="menu">
                                                                 <li data-original-index="0" className="selected">
-                                                                    <a tabindex="0" href="in.html">
+                                                                    <a tabIndex="0" href="in.html">
                                                                         <span className="text">All Areas</span>
                                                                         <span className="glyphicon glyphicon-ok check-mark"></span>
                                                                     </a>
                                                                 </li>
-                                                                <li data-original-index="1"><a tabindex="0" href="in.html">
+                                                                <li data-original-index="1"><a tabIndex="0" href="in.html">
                                                                     <span className="text"> , Al Fun</span>
                                                                     <span className="glyphicon glyphicon-ok check-mark"></span>
                                                                 </a>
                                                                 </li>
                                                                 <li data-original-index="2">
-                                                                    <a tabindex="0" href="in.html"><span className="text"> , Arab</span>
+                                                                    <a tabIndex="0" href="in.html"><span className="text"> , Arab</span>
                                                                         <span className="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                                                <li data-original-index="3"><a tabindex="0" href="in.html"><span className="text"> 23 Marina</span>
+                                                                <li data-original-index="3"><a tabIndex="0" href="in.html"><span className="text"> 23 Marina</span>
                                                                     <span className="glyphicon glyphicon-ok check-mark">
                                                                     </span>
                                                                 </a>
@@ -151,18 +151,18 @@ export default class AdvancedSearch extends Component {
                                                                 <span className="filter-option pull-left">All Status</span>&nbsp;<span className="fa fa-sort"></span>
                                                             </button><div className="dropdown-menu open"><ul className="dropdown-menu inner" role="menu">
                                                                 <li data-original-index="0" className="selected">
-                                                                    <a tabindex="0" href="in.html">
+                                                                    <a tabIndex="0" href="in.html">
                                                                         <span className="text">All Status</span>
                                                                         <span className="glyphicon glyphicon-ok check-mark"></span>
                                                                     </a>
                                                                 </li>
-                                                                <li data-original-index="1"><a tabindex="0" href="in.html">
+                                                                <li data-original-index="1"><a tabIndex="0" href="in.html">
                                                                     <span className="text"> For Rent</span>
                                                                     <span className="glyphicon glyphicon-ok check-mark"></span>
                                                                 </a>
                                                                 </li>
                                                                 <li data-original-index="2">
-                                                                    <a tabindex="0" href="in.html"><span className="text"> For Sale</span>
+                                                                    <a tabIndex="0" href="in.html"><span className="text"> For Sale</span>
                                                                         <span className="glyphicon glyphicon-ok check-mark"></span></a></li>
                                                                 
                                                                
@@ -195,13 +195,13 @@ export default class AdvancedSearch extends Component {
                                                             <div className="dropdown-menu open">
                                                                 <ul className="dropdown-menu inner" role="menu">
                                                                     <li data-original-index="0" className="selected">
-                                                                        <a tabindex="0" data-tokens="null" href="in.html">
+                                                                        <a tabIndex="0" data-tokens="null" href="in.html">
                                                                             <span className="text">All Types</span>
                                                                             <span className="glyphicon glyphicon-ok check-mark">
                                                                             </span>
                                                                         </a>
                                                                     </li>
-                                                                    <li data-original-index="1"><a tabindex="0" href="in.html">
+                                                                    <li data-original-index="1"><a tabIndex="0" href="in.html">
                                                                         <span className="text">
                                                                             Apartment</span>
                                                                         <span className="glyphicon glyphicon-ok check-mark">
@@ -229,20 +229,20 @@ export default class AdvancedSearch extends Component {
                                                                 <span className="filter-option pull-left">Beds</span>&nbsp;<span className="fa fa-sort"></span>
                                                             </button><div className="dropdown-menu open"><ul className="dropdown-menu inner" role="menu">
                                                                 <li data-original-index="0" className="selected">
-                                                                    <a tabindex="0" href="in.html">
+                                                                    <a tabIndex="0" href="in.html">
                                                                         <span className="text">Beds</span>
                                                                         <span className="glyphicon glyphicon-ok check-mark"></span>
                                                                     </a>
                                                                 </li>
-                                                                <li data-original-index="1"><a tabindex="0" href="in.html">
+                                                                <li data-original-index="1"><a tabIndex="0" href="in.html">
                                                                     <span className="text"> 1</span>
                                                                     <span className="glyphicon glyphicon-ok check-mark"></span>
                                                                 </a>
                                                                 </li>
                                                                 <li data-original-index="2">
-                                                                    <a tabindex="0" href="in.html"><span className="text">  2</span>
+                                                                    <a tabIndex="0" href="in.html"><span className="text">  2</span>
                                                                         <span className="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                                                <li data-original-index="3"><a tabindex="0" href="in.html"><span className="text">3 </span>
+                                                                <li data-original-index="3"><a tabIndex="0" href="in.html"><span className="text">3 </span>
                                                                     <span className="glyphicon glyphicon-ok check-mark">
                                                                     </span>
                                                                 </a>
@@ -268,20 +268,20 @@ export default class AdvancedSearch extends Component {
                                                                 <span className="filter-option pull-left">Baths</span>&nbsp;<span className="fa fa-sort"></span>
                                                             </button><div className="dropdown-menu open"><ul className="dropdown-menu inner" role="menu">
                                                                 <li data-original-index="0" className="selected">
-                                                                    <a tabindex="0" href="in.html">
+                                                                    <a tabIndex="0" href="in.html">
                                                                         <span className="text">Baths</span>
                                                                         <span className="glyphicon glyphicon-ok check-mark"></span>
                                                                     </a>
                                                                 </li>
-                                                                <li data-original-index="1"><a tabindex="0" href="in.html">
+                                                                <li data-original-index="1"><a tabIndex="0" href="in.html">
                                                                     <span className="text"> 1</span>
                                                                     <span className="glyphicon glyphicon-ok check-mark"></span>
                                                                 </a>
                                                                 </li>
                                                                 <li data-original-index="2">
-                                                                    <a tabindex="0" href="in.html"><span className="text"> 2</span>
+                                                                    <a tabIndex="0" href="in.html"><span className="text"> 2</span>
                                                                         <span className="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                                                <li data-original-index="3"><a tabindex="0" href="in.html"><span className="text">3</span>
+                                                                <li data-original-index="3"><a tabIndex="0" href="in.html"><span className="text">3</span>
                                                                     <span className="glyphicon glyphicon-ok check-mark">
                                                                     </span>
                                                                 </a>

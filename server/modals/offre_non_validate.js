@@ -21,6 +21,9 @@ exports.create = function (offre, done) {
         });
 }
 
+
+
+
 // admin bech yvalidi l offre -> offre valide
 exports.validate = function (offre, done) {
     console.log(offre);
@@ -40,5 +43,5 @@ exports.validate = function (offre, done) {
         })
 
     // ajouter l offre  à la table offre_en_cours
-
+        
 }
