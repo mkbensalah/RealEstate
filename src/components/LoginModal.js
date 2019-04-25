@@ -1,46 +1,56 @@
 import React, { Component } from 'react';
 
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
+
+import { loginUser } from '../actions/authAction';
 
 import Button from './hoc/Button';
 import Input from './hoc/Input';
 
-import axios from 'axios';
+class LoginModal extends Component {
+    constructor() {
+        super();
+        this.state = {
+            email: '',
+            password: '',
+            errors: {},
 
-class Login extends Component {
-
-    state = {
-        orderForm: {
-            email: {
-                elementType: 'input',
-                elementConfig: {
-                    type: 'email',
-                    placeholder: 'Your E-Mail'
+            orderForm: {
+                email: {
+                    elementType: 'input',
+                    elementConfig: {
+                        type: 'email',
+                        placeholder: 'Your E-Mail'
+                    },
+                    value: "",
+                    validation: {
+                        required: true,
+                        isEmail: true
+                    },
+                    valid: false,
+                    touched: false
                 },
-                value: "",
-                validation: {
-                    required: true,
-                    isEmail: true
-                },
-                valid: false,
-                touched: false
+                password: {
+                    elementType: 'input',
+                    elementConfig: {
+                        type: 'password',
+                        placeholder: 'Your Password'
+                    },
+                    value: '',
+                    validation: {
+                        required: true
+                    },
+                    valid: false,
+                    touched: false
+                }
             },
-            password: {
-                elementType: 'input',
-                elementConfig: {
-                    type: 'password',
-                    placeholder: 'Your Password'
-                },
-                value: '',
-                validation: {
-                    required: true
-                },
-                valid: false,
-                touched: false
-            }
-        },
-        formIsValid: true,
-        loading: false
-    }
+            formIsValid: true,
+            loading: false
+        }
+    };
+
 
     orderHandler = (event) => {
         event.preventDefault();
@@ -50,32 +60,17 @@ class Login extends Component {
             formData[formElementIdentifier] = this.state.orderForm[formElementIdentifier].value;
         }
 
-        var newUser = {
+        var userData = {
             email: this.state.orderForm.email.value,
             password: this.state.orderForm.password.value,
         }
 
-        console.log(newUser);
+        console.log(userData);
 
-        axios.post('http://localhost:5000/api/users/login', newUser)
-            .then(response => {
-                if (response.status === 200) {
-                    console.log(this.props);
-                    this.props.red();
-                  //  this.props.history.push('/services');
-                } else {
+        // fire register action form
+        this.props.loginUser(userData, this.props.loading);
 
-                    const error = new Error(response.error);
-                    throw error;
-                }
-
-            })
-            .catch(error => {
-                console.error(error);
-                this.setState({ loading: false });
-                           });
     }
-
 
     checkValidity(value, rules) {
         let isValid = true;
@@ -109,25 +104,26 @@ class Login extends Component {
     }
     inputChangedHandler = (event, inputIdentifier) => {
 
-            const updatedOrderForm = {
-                ...this.state.orderForm
-            };
-            const updatedFormElement = {
-                ...updatedOrderForm[inputIdentifier]
-            };
+        const updatedOrderForm = {
+            ...this.state.orderForm
+        };
+        const updatedFormElement = {
+            ...updatedOrderForm[inputIdentifier]
+        };
 
-            updatedFormElement.value = event.target.value;
-            updatedFormElement.valid = this.checkValidity(updatedFormElement.value, updatedFormElement.validation);
-            updatedFormElement.touched = true;
-            updatedOrderForm[inputIdentifier] = updatedFormElement;
+        updatedFormElement.value = event.target.value;
+        updatedFormElement.valid = this.checkValidity(updatedFormElement.value, updatedFormElement.validation);
+        updatedFormElement.touched = true;
+        updatedOrderForm[inputIdentifier] = updatedFormElement;
 
-            let formIsValid = true;
-            for (let inputIdentifier in updatedOrderForm) {
-                formIsValid = updatedOrderForm[inputIdentifier].valid && formIsValid;
-            }
+        let formIsValid = true;
+        for (let inputIdentifier in updatedOrderForm) {
+            formIsValid = updatedOrderForm[inputIdentifier].valid && formIsValid;
+        }
 
 
-            this.setState({ orderForm: updatedOrderForm, formIsValid: formIsValid });}
+        this.setState({ orderForm: updatedOrderForm, formIsValid: formIsValid });
+    }
 
 
 
@@ -142,8 +138,6 @@ class Login extends Component {
                 config: this.state.orderForm[key]
             });
         }
-
-
 
         let form = (
             <form onSubmit={this.orderHandler}>
@@ -172,6 +166,15 @@ class Login extends Component {
     }
 }
 
+LoginModal.propTypes = {
+    loginUser: PropTypes.func.isRequired,
+    auth: PropTypes.object.isRequired,
+    errors: PropTypes.object.isRequired
+};
 
+const mapStateToProps = state => ({
+    auth: state.auth,
+    errors: state.errors
+});
 
-export default Login;
+export default connect(mapStateToProps, { loginUser })(withRouter(LoginModal));

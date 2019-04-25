@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import Navbar from '../components/dashboard/layout/Navbar';
-import Footer from '../components/dashboard/layout/Footer';
+import Navbar from '../components/adminPanel/layout/Navbar';
+import Footer from '../components/adminPanel/layout/Footer';
 
 export default class Recommandation extends Component {
     render() {

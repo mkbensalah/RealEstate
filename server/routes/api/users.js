@@ -75,8 +75,9 @@ router.post("/login", (req, res) => {
                 expires: 0
               }
               res.cookie('realEstateAccessJwt', token, cookieOptions)
-              res.sendStatus(200)
-              res.json({ success: true, token: 'Bearer ' + token }); // Bearer encryption
+              res
+                .status(200)
+                .json({ success: true, token: 'Bearer ' + token }); // Bearer encryption
             }
           });
         }
@@ -103,7 +104,7 @@ router.get("/logout", checkAuthorization, (req, res) => {
 // @route   POST api/users/register
 // @desc    register user
 // @access  Public
-router.post("/register",[
+router.post("/register", [
   body('email')
     .isEmail()
     .normalizeEmail(),
@@ -112,7 +113,7 @@ router.post("/register",[
     .trim()
     .escape(),
   sanitizeBody('notifyOnReply').toBoolean()
-] ,(req, res) => {
+], (req, res) => {
   userModal.findByEmail(req.body.email, function (err, rows) {
     if (rows !== undefined && rows.length > 0) {
       return res

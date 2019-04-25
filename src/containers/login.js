@@ -2,20 +2,48 @@ import React, { Component } from 'react';
 import Footer from '../components/Footer';
 import Modal from '../components/Modal'
 import Aux from '../components/hoc/Auxliary'
-import Register from '../components/Register'
+import LoginModal from '../components/LoginModal'
+import Register from './Register'
 
-import './custom.css'
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+
+import '../assets/css/custom.css'
 
 
 class Login extends Component {
+    constructor(props) {
+        super(props);
+        this.child = null;
+    }
+
     state = {
         purchasing: false,
         loading: false,
         error: false
     }
 
-    purchaseHandler = () => {
+    componentDidMount() {
+        if (this.props.auth.isAuthenticated) {
+            this.props.history.push('/dashboard');
+        }
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.auth.isAuthenticated) {
+            this.props.history.push('/dashboard');
+        }
+
+        if (nextProps.errors) {
+            this.setState({ errors: nextProps.errors });
+        }
+    }
+
+    purchaseHandler = (type) => {
+        console.log(type);
         this.setState({ purchasing: true });
+        if (type === 'register') { this.child = <Register red={() => this.props.history.push('/services')} />; }
+        else if (type === 'login') { this.child = <LoginModal red={this.purchaseChangeHandler} />; }
     }
 
     purchaseCancelHandler = () => {
@@ -31,7 +59,7 @@ class Login extends Component {
         return (
             <Aux>
                 <Modal show={this.state.purchasing} modalClosed={this.purchaseCancelHandler}>
-                    <Register />
+                    {this.child}
                 </Modal>
                 <nav className="navbar navbar-fixed-top navbar-default" role="navigation">
                     <div className="container">
@@ -53,8 +81,8 @@ class Login extends Component {
                                 <li><a href="index.html">AboutUs</a></li>
                                 <li><a href="index.html">Contact</a></li>
                                 <li><div className="btn-group" style={{ marginBottom: 12 + 'px' }}>
-                                    <button type="button" className="btn navbar-btn btn-info" onClick={this.props.ordered}>Register</button>
-                                    <button type="button" className="btn navbar-btn btn-default" style={{ color: "#22a9f9", fontWeight: 1000 }}>Login</button>
+                                    <button type="button" className="btn navbar-btn btn-info" onClick={() => this.purchaseHandler('register')}>Register</button>
+                                    {/* <button type="button" className="btn navbar-btn btn-default" style={{ color: "#22a9f9", fontWeight: 1000 }}>Login</button> */}
                                 </div>
                                 </li>
                             </ul>
@@ -68,24 +96,24 @@ class Login extends Component {
                         <h4 className="zsg-content_collapsed get-started-text">select your profile to get connected</h4>
                     </div>
                     <section className="row zsg-g zsg-g_gutterless header-pro-section ">
-                        <div className="zsg-lg-1-5 zsg-md-1-1 zsg-sm-1-1 agent col-md-5"><a className="overlay" href="#"><span className="text">I'm an agent or broker</span></a></div>
-                        <div className="zsg-lg-1-5 zsg-md-1-1 zsg-sm-1-1 builder col-md-5"><a className="overlay" href="#"><span className="text">I'm a builder</span></a></div>
-                        <div className="zsg-lg-1-5 zsg-md-1-1 zsg-sm-1-1 lender col-md-5 "><a className="overlay" href="#"><span className="text">I'm a customer or visitor</span></a></div>
+                        <div className="zsg-lg-1-5 zsg-md-1-1 zsg-sm-1-1 agent col-md-5"><a className="overlay" href="javascript:void(0)" onClick={() => this.purchaseHandler('login')}><span className="text">I'm an agent or broker</span></a></div>
+                        <div className="zsg-lg-1-5 zsg-md-1-1 zsg-sm-1-1 builder col-md-5"><a className="overlay" href="javascript:void(0)" onClick={() => this.purchaseHandler('login')}><span className="text">I'm a home builder</span></a></div>
+                        <div className="zsg-lg-1-5 zsg-md-1-1 zsg-sm-1-1 lender col-md-5 "><a className="overlay" href="javascript:void(0)" onClick={() => this.purchaseHandler('login')}><span className="text">I'm a customer or visitor</span></a></div>
                     </section>
 
-                    <section class="middle-section" id="yui_3_18_1_1_1555861280594_62">
-                        <h3 class="network-text" id="yui_3_18_1_1_1555861280594_61">Reach our customer support on our network of leading real estate sites.</h3>
-                        <div class="zsg-g zsg-g_gutterless zsg-content-section company-logo">
-                            <div class="zsg-lg-1-4 zsg-md-1-4 zsg-sm-1-1">
+                    <section className="middle-section" id="yui_3_18_1_1_1555861280594_62">
+                        <h3 className="network-text" id="yui_3_18_1_1_1555861280594_61">Reach our customer support on our network of leading real estate sites.</h3>
+                        <div className="zsg-g zsg-g_gutterless zsg-content-section company-logo">
+                            <div className="zsg-lg-1-4 zsg-md-1-4 zsg-sm-1-1">
                                 <a href="#"><img src="https://www.freepnglogos.com/uploads/google-plus-png-logo/light-google-plus-logo-png-12.png"></img></a>
                             </div>
-                            <div class="zsg-lg-1-4 zsg-md-1-4 zsg-sm-1-1">
+                            <div className="zsg-lg-1-4 zsg-md-1-4 zsg-sm-1-1">
                                 <a href="#" target="_blank"><img src="https://www2.djicdn.com/assets/images/support/icons/icon3-b-c010506482c1bc05352c83d6c49b6b21.png"></img></a>
                             </div>
-                            <div class="zsg-lg-1-4 zsg-md-1-4 zsg-sm-1-1">
+                            <div className="zsg-lg-1-4 zsg-md-1-4 zsg-sm-1-1">
                                 <a href="#" target="_blank"><img src="http://assets.stickpng.com/thumbs/580b57fcd9996e24bc43c528.png"></img></a>
                             </div>
-                            <div class="zsg-lg-1-4 zsg-md-1-4 zsg-sm-1-1">
+                            <div className="zsg-lg-1-4 zsg-md-1-4 zsg-sm-1-1">
                                 <a href="#" target="_blank"><img src="https://www.commandersact.com/wp-content/uploads/2015/11/pinterest-logo128.png"></img></a>
                             </div>
                         </div>
@@ -97,4 +125,16 @@ class Login extends Component {
     }
 }
 
-export default Login;
+
+
+Register.propTypes = {
+    auth: PropTypes.object.isRequired,
+    errors: PropTypes.object.isRequired
+};
+
+const mapStateToProps = state => ({
+    auth: state.auth,
+    errors: state.errors
+});
+
+export default connect(mapStateToProps, {})(Login);

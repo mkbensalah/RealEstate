@@ -3,15 +3,15 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Modal from '../components/Modal'
 import Aux from '../components/hoc/Auxliary'
-import Register from '../components/Register'
+import Register from './Register'
 import SideBar from '../components/SideBar';
 import Offers from '../components/Offers'
-import Login from '../components/Login';
+import LoginModal from '../components/LoginModal';
 
 
 
 class Services extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.child = null;
     }
@@ -24,9 +24,9 @@ class Services extends Component {
 
     purchaseHandler = (type) => {
         console.log(type);
-        this.setState( { purchasing: true } );
-        if( type === 'register' ){this.child = <Register/>; }
-        else if( type === 'login') {this.child = <Login />; }
+        this.setState({ purchasing: true });
+        if (type === 'register') { this.child = <Register />; }
+        else if (type === 'login') { this.child = <LoginModal />; }
     }
 
     purchaseCancelHandler = () => {
@@ -42,9 +42,9 @@ class Services extends Component {
                     {this.child}
 
                 </Modal>
-                <Header ordered={this.purchaseHandler}/>
-                <SideBar type="AdvancedSearch"/>
-                <Offers/>
+                <Header ordered={this.purchaseHandler} />
+                <SideBar type="AdvancedSearch" />
+                <Offers />
                 <Footer />
             </Aux>
         );

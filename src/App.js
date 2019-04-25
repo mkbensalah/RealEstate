@@ -1,28 +1,60 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
+import PrivateRoute from './common/PrivateRoute';
 import Home from './containers/Home';
 import Services from './containers/Services'
-import Dashboard from '../src/components/dashboard/containers/dashboard'
+import Dashboard from '../src/containers/Dashboard'
+
+import jwt_decode from 'jwt-decode';
+import setAuthToken from './helpers/setAuthToken';
+import { setCurrentUser, logoutUser } from './actions/authAction';
+
+import { Provider } from 'react-redux';
+import store from './store';
 
 import Recommandation from './containers/Recommandation';
-import Login from './containers/login';
+import Login from './containers/Login';
 
 import './App.css';
 
 
+// Check for token
+if (localStorage.jwtToken) {
+	// Set auth token header auth
+	setAuthToken(localStorage.jwtToken);
+	// Decode token and get user info and exp
+	const decoded = jwt_decode(localStorage.jwtToken);
+	// Set user and isAuthenticated
+	store.dispatch(setCurrentUser(decoded));
+
+	// Check for expired token
+	const currentTime = Date.now() / 1000;
+	if (decoded.exp < currentTime) {
+		// Logout user
+		store.dispatch(logoutUser());
+		// TODO: Clear current Profile
+
+		// Redirect to login
+		window.location.href = '/login';
+	}
+}
 
 class App extends Component {
 	render() {
 		return (
-			<div>
-				<Switch>
-					<Route path="/services" exact component={Services} />
-					<Route path="/" exact component={Home} />
-					<Route path="/login" exact component={Login} />
-					<Route path="/dashboard" exact component={Dashboard} />
-					<Route path="/calculator" exact component={Recommandation} />
-				</Switch>
-			</div>
+			<Provider store={store}>
+				<div>
+					<Switch>
+						<Route path="/services" exact component={Services} />
+						<Route path="/" exact component={Home} />
+						<Route path="/login" exact component={Login} />
+						<Switch>
+							<PrivateRoute path="/dashboard" exact component={Dashboard} />
+							<PrivateRoute path="/calculator" exact component={Recommandation} />
+						</Switch>
+					</Switch>
+				</div>
+			</Provider>
 		);
 	}
 }

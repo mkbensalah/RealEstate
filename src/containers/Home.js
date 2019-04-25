@@ -5,13 +5,14 @@ import Footer from '../components/Footer';
 import Properties from '../components/Properties';
 import Modal from '../components/Modal'
 import Aux from '../components/hoc/Auxliary'
-import Register from '../components/Register'
-import Login from '../components/Login'
+import Register from './Register'
 
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 
 class Home extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.child = null;
     }
@@ -24,13 +25,14 @@ class Home extends Component {
 
     purchaseHandler = (type) => {
         console.log(type);
-        this.setState( { purchasing: true } );
-        if( type === 'register' ){this.child = <Register red={() => this.props.history.push('/services')}/>; }
-        else if( type === 'login') {this.child = <Login red={this.purchaseChangeHandler}/>; }
+        this.setState({ purchasing: true });
+        if (type === 'register') { this.child = <Register red={() => this.props.history.push('/services')} />; }
+        else if (type === 'login') { this.props.history.push('/login'); };
     }
 
+
     purchaseCancelHandler = () => {
-        this.setState( { purchasing: false } );
+        this.setState({ purchasing: false });
     }
 
     purchaseChangeHandler = () => {
@@ -38,20 +40,38 @@ class Home extends Component {
     }
 
 
-	render() {
-		return (
-			<Aux>
+    componentDidMount() {
+        if (this.props.auth.isAuthenticated) {
+            this.props.history.push('/dashboard');
+        }
+    }
+
+    render() {
+        return (
+            <Aux>
                 <Modal show={this.state.purchasing} modalClosed={this.purchaseCancelHandler} >
                     {this.child}
 
                 </Modal>
-				<Header ordered={this.purchaseHandler}/>
-				<SideBar type="Search"/>
-				<Properties />
-				<Footer />
-			</Aux>
-		);
-	}
+                <Header ordered={this.purchaseHandler} />
+                <SideBar type="Search" />
+                <Properties />
+                <Footer />
+            </Aux>
+        );
+    }
 }
 
-export default Home;
+
+
+Home.propTypes = {
+    auth: PropTypes.object.isRequired,
+    errors: PropTypes.object.isRequired
+};
+
+const mapStateToProps = state => ({
+    auth: state.auth,
+    errors: state.errors
+});
+
+export default connect(mapStateToProps, {})(Home);

@@ -1344,7 +1344,7 @@ input[type="checkbox"]:checked + label:after {
   font-weight: 400 !important;
   font-variant: normal !important;
   text-transform: none !important;
-  speak: none;
+  outline: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: inline-block;
@@ -1617,7 +1617,7 @@ input[type="radio"][disabled]:checked + label:after {
   position: absolute;
   top: 4px;
   color: #a7a6ab;
-  speak: none;
+  outline: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -1644,7 +1644,7 @@ input[type="radio"][disabled]:checked + label:after {
   left: 4px;
   pointer-events: none;
   position: absolute;
-  speak: none;
+  outline: none;
   top: 4px;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -3920,7 +3920,7 @@ input[type="checkbox"] + label.zsg-nav-sub-expando .zsg-nav-sub-hellip {
 }
 
 .header-section {
-  background: url(../assets/images/showcase.jpg) no-repeat;
+  background: url(../images/showcase.jpg) no-repeat;
   background-size: 100%;
   height: 225px;
   margin-top: -50px;
@@ -3956,31 +3956,31 @@ input[type="checkbox"] + label.zsg-nav-sub-expando .zsg-nav-sub-hellip {
   width: 160px;
 }
 .header-pro-section .agent {
-  background: url(../assets/images/agent_cropped.jpg) no-repeat;
+  background: url(../images/agent_cropped.jpg) no-repeat;
 }
 .header-pro-section .agent :hover {
   background-color: rgba(27, 80, 152, 0.2);
 }
 .header-pro-section .lender {
-  background: url(../assets/images/lender.jpg) no-repeat;
+  background: url(../images/lender.jpg) no-repeat;
 }
 .header-pro-section .lender :hover {
   background-color: rgba(27, 80, 152, 0.2);
 }
 .header-pro-section .property-manager {
-  background: url(../assets/images/showcase.jpg) no-repeat;
+  background: url(../images/showcase.jpg) no-repeat;
 }
 .header-pro-section .property-manager :hover {
   background-color: rgba(27, 80, 152, 0.2);
 }
 .header-pro-section .brand-advertiser {
-  background: url(../assets/images/showcase.jpg) no-repeat;
+  background: url(../images/showcase.jpg) no-repeat;
 }
 .header-pro-section .brand-advertiser :hover {
   background-color: rgba(27, 80, 152, 0.2);
 }
 .header-pro-section .builder {
-  background: url(../assets/images/builder.jpg) no-repeat;
+  background: url(../images/builder.jpg) no-repeat;
 }
 .header-pro-section .builder :hover {
   background-color: rgba(27, 80, 152, 0.2);
@@ -3991,9 +3991,9 @@ input[type="checkbox"] + label.zsg-nav-sub-expando .zsg-nav-sub-hellip {
 .middle-section .network-text {
   padding-top: 60px;
   padding-bottom: 10px;
-  text-color: #000 100%;
+  color: #000 100%;
   font-size: 18px;
-  font-face: OpenSans-Bold;
+  font-family: OpenSans-Bold;
 }
 .middle-section .zsg-g div {
   padding: 0 25px;
@@ -4022,7 +4022,7 @@ input[type="checkbox"] + label.zsg-nav-sub-expando .zsg-nav-sub-hellip {
 }
 .bottom-blue-section .stats-header {
   color: #fff;
-  font-face: OpenSans;
+  font-family: OpenSans;
 }
 .bottom-blue-section .stats-description {
   color: #fff;
@@ -4229,7 +4229,7 @@ input[type="checkbox"] + label.zsg-nav-sub-expando .zsg-nav-sub-hellip {
 }
 @media screen and (max-width: 480px) {
   .header-section {
-    background: url(../assets/images/showcase.jpg) no-repeat;
+    background: url(../images/showcase.jpg) no-repeat;
     height: 300px;
     margin-top: 0;
   }

@@ -2,43 +2,57 @@ import axios from 'axios';
 import setAuthToken from '../helpers/setAuthToken';
 import jwt_decode from 'jwt-decode';
 
-import { GET_ERRORS, SET_CURRENT_USER } from './types';
+import { GET_ERRORS, SET_CURRENT_USER } from '../helpers/types';
 
 // Register User
-export const registerUser = (userData, history) => dispatch => {
+export const registerUser = (userData, history, loadingState) => dispatch => {
     axios
-        .post('/api/users/register', userData)
-        .then(res => history.push('/login'))
-        .catch(err =>
+        .post('http://localhost:5000/api/users/register', userData)
+        .then(res => {
+            console.log(res)
+            history.push('/login');
+            loadingState = false;
+        })
+        .catch(err => {
+            loadingState = false;
+            console.log(err);
             dispatch({
                 type: GET_ERRORS,
                 payload: err.response.data
             })
-        );
+        });
 };
 
 // Login - Get User Token
-export const loginUser = userData => dispatch => {
+export const loginUser = (userData, loadingState) => dispatch => {
     axios
-        .post('/api/users/login', userData)
+        .post('http://localhost:5000/api/users/login', userData)
         .then(res => {
-            // Save to localStorage
-            const { token } = res.data;
-            // Set token to ls
-            localStorage.setItem('jwtToken', token);
-            // Set token to Auth header
-            setAuthToken(token);
-            // Decode token to get user data
-            const decoded = jwt_decode(token);
-            // Set current user
-            dispatch(setCurrentUser(decoded));
+            if (res.status === 200) {
+                // Save to localStorage
+                const { token } = res.data;
+                // Set token to ls
+                localStorage.setItem('jwtToken', token);
+                // Set token to Auth header
+                setAuthToken(token);
+                // Decode token to get user data
+                const decoded = jwt_decode(token);
+                // Set current user
+                dispatch(setCurrentUser(decoded));
+            }
+            else {
+                alert("problem occured while authenticating, Try again");
+            }
+            loadingState = false;
         })
-        .catch(err =>
+        .catch(err => {
+            console.log(err)
+            loadingState = false;
             dispatch({
                 type: GET_ERRORS,
-                payload: err.response.data
+                payload: err.response
             })
-        );
+        });
 };
 
 // Set logged in user
