@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import classnames from 'classnames';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { Link } from "react-router-dom";
 import { logoutUser } from '../actions/authAction';
 
 
@@ -62,7 +63,7 @@ class Header extends Component {
 					<div className="collapse navbar-collapse" id="top-navbar-1">
 						<ul className="nav navbar-nav navbar-right">
 							<li><a href="index.html">Home</a></li>
-							<li><a href="index.html">Services</a></li>
+							<li><Link to={'/services'}>Services</Link></li>
 							<li><a href="index.html">Support</a></li>
 							<li><a href="index.html">AboutUs</a></li>
 							<li><a href="index.html">Contact</a></li>

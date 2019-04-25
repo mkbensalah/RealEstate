@@ -5,7 +5,12 @@ import Modal from '../components/Modal'
 import Aux from '../components/hoc/Auxliary'
 import Register from './Register'
 import SideBar from '../components/SideBar';
-import Offers from '../components/Offers'
+import HomeBuilder from '../components/AllServices/HomeBuilder'
+import HomeRepair from '../components/AllServices/HomeRepair'
+import HomeLeasing from '../components/AllServices/HomeLeasing'
+import HomeEvaluation from '../components/AllServices/HomeEvaluation'
+import HomePacking from '../components/AllServices/HomePacking'
+import HomeDecorator from '../components/AllServices/HomeDecorator'
 import LoginModal from '../components/LoginModal';
 
 
@@ -43,8 +48,21 @@ class Services extends Component {
 
                 </Modal>
                 <Header ordered={this.purchaseHandler} />
-                <SideBar type="AdvancedSearch" />
-                <Offers />
+                <SideBar type="none" />
+
+                <div className="container">
+                    <div className="row">
+                    <HomeBuilder/>
+                        <HomeRepair/>
+                        <HomeLeasing/>
+                    </div>
+                    <div className="row">
+                        <HomeEvaluation/>
+                        <HomePacking/>
+                        <HomeDecorator/>
+                    </div>
+                </div>
+
                 <Footer />
             </Aux>
         );
