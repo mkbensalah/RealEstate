@@ -7376,3 +7376,100 @@ section,
 summary {
   display: block;
 }
+
+.card {
+  height:500px;
+  width:250px;
+  background:rgba(255,255,255,1);
+  margin:2em 2em;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 3px 7px 1px rgba(1,0,0,0.75);
+  -moz-box-shadow: 0px 3px 7px 1px rgba(0,0,0,0.75);
+  box-shadow: 0px 2px 4px 1px #999999;
+}
+
+.card img {
+  border-radius: 2px 0 0 2px;
+  height:40px;
+  padding: 5px 5px 5px 5px;
+
+
+
+}
+
+
+
+.itemDetails {
+
+  color: #555555;
+  font-size:15px;
+}
+
+#title h1 {
+  background-color : transparent;
+  font-size:14px;
+  font-family: sans-serif;
+  text-align:center;
+  color: #00b288;
+  margin-top:20px;
+  margin-bottom: 20px;
+}
+
+#title h1:hover{
+  color: #009bde;
+
+}
+
+
+
+
+
+
+
+
+.addToCart h1{
+  display:block;
+  background-color : transparent;
+  font-size:13px;
+  font-family: sans-serif;
+  text-align:center;
+  color: #00b288;
+
+}
+.addToCart h1:hover{
+  color: #009bde;
+
+}
+
+
+
+.descriptionContainer {
+  display:block;
+  width:100%;
+  position: relative;
+  clear:both;
+  margin-top:10px;
+  margin-bottom: 150px;
+}
+.description {
+  width:100%;
+  font-family: Work Sans,sans-serif;
+  font-size: 14px;
+  line-height: 26px;
+  padding: 6px;
+  color: #555;
+  height: 200px;
+  margin-top:20px;
+  margin-bottom: 20px;
+}
+
+
+
+
+
+
+*{
+  box-sizing: border-box;
+  outline:none;
+}
+

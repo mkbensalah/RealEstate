@@ -4,8 +4,8 @@ import AdvancedSearch from '../components/AdvancedSearch'
 export default class SideBar extends Component {
     render() {
         let search = null;
-        if(this.props.type === "AdvancedSearch"){
-            search = <AdvancedSearch/>
+        if(this.props.type === "none"){
+            search = null
         }
         else { search = <Search/>}
 
