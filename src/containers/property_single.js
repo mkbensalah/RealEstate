@@ -45,7 +45,7 @@ class Property_single extends Component {
                  <Popup trigger={<button> Make offer</button>} position="right center" modal>
                    
                    
-                  <Offer client_id={'1'} agency_id={'2'} service_id={'3'} />
+                  <Offer client_id={'1'} agency_id={'2'} service_id={'3'}  />
 
                 </Popup>
                 
