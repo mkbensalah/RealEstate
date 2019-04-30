@@ -31,7 +31,7 @@ class Services extends Component {
         console.log(type);
         this.setState({ purchasing: true });
         if (type === 'register') { this.child = <Register />; }
-        else if (type === 'login') { this.child = <LoginModal />; }
+        else if (type === 'login') { this.props.history.push('login'); }
     }
 
     purchaseCancelHandler = () => {
@@ -52,14 +52,14 @@ class Services extends Component {
 
                 <div className="container">
                     <div className="row">
-                    <HomeBuilder/>
-                        <HomeRepair/>
-                        <HomeLeasing/>
+                        <HomeBuilder />
+                        <HomeRepair />
+                        <HomeLeasing />
                     </div>
                     <div className="row">
-                        <HomeEvaluation/>
-                        <HomePacking/>
-                        <HomeDecorator/>
+                        <HomeEvaluation />
+                        <HomePacking />
+                        <HomeDecorator />
                     </div>
                 </div>
 

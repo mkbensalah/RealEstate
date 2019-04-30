@@ -4,10 +4,10 @@ import AdvancedSearch from '../components/AdvancedSearch'
 export default class SideBar extends Component {
     render() {
         let search = null;
-        if(this.props.type === "none"){
+        if (this.props.type === "none") {
             search = null
         }
-        else { search = <Search/>}
+        else { search = <Search /> }
 
 
 
@@ -20,8 +20,8 @@ export default class SideBar extends Component {
                                 <h1>Welcome to Dari.tn</h1>
                                 <div className="description">
                                     <p className="medium-paragraph">
-                                    Find your perfect house and enjoy!
-							</p>
+                                        <span>Find your perfect house and enjoy!</span>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -31,7 +31,7 @@ export default class SideBar extends Component {
 
                 <div className="features-container section-container">
                     <div className="container">
-                    {search}
+                        {search}
                     </div>
                 </div>
             </div>

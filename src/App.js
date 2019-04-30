@@ -16,6 +16,7 @@ import Recommandation from './containers/Recommandation';
 import Login from './containers/Login';
 
 import './App.css';
+import Register from './containers/Register';
 
 
 // Check for token
@@ -48,6 +49,7 @@ class App extends Component {
 						<Route path="/services" exact component={Services} />
 						<Route path="/" exact component={Home} />
 						<Route path="/login" exact component={Login} />
+						<Route path="/register" exact component={Register} />
 						<Switch>
 							<PrivateRoute path="/dashboard" exact component={Dashboard} />
 							<PrivateRoute path="/calculator" exact component={Recommandation} />

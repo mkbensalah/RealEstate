@@ -9,6 +9,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import '../assets/css/custom.css'
+import Header from '../components/Header';
 
 
 class Login extends Component {
@@ -54,51 +55,23 @@ class Login extends Component {
     //     this.props.history.push('/checkout');
     // }
 
-
     render() {
         return (
             <Aux>
                 <Modal show={this.state.purchasing} modalClosed={this.purchaseCancelHandler}>
                     {this.child}
                 </Modal>
-                <nav className="navbar navbar-fixed-top navbar-default" role="navigation">
-                    <div className="container">
-                        <div className="navbar-header">
-                            <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-1">
-                                <span className="sr-only">Toggle navigation</span>
-                                <span className="icon-bar"></span>
-                                <span className="icon-bar"></span>
-                                <span className="icon-bar"></span>
-                            </button>
-                            <a className="navbar-brand" href="index.html">Bootstrap Navbar Menu Template</a>
-                        </div>
-
-                        <div className="collapse navbar-collapse" id="top-navbar-1">
-                            <ul className="nav navbar-nav navbar-right">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="index.html">Services</a></li>
-                                <li><a href="index.html">Support</a></li>
-                                <li><a href="index.html">AboutUs</a></li>
-                                <li><a href="index.html">Contact</a></li>
-                                <li><div className="btn-group" style={{ marginBottom: 12 + 'px' }}>
-                                    <button type="button" className="btn navbar-btn btn-info" onClick={() => this.purchaseHandler('register')}>Register</button>
-                                    {/* <button type="button" className="btn navbar-btn btn-default" style={{ color: "#22a9f9", fontWeight: 1000 }}>Login</button> */}
-                                </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
+                <Header />
                 <section className="sectionpadding10050 featured-properties-area">
                     <div className="overlay">
                         <h1 className="zsg-content_collapsed header-text">Build Your Business with Dari.tn</h1>
                         <h5 className="zsg-content_collapsed description">Reach thousands of home shoppers and renters on the largest real estate network on Tunisia.</h5>
-                        <h4 className="zsg-content_collapsed get-started-text">select your profile to get connected</h4>
+                        <h4 className="zsg-content_collapsed get-started-text" style={{ marginBottom: '50px' }}>select your profile to get connected</h4>
                     </div>
                     <section className="row zsg-g zsg-g_gutterless header-pro-section ">
-                        <div className="zsg-lg-1-5 zsg-md-1-1 zsg-sm-1-1 agent col-md-5"><a className="overlay" href="javascript:void(0)" onClick={() => this.purchaseHandler('login')}><span className="text">I'm an agent or broker</span></a></div>
-                        <div className="zsg-lg-1-5 zsg-md-1-1 zsg-sm-1-1 builder col-md-5"><a className="overlay" href="javascript:void(0)" onClick={() => this.purchaseHandler('login')}><span className="text">I'm a home builder</span></a></div>
-                        <div className="zsg-lg-1-5 zsg-md-1-1 zsg-sm-1-1 lender col-md-5 "><a className="overlay" href="javascript:void(0)" onClick={() => this.purchaseHandler('login')}><span className="text">I'm a customer or visitor</span></a></div>
+                        <div className="zsg-lg-1-5 zsg-md-1-1 zsg-sm-1-1 agent col-cust"><a className="overlay" href="javascript:void(0)" onClick={() => this.purchaseHandler('login')}><span className="text">I'm an agent or broker</span></a></div>
+                        <div className="zsg-lg-1-5 zsg-md-1-1 zsg-sm-1-1 builder col-cust"><a className="overlay" href="javascript:void(0)" onClick={() => this.purchaseHandler('login')}><span className="text">I'm a home builder</span></a></div>
+                        <div className="zsg-lg-1-5 zsg-md-1-1 zsg-sm-1-1 lender col-cust "><a className="overlay" href="javascript:void(0)" onClick={() => this.purchaseHandler('login')}><span className="text">I'm a customer or visitor</span></a></div>
                     </section>
 
                     <section className="middle-section" id="yui_3_18_1_1_1555861280594_62">

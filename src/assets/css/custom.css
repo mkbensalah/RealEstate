@@ -524,9 +524,9 @@ h6 {
 }
 .zsg-h1,
 h1 {
-  font-size: 33px;
+  font-size: 40px;
   line-height: 1.3;
-  font-weight: 600;
+  font-weight: 900;
 }
 @media screen and (max-width: 480px) {
   .zsg-h1,
@@ -769,60 +769,6 @@ h2.zsg-separator {
   margin-bottom: 0 !important;
   margin-top: 0 !important;
 }
-.zsg-link,
-.zsg-link_primary,
-a {
-  cursor: pointer;
-  font-weight: 300;
-  text-decoration: none;
-  color: #006aff;
-}
-.zsg-link:visited,
-.zsg-link_primary:visited,
-a:visited {
-  color: #7a48d6;
-}
-.zsg-link:focus,
-.zsg-link:hover,
-.zsg-link_primary:focus,
-.zsg-link_primary:hover,
-a:focus,
-a:hover {
-  color: #62aef7;
-}
-.zsg-link:active,
-.zsg-link_primary:active,
-a:active {
-  color: #3390e9;
-}
-.zsg-link.zsg-link_darkbg,
-.zsg-link_primary.zsg-link_darkbg,
-a.zsg-link_darkbg {
-  color: #006aff;
-}
-.zsg-link.zsg-link_darkbg:visited,
-.zsg-link_primary.zsg-link_darkbg:visited,
-a.zsg-link_darkbg:visited {
-  color: #7a48d6;
-}
-.zsg-link.zsg-link_darkbg:focus,
-.zsg-link.zsg-link_darkbg:hover,
-.zsg-link_primary.zsg-link_darkbg:focus,
-.zsg-link_primary.zsg-link_darkbg:hover,
-a.zsg-link_darkbg:focus,
-a.zsg-link_darkbg:hover {
-  color: #62aef7;
-}
-.zsg-link.zsg-link_darkbg:active,
-.zsg-link_primary.zsg-link_darkbg:active,
-a.zsg-link_darkbg:active {
-  color: #3390e9;
-}
-.zsg-link_primary,
-.zsg-link_primary a {
-  font-weight: 700;
-}
-.zsg-layout-ab,
 .zsg-layout-abc,
 .zsg-layout-bc {
   margin: 0;
@@ -3842,10 +3788,6 @@ input[type="checkbox"] + label.zsg-nav-sub-expando .zsg-nav-sub-hellip {
 .zsg-steps > li.zsg-steps_active > a:hover:after {
   border-left-color: #2a2a33;
 }
-.zsg-step-content:active,
-.zsg-steps > li > a:active {
-  color: #0d4599;
-}
 .zsg-step_active .zsg-step-content,
 .zsg-step_active .zsg-steps > li > a,
 .zsg-steps > li.zsg-steps_active > a {
@@ -3879,26 +3821,9 @@ input[type="checkbox"] + label.zsg-nav-sub-expando .zsg-nav-sub-hellip {
 .zsg-steps > li.zsg-steps_active > a:active {
   color: #3390e9;
 }
-.zsg-step_visited .zsg-step-content,
-.zsg-step_visited .zsg-steps > li > a,
-.zsg-steps > li.zsg-steps_visited > a {
-  color: #777;
-  background-color: #d1d1d5;
-}
-.zsg-step_visited .zsg-step-content:hover,
-.zsg-step_visited .zsg-steps > li > a:hover,
-.zsg-steps > li.zsg-steps_visited > a:hover {
-  color: #006aff;
-  background-color: #d1d1d5;
-}
-.zsg-step_visited .zsg-step-content:active,
-.zsg-step_visited .zsg-steps > li > a:active,
-.zsg-steps > li.zsg-steps_visited > a:active {
-  color: #0d4599;
-}
 
 /* Create three equal columns that floats next to each other */
-.col-md-5 {
+.col-cust {
   float: left;
   width: 33.33%;
   padding: 10px;

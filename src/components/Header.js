@@ -45,35 +45,79 @@ class Header extends Component {
 		);
 
 		return (
-			<nav className={classnames('navbar navbar-fixed-top', {
-				'navbar-default': isAuthenticated,
-				'navbar-no-bg': !isAuthenticated
-			})} role="navigation">
-				<div className="container">
-					<div className="navbar-header">
-						<button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-1">
-							<span className="sr-only">Toggle navigation</span>
-							<span className="icon-bar"></span>
-							<span className="icon-bar"></span>
-							<span className="icon-bar"></span>
-						</button>
-						<a className="navbar-brand" href="index.html">Bootstrap Navbar Menu Template</a>
-					</div>
-
-					<div className="collapse navbar-collapse" id="top-navbar-1">
-						<ul className="nav navbar-nav navbar-right">
-							<li><a href="index.html">Home</a></li>
-							<li><Link to={'/services'}>Services</Link></li>
-							<li><a href="index.html">Support</a></li>
-							<li><a href="index.html">AboutUs</a></li>
-							<li><a href="index.html">Contact</a></li>
-							{isAuthenticated ? authLinks : guestLinks}
-							{/* <li><button className="bn" onClick={() => this.props.ordered('register')}>Register</button></li>
-							<li><button className="bn" onClick={() => this.props.ordered('login')}>Login</button></li> */}
+			<div>
+				<div className="header_bar d-flex flex-row align-items-center justify-content-start js-sticky-top-header">
+					<div className="header_list">
+						<ul className="d-flex flex-row align-items-center justify-content-start">
+							{/* <!-- Phone --> */}
+							<li className="d-flex flex-row align-items-center justify-content-start">
+								<div><img src="images/phone-call.svg" alt=""></img></div>
+								<span>+546 990221 123</span>
+							</li>
+							{/* <!-- Address --> */}
+							<li className="d-flex flex-row align-items-center justify-content-start">
+								<div><img src="images/placeholder.svg" alt=""></img></div>
+								<span>Main Str, no 23, New York</span>
+							</li>
+							{/* <!-- Email --> */}
+							<li className="d-flex flex-row align-items-center justify-content-start">
+								<div><img src="images/envelope.svg" alt=""></img></div>
+								<span>hosting@contact.com</span>
+							</li>
 						</ul>
 					</div>
+					<div className="ml-auto d-flex flex-row align-items-center justify-content-start">
+						<div className="social">
+							<ul className="d-flex flex-row align-items-center justify-content-start">
+								<li><a href="#"><i className="fa fa-pinterest" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i className="fa fa-facebook" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i className="fa fa-twitter" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i className="fa fa-dribbble" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i className="fa fa-behance" aria-hidden="true"></i></a></li>
+							</ul>
+						</div>
+						<div className="log_reg d-flex flex-row align-items-center justify-content-start">
+							<ul className="d-flex flex-row align-items-start justify-content-start">
+								<li><Link to="login">Login</Link></li>
+								<li><Link to="register">Register</Link></li>
+							</ul>
+						</div>
+					</div>
 				</div>
-			</nav>
+				<header className="site-navbar py-4 js-sticky-header site-navbar-target" style={{
+					WebkitBoxShadow: "4px 0 20px -5px rgba(0, 0, 0, 0.2)",
+					boxShadow: "4px 0 20px -5px rgba(0, 0, 0, 0.2)"
+				}} role="banner">
+
+					<div className="container">
+						<div className="row align-items-center">
+
+							<div className="col-6 col-xl-2">
+								<h1 className="mb-0 site-logo m-0 p-0"><a href="index.html" className="mb-0">DARI.</a><span>tn</span></h1>
+							</div>
+
+							<div className="col-12 col-md-10 d-none d-xl-block">
+								<nav className="site-navigation position-relative text-right" role="navigation">
+
+									<ul className="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+										<li><a href="#home-section" className="nav-link active">Home</a></li>
+										<li><a href="#properties-section" className="nav-link">Properties</a></li>
+										<li><a href="#agents-section" className="nav-link">Agents</a></li>
+										<li><a href="#about-section" className="nav-link">About</a></li>
+										<li><a href="#news-section" className="nav-link">News</a></li>
+										<li><a href="#contact-section" className="nav-link">Contact</a></li>
+									</ul>
+								</nav>
+							</div>
+
+
+							<div className="col-6 d-inline-block d-xl-none ml-md-0 py-3"><a href="#" className="site-menu-toggle js-menu-toggle text-black float-right"><span className="icon-menu h3"></span></a></div>
+
+						</div>
+					</div>
+
+				</header>
+			</div>
 		)
 	}
 }
