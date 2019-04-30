@@ -400,6 +400,9 @@ h5,
   display: inline-block;
   text-decoration: none !important;
 }
+.site-navbar .site-navigation .site-menu > li > .shaded {
+  color: rgba(255, 255, 255, 0.95) !important;
+}
 .site-navbar .site-navigation .site-menu > li > a:hover {
   color: #fff;
 }

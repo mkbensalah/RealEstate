@@ -396,10 +396,18 @@ h5,
 }
 .site-navbar .site-navigation .site-menu > li > a {
   padding: 5px 20px;
-  color: rgba(0, 0, 0, 0.5);
+  /* color: rgba(0, 0, 0, 0.5); */
   display: inline-block;
   text-decoration: none !important;
 }
+.site-navbar .site-navigation .site-menu > li > .shaded {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.site-navbar .site-navigation .site-menu > li > .darken {
+  color: rgba(0, 0, 0, 0.7);
+}
+
 .site-navbar .site-navigation .site-menu > li > a.active {
   color: #f69314;
 }

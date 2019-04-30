@@ -52,17 +52,17 @@ class Header extends Component {
 							{/* <!-- Phone --> */}
 							<li className="d-flex flex-row align-items-center justify-content-start">
 								<div><img src="images/phone-call.svg" alt=""></img></div>
-								<span>+546 990221 123</span>
+								<span>+216 28586 319</span>
 							</li>
 							{/* <!-- Address --> */}
 							<li className="d-flex flex-row align-items-center justify-content-start">
 								<div><img src="images/placeholder.svg" alt=""></img></div>
-								<span>Main Str, no 23, New York</span>
+								<span>BP 676 Centre Urbain Nord - 1080 Cedex</span>
 							</li>
 							{/* <!-- Email --> */}
 							<li className="d-flex flex-row align-items-center justify-content-start">
 								<div><img src="images/envelope.svg" alt=""></img></div>
-								<span>hosting@contact.com</span>
+								<span>dari.tn@contact.com</span>
 							</li>
 						</ul>
 					</div>
@@ -86,7 +86,8 @@ class Header extends Component {
 				</div>
 				<header className="site-navbar py-4 js-sticky-header site-navbar-target" style={{
 					WebkitBoxShadow: "4px 0 20px -5px rgba(0, 0, 0, 0.2)",
-					boxShadow: "4px 0 20px -5px rgba(0, 0, 0, 0.2)"
+					boxShadow: "4px 0 20px -5px rgba(0, 0, 0, 0.2)",
+					backgroundColor: this.props.theme
 				}} role="banner">
 
 					<div className="container">
@@ -101,11 +102,11 @@ class Header extends Component {
 
 									<ul className="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
 										<li><a href="#home-section" className="nav-link active">Home</a></li>
-										<li><a href="#properties-section" className="nav-link">Properties</a></li>
-										<li><a href="#agents-section" className="nav-link">Agents</a></li>
-										<li><a href="#about-section" className="nav-link">About</a></li>
-										<li><a href="#news-section" className="nav-link">News</a></li>
-										<li><a href="#contact-section" className="nav-link">Contact</a></li>
+										<li><a href="#properties-section" className={"nav-link " + (this.props.isLighten ? "shaded" : "darken")}>Properties</a></li>
+										<li><a href="#agents-section" className={"nav-link " + (this.props.isLighten ? "shaded" : "darken")}>Agents</a></li>
+										<li><a href="#about-section" className={"nav-link " + (this.props.isLighten ? "shaded" : "darken")}>About</a></li>
+										<li><a href="#news-section" className={"nav-link " + (this.props.isLighten ? "shaded" : "darken")}>News</a></li>
+										<li><a href="#contact-section" className={"nav-link " + (this.props.isLighten ? "shaded" : "darken")}>Contact</a></li>
 									</ul>
 								</nav>
 							</div>
