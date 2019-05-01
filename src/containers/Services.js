@@ -1,72 +1,101 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import Modal from '../components/Modal'
 import Aux from '../components/hoc/Auxliary'
-import Register from './Register'
-import SideBar from '../components/SideBar';
-import HomeBuilder from '../components/AllServices/HomeBuilder'
-import HomeRepair from '../components/AllServices/HomeRepair'
-import HomeLeasing from '../components/AllServices/HomeLeasing'
-import HomeEvaluation from '../components/AllServices/HomeEvaluation'
-import HomePacking from '../components/AllServices/HomePacking'
-import HomeDecorator from '../components/AllServices/HomeDecorator'
-import LoginModal from '../components/LoginModal';
+import ServiceCard from '../components/ServiceCard'
+import {connect} from 'react-redux';
+import PropTypes from 'prop-types';
+import axios from "axios";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles";
+import Pagination from "material-ui-flat-pagination";
 
 
-
+const theme = createMuiTheme();
 class Services extends Component {
-    constructor(props) {
+
+    constructor(props){
         super(props);
-        this.child = null;
+        let data = null;
+        let aa =  null;
     }
 
     state = {
-        purchasing: false,
+        allServices: null,
         loading: false,
-        error: false
-    }
-
-    purchaseHandler = (type) => {
-        console.log(type);
-        this.setState({ purchasing: true });
-        if (type === 'register') { this.child = <Register />; }
-        else if (type === 'login') { this.props.history.push('login'); }
-    }
-
-    purchaseCancelHandler = () => {
-        this.setState({ purchasing: false });
+        offset: 0
     }
 
 
+    componentDidMount() {
+        axios.get('http://localhost:5000/api/service/all')
+            .then(response => {
+                this.setState({loading: false});
+                this.data = response.data.services;
+                this.aa = [];
+                this.aa = this.data;
+                this.setState({loading: true});
+                //console.log(this.aa[1].serviceID);
+                // this.setState({allServices: response.data.services});
+
+            })
+            .catch(error => {
+                this.setState({loading: false});
+                console.log("nnnnnnnnnnn");
+                console.log(error);
+            });
+    }
+
+    handleClick(offset) {
+        this.setState({ offset });
+    }
 
     render() {
+        let service = null;
+        if(this.state.loading){
+            service = this.aa.map(element => (
+                <Aux  key={element.serviceID}>
+                <ServiceCard key={element.serviceID} elt={element}/>
+
+                </Aux>
+            ))
+        };
         return (
             <Aux>
-                <Modal show={this.state.purchasing} modalClosed={this.purchaseCancelHandler} >
-                    {this.child}
+                <Header/>
+                <section className="sectionpadding10050 featured-properties-area">
 
-                </Modal>
-                <Header ordered={this.purchaseHandler} />
-                <SideBar type="none" />
 
-                <div className="container">
-                    <div className="row">
-                        <HomeBuilder />
-                        <HomeRepair />
-                        <HomeLeasing />
-                    </div>
-                    <div className="row">
-                        <HomeEvaluation />
-                        <HomePacking />
-                        <HomeDecorator />
-                    </div>
-                </div>
+                            <div className="row justify-content-center">
 
-                <Footer />
+                                <h2 className="section-title mb-3">How It Works</h2>
+
+                                <div className="row justify-content-center" style={{margin : '32px'}}>
+                                    {service}
+
+
+                                </div>
+
+                            </div>
+
+
+                </section>
+                
+                <h1> Mar7be bik si {this.props.auth.user.username}</h1>
+                <Footer/>
             </Aux>
         );
     }
 }
 
-export default Services;
+Services.propTypes = {
+    auth: PropTypes.object.isRequired,
+    errors: PropTypes.object.isRequired
+};
+
+const mapStateToProps = state => ({
+    auth: state.auth,
+    errors: state.errors
+});
+
+export default connect(mapStateToProps, {})(Services);

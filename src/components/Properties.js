@@ -60,7 +60,7 @@ export default class Properties extends Component {
                     $('.site-mobile-menu .has-children').each(function () {
                         var $this = $(this);
 
-                        $this.prepend('<span class="arrow-collapse collapsed">');
+                        $this.prepend('<span className="arrow-collapse collapsed">');
 
                         $this.find('.arrow-collapse').attr({
                             'data-toggle': 'collapse',
@@ -202,7 +202,7 @@ export default class Properties extends Component {
                 //     pauseOnHover: false,
                 //     nav: false,
                 //     dots: true,
-                //     navText: ['<span class="icon-keyboard_arrow_left">', '<span class="icon-keyboard_arrow_right">']
+                //     navText: ['<span className="icon-keyboard_arrow_left">', '<span className="icon-keyboard_arrow_right">']
                 // });
 
                 // $('.slide-one-item-alt').owlCarousel({
@@ -257,11 +257,11 @@ export default class Properties extends Component {
 
                 $('#date-countdown').countdown('2020/10/10', function (event) {
                     var $this = $(this).html(event.strftime(''
-                        + '<span class="countdown-block"><span class="label">%w</span> weeks </span>'
-                        + '<span class="countdown-block"><span class="label">%d</span> days </span>'
-                        + '<span class="countdown-block"><span class="label">%H</span> hr </span>'
-                        + '<span class="countdown-block"><span class="label">%M</span> min </span>'
-                        + '<span class="countdown-block"><span class="label">%S</span> sec</span>'));
+                        + '<span className="countdown-block"><span className="label">%w</span> weeks </span>'
+                        + '<span className="countdown-block"><span className="label">%d</span> days </span>'
+                        + '<span className="countdown-block"><span className="label">%H</span> hr </span>'
+                        + '<span className="countdown-block"><span className="label">%M</span> min </span>'
+                        + '<span className="countdown-block"><span className="label">%S</span> sec</span>'));
                 });
 
             };
@@ -328,34 +328,34 @@ export default class Properties extends Component {
 
         return (
             <section className="sectionpadding10050 featured-properties-area">
-                <div class="py-5 bg-light site-section how-it-works" id="howitworks-section">
-                    <div class="container">
-                        <div class="row mb-5 justify-content-center">
-                            <div class="col-md-7 text-center">
-                                <h2 class="section-title mb-3">How It Works</h2>
+                <div className="py-5 bg-light site-section how-it-works" id="howitworks-section">
+                    <div className="container">
+                        <div className="row mb-5 justify-content-center">
+                            <div className="col-md-7 text-center">
+                                <h2 className="section-title mb-3">How It Works</h2>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-4 text-center">
-                                <div class="pr-5">
-                                    <span class="custom-icon flaticon-house text-primary"></span>
-                                    <h3 class="text-dark">Find Property.</h3>
+                        <div className="row">
+                            <div className="col-md-4 text-center">
+                                <div className="pr-5">
+                                    <span className="custom-icon flaticon-house text-primary"></span>
+                                    <h3 className="text-dark">Find Property.</h3>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                                 </div>
                             </div>
 
-                            <div class="col-md-4 text-center">
-                                <div class="pr-5">
-                                    <span class="custom-icon flaticon-coin text-primary"></span>
-                                    <h3 class="text-dark">Buy Property.</h3>
+                            <div className="col-md-4 text-center">
+                                <div className="pr-5">
+                                    <span className="custom-icon flaticon-coin text-primary"></span>
+                                    <h3 className="text-dark">Buy Property.</h3>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                                 </div>
                             </div>
 
-                            <div class="col-md-4 text-center">
-                                <div class="pr-5">
-                                    <span class="custom-icon flaticon-home text-primary"></span>
-                                    <h3 class="text-dark">Make Investment.</h3>
+                            <div className="col-md-4 text-center">
+                                <div className="pr-5">
+                                    <span className="custom-icon flaticon-home text-primary"></span>
+                                    <h3 className="text-dark">Make Investment.</h3>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                                 </div>
                             </div>
@@ -363,206 +363,206 @@ export default class Properties extends Component {
                     </div>
                 </div>
 
-                <div class="site-section" id="properties-section">
-                    <div class="container">
-                        <div class="row mb-5 align-items-center">
-                            <div class="col-md-7 text-left">
-                                <h2 class="section-title mb-3">Properties</h2>
+                <div className="site-section" id="properties-section">
+                    <div className="container">
+                        <div className="row mb-5 align-items-center">
+                            <div className="col-md-7 text-left">
+                                <h2 className="section-title mb-3">Properties</h2>
                             </div>
-                            <div class="col-md-5 text-left text-md-right">
-                                <div class="custom-nav1">
-                                    <a href="#" class="custom-prev1">Previous</a><span class="mx-3">/</span><a href="#" class="custom-next1">Next</a>
+                            <div className="col-md-5 text-left text-md-right">
+                                <div className="custom-nav1">
+                                    <a href="#" className="custom-prev1">Previous</a><span className="mx-3">/</span><a href="#" className="custom-next1">Next</a>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="owl-carousel nonloop-block-13 mb-5">
+                        <div className="owl-carousel nonloop-block-13 mb-5">
 
-                            <div class="property">
+                            <div className="property">
                                 <a href="property-single.html">
-                                    <img src={require("../assets/images/property_1.jpg")} alt="Image" class="img-fluid"></img>
+                                    <img src={require("../assets/images/property_1.jpg")} alt="Image" className="img-fluid"></img>
                                 </a>
-                                <div class="prop-details p-3">
-                                    <div><strong class="price">$3,400,000</strong></div>
-                                    <div class="mb-2 d-flex justify-content-between">
-                                        <span class="w border-r">6 beds</span>
-                                        <span class="w border-r">4 baths</span>
-                                        <span class="w">4,250 sqft.</span>
+                                <div className="prop-details p-3">
+                                    <div><strong className="price">$3,400,000</strong></div>
+                                    <div className="mb-2 d-flex justify-content-between">
+                                        <span className="w border-r">6 beds</span>
+                                        <span className="w border-r">4 baths</span>
+                                        <span className="w">4,250 sqft.</span>
                                     </div>
                                     <div>480 12th, Unit 14, San Francisco, CA</div>
                                 </div>
                             </div>
 
-                            <div class="property">
+                            <div className="property">
                                 <a href="property-single.html">
-                                    <img src={require("../assets/images/property_2.jpg")} alt="Image" class="img-fluid"></img>
+                                    <img src={require("../assets/images/property_2.jpg")} alt="Image" className="img-fluid"></img>
                                 </a>
-                                <div class="prop-details p-3">
-                                    <div><strong class="price">$3,400,000</strong></div>
-                                    <div class="mb-2 d-flex justify-content-between">
-                                        <span class="w border-r">6 beds</span>
-                                        <span class="w border-r">4 baths</span>
-                                        <span class="w">4,250 sqft.</span>
+                                <div className="prop-details p-3">
+                                    <div><strong className="price">$3,400,000</strong></div>
+                                    <div className="mb-2 d-flex justify-content-between">
+                                        <span className="w border-r">6 beds</span>
+                                        <span className="w border-r">4 baths</span>
+                                        <span className="w">4,250 sqft.</span>
                                     </div>
                                     <div>480 12th, Unit 14, San Francisco, CA</div>
                                 </div>
                             </div>
 
-                            <div class="property">
+                            <div className="property">
                                 <a href="property-single.html">
-                                    <img src={require("../assets/images/property_3.jpg")} alt="Image" class="img-fluid"></img>
+                                    <img src={require("../assets/images/property_3.jpg")} alt="Image" className="img-fluid"></img>
                                 </a>
-                                <div class="prop-details p-3">
-                                    <div><strong class="price">$3,400,000</strong></div>
-                                    <div class="mb-2 d-flex justify-content-between">
-                                        <span class="w border-r">6 beds</span>
-                                        <span class="w border-r">4 baths</span>
-                                        <span class="w">4,250 sqft.</span>
+                                <div className="prop-details p-3">
+                                    <div><strong className="price">$3,400,000</strong></div>
+                                    <div className="mb-2 d-flex justify-content-between">
+                                        <span className="w border-r">6 beds</span>
+                                        <span className="w border-r">4 baths</span>
+                                        <span className="w">4,250 sqft.</span>
                                     </div>
                                     <div>480 12th, Unit 14, San Francisco, CA</div>
                                 </div>
                             </div>
 
-                            <div class="property">
+                            <div className="property">
                                 <a href="property-single.html">
-                                    <img src={require("../assets/images/property_4.jpg")} alt="Image" class="img-fluid"></img>
+                                    <img src={require("../assets/images/property_4.jpg")} alt="Image" className="img-fluid"></img>
                                 </a>
-                                <div class="prop-details p-3">
-                                    <div><strong class="price">$3,400,000</strong></div>
-                                    <div class="mb-2 d-flex justify-content-between">
-                                        <span class="w border-r">6 beds</span>
-                                        <span class="w border-r">4 baths</span>
-                                        <span class="w">4,250 sqft.</span>
+                                <div className="prop-details p-3">
+                                    <div><strong className="price">$3,400,000</strong></div>
+                                    <div className="mb-2 d-flex justify-content-between">
+                                        <span className="w border-r">6 beds</span>
+                                        <span className="w border-r">4 baths</span>
+                                        <span className="w">4,250 sqft.</span>
                                     </div>
                                     <div>480 12th, Unit 14, San Francisco, CA</div>
                                 </div>
                             </div>
 
                         </div>
-                        <div class="row justify-content-center">
-                            <div class="col-md-4">
-                                <a href="listings.html" class="btn btn-primary btn-block">View All Property Listings</a>
+                        <div className="row justify-content-center">
+                            <div className="col-md-4">
+                                <a href="listings.html" className="btn btn-primary btn-block">View All Property Listings</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
 
-                <section class="site-section border-bottom" id="agents-section">
-                    <div class="container">
-                        <div class="row mb-5">
-                            <div class="col-md-7 text-left">
-                                <h2 class="section-title mb-3">Agents</h2>
-                                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus minima neque tempora reiciendis.</p>
+                <section className="site-section border-bottom" id="agents-section">
+                    <div className="container">
+                        <div className="row mb-5">
+                            <div className="col-md-7 text-left">
+                                <h2 className="section-title mb-3">Agents</h2>
+                                <p className="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus minima neque tempora reiciendis.</p>
                             </div>
                         </div>
-                        <div class="row">
+                        <div className="row">
 
 
-                            <div class="col-md-6 col-lg-4 mb-4">
-                                <div class="team-member">
+                            <div className="col-md-6 col-lg-4 mb-4">
+                                <div className="team-member">
                                     <figure>
-                                        <ul class="social">
-                                            <li><a href="#"><span class="icon-facebook"></span></a></li>
-                                            <li><a href="#"><span class="icon-twitter"></span></a></li>
-                                            <li><a href="#"><span class="icon-linkedin"></span></a></li>
-                                            <li><a href="#"><span class="icon-instagram"></span></a></li>
+                                        <ul className="social">
+                                            <li><a href="#"><span className="icon-facebook"></span></a></li>
+                                            <li><a href="#"><span className="icon-twitter"></span></a></li>
+                                            <li><a href="#"><span className="icon-linkedin"></span></a></li>
+                                            <li><a href="#"><span className="icon-instagram"></span></a></li>
                                         </ul>
-                                        <img src={require("../assets/images/person_5.jpg")} alt="Image" class="img-fluid" />
+                                        <img src={require("../assets/images/person_5.jpg")} alt="Image" className="img-fluid" />
                                     </figure>
-                                    <div class="p-3">
-                                        <h3 class="mb-2">Kaiara Spencer</h3>
-                                        <span class="position">Real Estate Agent</span>
+                                    <div className="p-3">
+                                        <h3 className="mb-2">Kaiara Spencer</h3>
+                                        <span className="position">Real Estate Agent</span>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-md-6 col-lg-4 mb-4">
-                                <div class="team-member">
+                            <div className="col-md-6 col-lg-4 mb-4">
+                                <div className="team-member">
                                     <figure>
-                                        <ul class="social">
-                                            <li><a href="#"><span class="icon-facebook"></span></a></li>
-                                            <li><a href="#"><span class="icon-twitter"></span></a></li>
-                                            <li><a href="#"><span class="icon-linkedin"></span></a></li>
-                                            <li><a href="#"><span class="icon-instagram"></span></a></li>
+                                        <ul className="social">
+                                            <li><a href="#"><span className="icon-facebook"></span></a></li>
+                                            <li><a href="#"><span className="icon-twitter"></span></a></li>
+                                            <li><a href="#"><span className="icon-linkedin"></span></a></li>
+                                            <li><a href="#"><span className="icon-instagram"></span></a></li>
                                         </ul>
-                                        <img src={require("../assets/images/person_6.jpg")} alt="Image" class="img-fluid" />
+                                        <img src={require("../assets/images/person_6.jpg")} alt="Image" className="img-fluid" />
                                     </figure>
-                                    <div class="p-3">
-                                        <h3 class="mb-2">Dave Simpson</h3>
-                                        <span class="position">Real Estate Agent</span>
+                                    <div className="p-3">
+                                        <h3 className="mb-2">Dave Simpson</h3>
+                                        <span className="position">Real Estate Agent</span>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-md-6 col-lg-4 mb-4">
-                                <div class="team-member">
+                            <div className="col-md-6 col-lg-4 mb-4">
+                                <div className="team-member">
                                     <figure>
-                                        <ul class="social">
-                                            <li><a href="#"><span class="icon-facebook"></span></a></li>
-                                            <li><a href="#"><span class="icon-twitter"></span></a></li>
-                                            <li><a href="#"><span class="icon-linkedin"></span></a></li>
-                                            <li><a href="#"><span class="icon-instagram"></span></a></li>
+                                        <ul className="social">
+                                            <li><a href="#"><span className="icon-facebook"></span></a></li>
+                                            <li><a href="#"><span className="icon-twitter"></span></a></li>
+                                            <li><a href="#"><span className="icon-linkedin"></span></a></li>
+                                            <li><a href="#"><span className="icon-instagram"></span></a></li>
                                         </ul>
-                                        <img src={require("../assets/images/person_7.jpg")} alt="Image" class="img-fluid" />
+                                        <img src={require("../assets/images/person_7.jpg")} alt="Image" className="img-fluid" />
                                     </figure>
-                                    <div class="p-3">
-                                        <h3 class="mb-2">Ben Thompson</h3>
-                                        <span class="position">Real Estate Agent</span>
+                                    <div className="p-3">
+                                        <h3 className="mb-2">Ben Thompson</h3>
+                                        <span className="position">Real Estate Agent</span>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-md-6 col-lg-4 mb-4">
-                                <div class="team-member">
+                            <div className="col-md-6 col-lg-4 mb-4">
+                                <div className="team-member">
                                     <figure>
-                                        <ul class="social">
-                                            <li><a href="#"><span class="icon-facebook"></span></a></li>
-                                            <li><a href="#"><span class="icon-twitter"></span></a></li>
-                                            <li><a href="#"><span class="icon-linkedin"></span></a></li>
-                                            <li><a href="#"><span class="icon-instagram"></span></a></li>
+                                        <ul className="social">
+                                            <li><a href="#"><span className="icon-facebook"></span></a></li>
+                                            <li><a href="#"><span className="icon-twitter"></span></a></li>
+                                            <li><a href="#"><span className="icon-linkedin"></span></a></li>
+                                            <li><a href="#"><span className="icon-instagram"></span></a></li>
                                         </ul>
-                                        <img src={require("../assets/images/person_8.jpg")} alt="Image" class="img-fluid" />
+                                        <img src={require("../assets/images/person_8.jpg")} alt="Image" className="img-fluid" />
                                     </figure>
-                                    <div class="p-3">
-                                        <h3 class="mb-2">Kyla Stewart</h3>
-                                        <span class="position">Real Estate Agent</span>
+                                    <div className="p-3">
+                                        <h3 className="mb-2">Kyla Stewart</h3>
+                                        <span className="position">Real Estate Agent</span>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-md-6 col-lg-4 mb-4">
-                                <div class="team-member">
+                            <div className="col-md-6 col-lg-4 mb-4">
+                                <div className="team-member">
                                     <figure>
-                                        <ul class="social">
-                                            <li><a href="#"><span class="icon-facebook"></span></a></li>
-                                            <li><a href="#"><span class="icon-twitter"></span></a></li>
-                                            <li><a href="#"><span class="icon-linkedin"></span></a></li>
-                                            <li><a href="#"><span class="icon-instagram"></span></a></li>
+                                        <ul className="social">
+                                            <li><a href="#"><span className="icon-facebook"></span></a></li>
+                                            <li><a href="#"><span className="icon-twitter"></span></a></li>
+                                            <li><a href="#"><span className="icon-linkedin"></span></a></li>
+                                            <li><a href="#"><span className="icon-instagram"></span></a></li>
                                         </ul>
-                                        <img src={require("../assets/images/person_5.jpg")} alt="Image" class="img-fluid" />
+                                        <img src={require("../assets/images/person_5.jpg")} alt="Image" className="img-fluid" />
                                     </figure>
-                                    <div class="p-3">
-                                        <h3 class="mb-2">Kaiara Spencer</h3>
-                                        <span class="position">Real Estate Agent</span>
+                                    <div className="p-3">
+                                        <h3 className="mb-2">Kaiara Spencer</h3>
+                                        <span className="position">Real Estate Agent</span>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-md-6 col-lg-4 mb-4">
-                                <div class="team-member">
+                            <div className="col-md-6 col-lg-4 mb-4">
+                                <div className="team-member">
                                     <figure>
-                                        <ul class="social">
-                                            <li><a href="#"><span class="icon-facebook"></span></a></li>
-                                            <li><a href="#"><span class="icon-twitter"></span></a></li>
-                                            <li><a href="#"><span class="icon-linkedin"></span></a></li>
-                                            <li><a href="#"><span class="icon-instagram"></span></a></li>
+                                        <ul className="social">
+                                            <li><a href="#"><span className="icon-facebook"></span></a></li>
+                                            <li><a href="#"><span className="icon-twitter"></span></a></li>
+                                            <li><a href="#"><span className="icon-linkedin"></span></a></li>
+                                            <li><a href="#"><span className="icon-instagram"></span></a></li>
                                         </ul>
-                                        <img src={require("../assets/images/person_6.jpg")} alt="Image" class="img-fluid" />
+                                        <img src={require("../assets/images/person_6.jpg")} alt="Image" className="img-fluid" />
                                     </figure>
-                                    <div class="p-3">
-                                        <h3 class="mb-2">Dave Simpson</h3>
-                                        <span class="position">Real Estate Agent</span>
+                                    <div className="p-3">
+                                        <h3 className="mb-2">Dave Simpson</h3>
+                                        <span className="position">Real Estate Agent</span>
                                     </div>
                                 </div>
                             </div>
@@ -573,30 +573,30 @@ export default class Properties extends Component {
                 </section>
 
 
-                <section class="site-section" id="about-section">
-                    <div class="container">
+                <section className="site-section" id="about-section">
+                    <div className="container">
 
-                        <div class="row">
-                            <div class="col-lg-6">
+                        <div className="row">
+                            <div className="col-lg-6">
 
-                                <div class="owl-carousel slide-one-item-alt">
-                                    <img src={require("../assets/images/property_1.jpg")} alt="Image" class="img-fluid" />
-                                    <img src={require("../assets/images/property_2.jpg")} alt="Image" class="img-fluid" />
-                                    <img src={require("../assets/images/property_3.jpg")} alt="Image" class="img-fluid" />
-                                    <img src={require("../assets/images/property_4.jpg")} alt="Image" class="img-fluid" />
+                                <div className="owl-carousel slide-one-item-alt">
+                                    <img src={require("../assets/images/property_1.jpg")} alt="Image" className="img-fluid" />
+                                    <img src={require("../assets/images/property_2.jpg")} alt="Image" className="img-fluid" />
+                                    <img src={require("../assets/images/property_3.jpg")} alt="Image" className="img-fluid" />
+                                    <img src={require("../assets/images/property_4.jpg")} alt="Image" className="img-fluid" />
                                 </div>
-                                <div class="custom-direction" style={{ textAlign: "center", left: "15%" }}>
-                                    <a href="#" class="custom-prev">Prev</a><a href="#" class="custom-next">Next</a>
+                                <div className="custom-direction" style={{ textAlign: "center", left: "15%" }}>
+                                    <a href="#" className="custom-prev">Prev</a><a href="#" className="custom-next">Next</a>
                                 </div>
 
                             </div>
-                            <div class="col-lg-5 ml-auto">
+                            <div className="col-lg-5 ml-auto">
 
-                                <h2 class="section-title mb-3">We Are The Best RealEstate Company</h2>
-                                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <h2 className="section-title mb-3">We Are The Best RealEstate Company</h2>
+                                <p className="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                                 <p>Est qui eos quasi ratione nostrum excepturi id recusandae fugit omnis ullam pariatur itaque nisi voluptas impedit  Quo suscipit omnis iste velit maxime.</p>
 
-                                <ul class="list-unstyled ul-check success">
+                                <ul className="list-unstyled ul-check success">
                                     <li>Placeat maxime animi minus</li>
                                     <li>Dolore qui placeat maxime</li>
                                     <li>Consectetur adipisicing</li>
@@ -604,7 +604,7 @@ export default class Properties extends Component {
                                     <li>Placeat molestias animi</li>
                                 </ul>
 
-                                <p><a href="#" class="btn btn-primary mr-2 mb-2">Learn More</a></p>
+                                <p><a href="#" className="btn btn-primary mr-2 mb-2">Learn More</a></p>
 
                             </div>
                         </div>
@@ -613,17 +613,17 @@ export default class Properties extends Component {
 
 
 
-                <section class="site-section border-bottom bg-light" id="services-section">
-                    <div class="container">
-                        <div class="row mb-5">
-                            <div class="col-12 text-center">
-                                <h2 class="section-title mb-3">Services</h2>
+                <section className="site-section border-bottom bg-light" id="services-section">
+                    <div className="container">
+                        <div className="row mb-5">
+                            <div className="col-12 text-center">
+                                <h2 className="section-title mb-3">Services</h2>
                             </div>
                         </div>
-                        <div class="row align-items-stretch">
-                            <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
+                        <div className="row align-items-stretch">
+                            <div className="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
                                 <div className="unit-4 d-flex" style={{ color: "grey" }}>
-                                    <div class="unit-4-icon mr-4"><span class="text-primary flaticon-house"></span></div>
+                                    <div className="unit-4-icon mr-4"><span className="text-primary flaticon-house"></span></div>
                                     <div>
                                         <h3>Search Property</h3>
                                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
@@ -631,9 +631,9 @@ export default class Properties extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
+                            <div className="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
                                 <div className="unit-4 d-flex" style={{ color: "grey" }}>
-                                    <div class="unit-4-icon mr-4"><span class="text-primary flaticon-coin"></span></div>
+                                    <div className="unit-4-icon mr-4"><span className="text-primary flaticon-coin"></span></div>
                                     <div>
                                         <h3>Buy Property</h3>
                                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
@@ -641,9 +641,9 @@ export default class Properties extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
+                            <div className="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
                                 <div className="unit-4 d-flex" style={{ color: "grey" }}>
-                                    <div class="unit-4-icon mr-4"><span class="text-primary flaticon-home"></span></div>
+                                    <div className="unit-4-icon mr-4"><span className="text-primary flaticon-home"></span></div>
                                     <div>
                                         <h3>Invest a Home</h3>
                                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
@@ -653,9 +653,9 @@ export default class Properties extends Component {
                             </div>
 
 
-                            <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="300">
+                            <div className="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="300">
                                 <div className="unit-4 d-flex" style={{ color: "grey" }}>
-                                    <div class="unit-4-icon mr-4"><span class="text-primary flaticon-flat"></span></div>
+                                    <div className="unit-4-icon mr-4"><span className="text-primary flaticon-flat"></span></div>
                                     <div>
                                         <h3>Post Properties</h3>
                                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
@@ -663,9 +663,9 @@ export default class Properties extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="400">
+                            <div className="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="400">
                                 <div className="unit-4 d-flex" style={{ color: "grey" }}>
-                                    <div class="unit-4-icon mr-4"><span class="text-primary flaticon-location"></span></div>
+                                    <div className="unit-4-icon mr-4"><span className="text-primary flaticon-location"></span></div>
                                     <div>
                                         <h3>Property Locator</h3>
                                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
@@ -673,9 +673,9 @@ export default class Properties extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="500">
+                            <div className="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="500">
                                 <div className="unit-4 d-flex" style={{ color: "grey" }}>
-                                    <div class="unit-4-icon mr-4"><span class="text-primary flaticon-mobile-phone"></span></div>
+                                    <div className="unit-4-icon mr-4"><span className="text-primary flaticon-mobile-phone"></span></div>
                                     <div>
                                         <h3>Stated Apps</h3>
                                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
@@ -690,77 +690,77 @@ export default class Properties extends Component {
 
 
 
-                <section class="site-section bg-light bg-image" id="contact-section">
-                    <div class="container">
-                        <div class="row mb-5">
-                            <div class="col-12 text-center">
-                                {/* <!-- <h3 class="section-sub-title">Get</h3> --> */}
-                                <h2 class="section-title mb-3">Contact Us</h2>
+                <section className="site-section bg-light bg-image" id="contact-section">
+                    <div className="container">
+                        <div className="row mb-5">
+                            <div className="col-12 text-center">
+                                {/* <!-- <h3 className="section-sub-title">Get</h3> --> */}
+                                <h2 className="section-title mb-3">Contact Us</h2>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-7 mb-5">
+                        <div className="row">
+                            <div className="col-md-7 mb-5">
 
 
 
-                                <form action="#" class="p-5 bg-white">
+                                <form action="#" className="p-5 bg-white">
 
-                                    <h2 class="h4 text-black mb-5">Contact Form</h2>
+                                    <h2 className="h4 text-black mb-5">Contact Form</h2>
 
-                                    <div class="row form-group">
-                                        <div class="col-md-6 mb-3 mb-md-0">
-                                            <label class="text-black" for="fname">First Name</label>
-                                            <input type="text" id="fname" class="form-control" />
+                                    <div className="row form-group">
+                                        <div className="col-md-6 mb-3 mb-md-0">
+                                            <label className="text-black" for="fname">First Name</label>
+                                            <input type="text" id="fname" className="form-control" />
                                         </div>
-                                        <div class="col-md-6">
-                                            <label class="text-black" for="lname">Last Name</label>
-                                            <input type="text" id="lname" class="form-control" />
-                                        </div>
-                                    </div>
-
-                                    <div class="row form-group">
-
-                                        <div class="col-md-12">
-                                            <label class="text-black" for="email">Email</label>
-                                            <input type="email" id="email" class="form-control" />
+                                        <div className="col-md-6">
+                                            <label className="text-black" for="lname">Last Name</label>
+                                            <input type="text" id="lname" className="form-control" />
                                         </div>
                                     </div>
 
-                                    <div class="row form-group">
+                                    <div className="row form-group">
 
-                                        <div class="col-md-12">
-                                            <label class="text-black" for="subject">Subject</label>
-                                            <input type="subject" id="subject" class="form-control" />
+                                        <div className="col-md-12">
+                                            <label className="text-black" for="email">Email</label>
+                                            <input type="email" id="email" className="form-control" />
                                         </div>
                                     </div>
 
-                                    <div class="row form-group">
-                                        <div class="col-md-12">
-                                            <label class="text-black" for="message">Message</label>
-                                            <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Write your notes or questions here..."></textarea>
+                                    <div className="row form-group">
+
+                                        <div className="col-md-12">
+                                            <label className="text-black" for="subject">Subject</label>
+                                            <input type="subject" id="subject" className="form-control" />
                                         </div>
                                     </div>
 
-                                    <div class="row form-group">
-                                        <div class="col-md-12">
-                                            <input type="submit" value="Send Message" class="btn btn-primary btn-md text-white" />
+                                    <div className="row form-group">
+                                        <div className="col-md-12">
+                                            <label className="text-black" for="message">Message</label>
+                                            <textarea name="message" id="message" cols="30" rows="7" className="form-control" placeholder="Write your notes or questions here..."></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div className="row form-group">
+                                        <div className="col-md-12">
+                                            <input type="submit" value="Send Message" className="btn btn-primary btn-md text-white" />
                                         </div>
                                     </div>
 
 
                                 </form>
                             </div>
-                            <div class="col-md-5">
+                            <div className="col-md-5">
 
-                                <div class="p-4 mb-3 bg-white">
-                                    <p class="mb-0 font-weight-bold">Address</p>
-                                    <p class="mb-4">203 Fake St. Mountain View, San Francisco, California, USA</p>
+                                <div className="p-4 mb-3 bg-white">
+                                    <p className="mb-0 font-weight-bold">Address</p>
+                                    <p className="mb-4">203 Fake St. Mountain View, San Francisco, California, USA</p>
 
-                                    <p class="mb-0 font-weight-bold">Phone</p>
-                                    <p class="mb-4"><a href="#">+1 232 3235 324</a></p>
+                                    <p className="mb-0 font-weight-bold">Phone</p>
+                                    <p className="mb-4"><a href="#">+1 232 3235 324</a></p>
 
-                                    <p class="mb-0 font-weight-bold">Email Address</p>
-                                    <p class="mb-0"><a href="#">youremail@domain.com</a></p>
+                                    <p className="mb-0 font-weight-bold">Email Address</p>
+                                    <p className="mb-0"><a href="#">youremail@domain.com</a></p>
 
                                 </div>
 
