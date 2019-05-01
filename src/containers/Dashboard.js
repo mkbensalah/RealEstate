@@ -6,6 +6,7 @@ import Aux from '../components/hoc/Auxliary'
 import BuilderMaker from '../components/AllServices/ServiceMaker/BuilderMaker';
 import RepairMaker from '../components/AllServices/ServiceMaker/RepairMaker';
 import LeasingMaker from '../components/AllServices/ServiceMaker/LeasingMaker';
+import AdvertisingMaker from '../components/AllServices/ServiceMaker/AdvertisingMaker';
 
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -33,6 +34,7 @@ class Dashboard extends Component {
               <BuilderMaker agId={this.props.auth.user.id}/>
               <RepairMaker agId={this.props.auth.user.id}/>
               <LeasingMaker agId={this.props.auth.user.id}/>
+              <AdvertisingMaker agId={this.props.auth.user.id}/>
                 <Footer />
             </Aux>
         );

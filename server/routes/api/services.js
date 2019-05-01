@@ -164,6 +164,22 @@ router.post("/", passport.authenticate('jwt', { session: false }), (req, res) =>
                     })
                 }
 
+
+                // add Advertising service
+            else if (service.type === "Advertising") {
+
+                    if (req.body.advertisingType) service.advertisingType = req.body.advertisingType;
+                    if (req.body.marketingManagement) service.marketingManagement = req.body.marketingManagement;
+                    if (req.body.price) service.price = req.body.price;
+                    if (req.body.zone) service.zone = req.body.zone;
+
+                    serviceModel.addAdvertisingService(service, (err, result) => {
+                        // created successfully
+                        res.json({ result: "service added successfully", "service": result })
+                    })
+                }
+
+
             }
             else {
                 // update buiding

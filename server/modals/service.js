@@ -153,6 +153,55 @@ exports.addLeasingService = function (serviceSet, done) {
 };
 
 
+
+// add service(Advertising) to db
+exports.addAdvertisingService = function (serviceSet, done) {
+
+    var values = [
+        serviceSet.agenceid,
+        new Date(),
+        serviceSet.prix,
+        serviceSet.adresse,
+        serviceSet.Description
+    ];
+
+    db.get().query(
+        "INSERT INTO service (agenceid, date_creation, prix, adresse, Description)"
+        + "VALUES(?, ?, ?, ?, ?)",
+        values,
+        function (err, _result) {
+            if (err) {
+                console.log(err);
+                return done(err);
+            }
+
+
+            var values = [
+                _result.insertId,
+                serviceSet.advertisingType,
+                serviceSet.marketingManagement,
+                serviceSet.price,
+                serviceSet.zone,
+            ];
+            db.get().query(
+                "INSERT INTO AdvertisingService (serviceID, AdvertisingType, MarketingManagement, Price, Zone)"
+                + "VALUES(?, ?, ?, ?, ?)",
+                values,
+                function (err, result) {
+                    if (err) {
+                        console.log(err);
+                        return done(err);
+                    }
+                    done(null, { service: _result, reconstruction: result });
+                }
+            );
+        }
+    );
+};
+
+
+
+
 // update service(leasing) to db
 exports.updateLeasingService = function (serviceSet, serviceSetOld, done) {
 
