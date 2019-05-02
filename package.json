@@ -5,7 +5,10 @@
   "dependencies": {
     "@material-ui/core": "^3.9.3",
     "@material-ui/icons": "^3.0.2",
+<<<<<<< Updated upstream
     "@trendmicro/react-sidenav": "^0.4.5",
+=======
+>>>>>>> Stashed changes
     "axios": "^0.18.0",
     "classnames": "^2.2.6",
     "font-awesome": "^4.7.0",
