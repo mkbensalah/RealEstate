@@ -1,6 +1,111 @@
 var db = require("../helpers/db-setup");
 
-// add service(leasing) to db
+// add service(Builder) to db
+exports.addBuilderService = function (serviceSet, done) {
+
+    var values = [
+        serviceSet.agenceid,
+        new Date(),
+        serviceSet.prix,
+        serviceSet.adresse,
+        serviceSet.Description
+    ];
+
+    console.log("at create");
+    //console.log(values);
+
+
+    db.get().query(
+        "INSERT INTO service (agenceid, date_creation, prix, adresse, Description)"
+        + "VALUES(?, ?, ?, ?, ?)",
+        values,
+        function (err, _result) {
+            if (err) {
+                console.log(err);
+                return done(err);
+            }
+            let deco = 0;
+            (serviceSet.decoration == "yes") ? deco = 1 : deco = 0 ;
+            var values = [
+                _result.insertId,
+                serviceSet.buildingType,
+                serviceSet.workerNumber,
+                serviceSet.priceWorker,
+                serviceSet.maxArea,
+                serviceSet.minTotalPrice,
+                deco,
+                serviceSet.zone
+            ];
+            console.log(values);
+            db.get().query(
+                "INSERT INTO BuilderService (serviceID, BuildingType, WorkerNumber, WorkerPrice, MaxArea, MinTotalPrice,Decoration, Zone)"
+                + "VALUES(?, ?, ?, ?, ?, ?, ?, ?)",
+                values,
+                function (err, result) {
+                    if (err) {
+                        console.log(err);
+                        return done(err);
+                    }
+                    done(null, { service: _result, building: result });
+                }
+            );
+        }
+    );
+};
+
+
+// add service(Repair) to db
+exports.addRepairService = function (serviceSet, done) {
+
+    var values = [
+        serviceSet.agenceid,
+        new Date(),
+        serviceSet.prix,
+        serviceSet.adresse,
+        serviceSet.Description
+    ];
+
+    db.get().query(
+        "INSERT INTO service (agenceid, date_creation, prix, adresse, Description)"
+        + "VALUES(?, ?, ?, ?, ?)",
+        values,
+        function (err, _result) {
+            if (err) {
+                console.log(err);
+                return done(err);
+            }
+
+            let inc = 0;
+            (serviceSet.piecesIncluded == "yes") ? inc = 1 : inc = 0 ;
+
+            var values = [
+                _result.insertId,
+                serviceSet.repairType,
+                serviceSet.priceWorker,
+                serviceSet.damageType,
+                serviceSet.minTotalPrice,
+                inc,
+                serviceSet.zone,
+            ];
+            db.get().query(
+                "INSERT INTO RepairService (serviceID, RepairType, WorkerPrice, DamageType, MinTotalPrice, PiecesIncluded, Zone)"
+                + "VALUES(?, ?, ?, ?, ?, ?, ?)",
+                values,
+                function (err, result) {
+                    if (err) {
+                        console.log(err);
+                        return done(err);
+                    }
+                    done(null, { service: _result, reconstruction: result });
+                }
+            );
+        }
+    );
+};
+
+
+
+// add service(Leasing) to db
 exports.addLeasingService = function (serviceSet, done) {
 
     var values = [
@@ -20,23 +125,27 @@ exports.addLeasingService = function (serviceSet, done) {
                 console.log(err);
                 return done(err);
             }
+
+
             var values = [
                 _result.insertId,
-                serviceSet.nb_chambre,
-                new Date(),
-                serviceSet.haut_standing,
-                serviceSet.meuble
+                serviceSet.buildingType,
+                serviceSet.fromDate,
+                serviceSet.duration,
+                serviceSet.price,
+                serviceSet.increase,
+                serviceSet.zone,
             ];
             db.get().query(
-                "INSERT INTO service_location (serviceID, nb_chambre, date, haute_standing, meuble)"
-                + "VALUES(?, ?, ?, ?, ?)",
+                "INSERT INTO LeasingService (serviceID, BuildingType, FromDate, Duration, Price, Increase, Zone)"
+                + "VALUES(?, ?, ?, ?, ?, ?, ?)",
                 values,
                 function (err, result) {
                     if (err) {
                         console.log(err);
                         return done(err);
                     }
-                    done(null, { service: _result, building: result });
+                    done(null, { service: _result, reconstruction: result });
                 }
             );
         }
@@ -44,8 +153,9 @@ exports.addLeasingService = function (serviceSet, done) {
 };
 
 
-// add service(reconstruction) to db
-exports.addReconstructService = function (serviceSet, done) {
+
+// add service(Advertising) to db
+exports.addAdvertisingService = function (serviceSet, done) {
 
     var values = [
         serviceSet.agenceid,
@@ -64,15 +174,18 @@ exports.addReconstructService = function (serviceSet, done) {
                 console.log(err);
                 return done(err);
             }
+
+
             var values = [
                 _result.insertId,
-                serviceSet.service_reconstructioncol,
-                serviceSet.prix_metre,
-                serviceSet.type_reconstruction
+                serviceSet.advertisingType,
+                serviceSet.marketingManagement,
+                serviceSet.price,
+                serviceSet.zone,
             ];
             db.get().query(
-                "INSERT INTO service_reconstruction (idservice, service_reconstructioncol, prix_metre, type_reconstruction)"
-                + "VALUES(?, ?, ?, ?)",
+                "INSERT INTO AdvertisingService (serviceID, AdvertisingType, MarketingManagement, Price, Zone)"
+                + "VALUES(?, ?, ?, ?, ?)",
                 values,
                 function (err, result) {
                     if (err) {
@@ -85,6 +198,9 @@ exports.addReconstructService = function (serviceSet, done) {
         }
     );
 };
+
+
+
 
 // update service(leasing) to db
 exports.updateLeasingService = function (serviceSet, serviceSetOld, done) {
