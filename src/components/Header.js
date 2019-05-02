@@ -51,17 +51,17 @@ class Header extends Component {
 						<ul className="d-flex flex-row align-items-center justify-content-start">
 							{/* <!-- Phone --> */}
 							<li className="d-flex flex-row align-items-center justify-content-start">
-								<div><img src="images/phone-call.svg" alt=""></img></div>
+								<div><img src={require("../assets/images/phone-call.png")} alt=""></img></div>
 								<span>+216 28586 319</span>
 							</li>
 							{/* <!-- Address --> */}
 							<li className="d-flex flex-row align-items-center justify-content-start">
-								<div><img src="images/placeholder.svg" alt=""></img></div>
+								<div><img src={require("../assets/images/location.png")} alt=""></img></div>
 								<span>BP 676 Centre Urbain Nord - 1080 Cedex</span>
 							</li>
 							{/* <!-- Email --> */}
 							<li className="d-flex flex-row align-items-center justify-content-start">
-								<div><img src="images/envelope.svg" alt=""></img></div>
+								<div><img src={require("../assets/images/envelope.png")} alt=""></img></div>
 								<span>dari.tn@contact.com</span>
 							</li>
 						</ul>

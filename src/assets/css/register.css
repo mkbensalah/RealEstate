@@ -254,8 +254,9 @@ body {
 .inner .form-row .form-holder select {
   width: 100%;
   padding: 5px 0px 13px;
-  border: none;
+  /* border: 1px solid white; */
   appearance: unset;
+  outline: none;
   -moz-appearance: unset;
   -webkit-appearance: unset;
   -o-appearance: unset;

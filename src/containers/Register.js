@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { registerUser } from '../actions/authAction';
+import classnames from 'classnames';
 
 
 import Button from '../components/hoc/Button';
@@ -16,9 +17,43 @@ class Register extends Component {
     constructor() {
         super();
 
+        this.state = {
+            firstName: '',
+            lastName: '',
+            email: '',
+            phone: '',
+            password: '',
+            birthDate: '',
+            bank: '',
+            plan: '',
+            cin: '',
+            licence: '',
+            terms: '',
+            errors: {
+                // name: "fix this error",
+                // email: "fix this error",
+                // phone: "fix this error",
+                // password: "fix this error",
+                // birthDate: "fix this error",
+                // bank: "fix this error",
+                // plan: "fix this error"
+                // licence: "fix this error"
+                // cin: "fix this error"
+            }
+        };
+
+        this.onChange = this.onChange.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
+
+
     }
+
     componentDidMount() {
-        jQuery(document).ready(function () {
+        if (this.props.auth.isAuthenticated) {
+            this.props.history.push('/dashboard');
+        }
+
+        jQuery(document).ready(() => {
 
             window.$("#form-total").steps({
                 headerTag: "h2",
@@ -36,8 +71,52 @@ class Register extends Component {
                     current: ''
                 },
             })
+
+            var form = $('.btn-info');
+            var submitBtn = $('a[href="#finish"]');
+            submitBtn.on("click", function () {
+                form.click();
+            });
+
+            $('#inner').hide();
+
+            var accountTypeBtn = $('.btn-outline-primary');
+            accountTypeBtn.on('click', function (e) {
+                $(e.target).addClass("active");
+                if (accountTypeBtn.get(0) != e.target) {
+                    $('#section4').hide();
+                    $('#form-total-t-3').hide();
+                    $('#inner').show();
+                    console.log($('input[name=cin]'))
+                    $('input[name=cin]').prop('required', false);
+                    $('input[name=licence]').prop('required', false);
+
+                    $(accountTypeBtn.get(0)).removeClass("active");
+                }
+                else {
+                    $('#section4').show();
+                    $('#form-total-t-3').show();
+                    $('#inner').hide();
+                    $('input[name=cin]').prop('required', true);
+                    $('input[name=licence]').prop('required', true);
+
+                    $(accountTypeBtn.get(1)).removeClass("active");
+                }
+            })
+
+            $('input').on("focus", (e) => {
+                $(e.target).removeClass("is-invalid");
+            })
+
+            $('input').on("change", (e) => {
+                this.setState({ [e.target.name]: e.target.value });
+            })
+
         })
     }
+
+
+
 
     // num_patente = {
     //     id: 'num_patente',
@@ -264,140 +343,149 @@ class Register extends Component {
     // }
 
 
-    // componentDidMount() {
-    //     if (this.props.auth.isAuthenticated) {
-    //         this.props.history.push('/dashboard');
-    //     }
-    // }
+    onChange(e) {
+        console.log(e.target.value);
+        this.setState({ [e.target.name]: e.target.value });
+    }
 
-    // componentWillReceiveProps(nextProps) {
-    //     if (nextProps.errors) {
-    //         this.setState({ errors: nextProps.errors });
-    //     }
-    // }
-
-    // orderHandler = (event) => {
-    //     event.preventDefault();
-    //     this.setState({ loading: true });
-    //     const formData = {};
-    //     for (let formElementIdentifier in this.state.orderForm) {
-    //         formData[formElementIdentifier] = this.state.orderForm[formElementIdentifier].value;
-    //     }
-
-    //     var newUser = {
-    //         account_type: this.state.orderForm.type.value,
-    //         username: this.state.orderForm.username.value,
-    //         email: this.state.orderForm.email.value,
-    //         state: this.state.orderForm.state.value,
-    //         tel: this.state.orderForm.tel.value,
-    //         password: this.state.orderForm.password.value,
-
-    //         cin: this.state.CIN.value,
-
-    //         patente_num: this.state.num_patente.value,
-    //         about: this.state.description.value
-    //     }
-
-    //     console.log(newUser);
-    //     // fire register action form
-    //     this.props.registerUser(newUser, this.props.history, this.props.loading);
-
-    // }
-    // checkValidity(value, rules) {
-    //     let isValid = true;
-    //     if (!rules) {
-    //         return true;
-    //     }
-
-    //     if (rules.required) {
-    //         isValid = value.trim() !== '' && isValid;
-    //     }
-
-    //     if (rules.minLength) {
-    //         isValid = value.length >= rules.minLength && isValid
-    //     }
-
-    //     if (rules.maxLength) {
-    //         isValid = value.length <= rules.maxLength && isValid
-    //     }
-
-    //     if (rules.isEmail) {
-    //         const pattern = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
-    //         isValid = pattern.test(value) && isValid
-    //     }
-
-    //     if (rules.isNumeric) {
-    //         const pattern = /^\d+$/;
-    //         isValid = pattern.test(value) && isValid
-    //     }
-
-    //     return isValid;
-    // }
-    // inputChangedHandler = (event, inputIdentifier) => {
-    //     if (inputIdentifier === 'CIN') {
-
-    //         this.cin.config.value = event.target.value;
-
-    //         this.cin.config.valid = this.checkValidity(this.cin.config.value, this.cin.config.validation);
-    //         console.log(this.cin.config.valid);
-    //         this.cin.config.touched = true;
-
-    //         let formIsValid = true;
-
-    //         formIsValid = this.cin.config.valid && formIsValid;
-    //         this.setState({ CIN: this.cin.config, formIsValid: formIsValid });
-    //         //console.log(this.state.CIN)
-    //     }
-    //     else if (inputIdentifier === 'num_patente') {
-    //         this.num_patente.config.value = event.target.value;
-
-    //         this.num_patente.config.valid = this.checkValidity(this.num_patente.config.value, this.num_patente.config.validation);
-    //         // console.log(this.num_patente.config.valid );
-    //         this.num_patente.config.touched = true;
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.errors) {
+            this.setState({ errors: nextProps.errors });
+        }
+    }
 
 
-    //         let formIsValid = true;
-
-    //         formIsValid = this.num_patente.config.valid && formIsValid;
-    //         this.setState({ num_patente: this.num_patente.config, formIsValid: formIsValid });
-    //         // console.log(this.state.num_patente)
-    //     }
-    //     else if (inputIdentifier === 'description') {
-    //         this.description.config.value = event.target.value;
-
-    //         this.description.config.valid = this.checkValidity(this.description.config.value, this.description.config.validation);
-    //         //console.log(this.description.config.valid );
-    //         this.description.config.touched = true;
+    onSubmit(event) {
+        event.preventDefault();
+        console.log("hey");
+        this.setState({ loading: true });
+        const formData = {};
+        // for (let formElementIdentifier in this.state.orderForm) {
+        //     formData[formElementIdentifier] = this.state.orderForm[formElementIdentifier].value;
+        // }
 
 
-    //         let formIsValid = true;
+        var newUser = {
+            account_type: $($('.btn-outline-primary').get(0)).hasClass('active') ? "agent" : "client",
+            username: this.state.firstName + " " + this.state.lastName,
+            email: this.state.email,
+            state: $('input[name=radio1]:checked').val(),
+            tel: this.state.phone,
+            password: this.state.password,
+            bank: this.state.bank,
 
-    //         formIsValid = this.description.config.valid && formIsValid;
-    //         this.setState({ description: this.description.config, formIsValid: formIsValid });
-    //         //  console.log(this.state.description)
-    //     }
+            cin: this.state.cin,
 
-    //     else {
-    //         const updatedOrderForm = {
-    //             ...this.state.orderForm
-    //         };
-    //         const updatedFormElement = {
-    //             ...updatedOrderForm[inputIdentifier]
-    //         };
+            patente_num: this.state.licence,
 
-    //         updatedFormElement.value = event.target.value;
-    //         updatedFormElement.valid = this.checkValidity(updatedFormElement.value, updatedFormElement.validation);
-    //         updatedFormElement.touched = true;
-    //         updatedOrderForm[inputIdentifier] = updatedFormElement;
+        }
 
-    //         let formIsValid = true;
-    //         for (let inputIdentifier in updatedOrderForm) {
-    //             formIsValid = updatedOrderForm[inputIdentifier].valid && formIsValid;
+        if (!($("input[type=checkbox]").prop("checked"))) {
+            this.setState({ errors: { name: "required" } });
+            alert("Accept terms and conditions")
+        }
+        console.log(newUser);
+        console.log(this.state);
+
+        // fire register action form
+        this.props.registerUser(newUser, this.props.history, this.props.loading);
+
+    }
+    //     checkValidity(value, rules) {
+    //         let isValid = true;
+    //         if (!rules) {
+    //             return true;
     //         }
 
+    //         if (rules.required) {
+    //             isValid = value.trim() !== '' && isValid;
+    //         }
 
-    //         this.setState({ orderForm: updatedOrderForm, formIsValid: formIsValid });
+    //         if (rules.minLength) {
+    //             isValid = value.length >= rules.minLength && isValid
+    //         }
+
+    //         if (rules.maxLength) {
+    //             isValid = value.length <= rules.maxLength && isValid
+    //         }
+
+    //         if (rules.isEmail) {
+    //             const pattern = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+    //             isValid = pattern.test(value) && isValid
+    //         }
+
+    //         if (rules.isNumeric) {
+    //             const pattern = /^\d+$/;
+    //             isValid = pattern.test(value) && isValid
+    //         }
+
+    //         return isValid;
     //     }
+    //     inputChangedHandler = (event, inputIdentifier) => {
+    //         if (inputIdentifier === 'CIN') {
+
+    //             this.cin.config.value = event.target.value;
+
+    //             this.cin.config.valid = this.checkValidity(this.cin.config.value, this.cin.config.validation);
+    //             console.log(this.cin.config.valid);
+    //             this.cin.config.touched = true;
+
+    //             let formIsValid = true;
+
+    //             formIsValid = this.cin.config.valid && formIsValid;
+    //             this.setState({ CIN: this.cin.config, formIsValid: formIsValid });
+    //             //console.log(this.state.CIN)
+    //         }
+    //         else if (inputIdentifier === 'num_patente') {
+    //             this.num_patente.config.value = event.target.value;
+
+    //             this.num_patente.config.valid = this.checkValidity(this.num_patente.config.value, this.num_patente.config.validation);
+    //             // console.log(this.num_patente.config.valid );
+    //             this.num_patente.config.touched = true;
+
+
+    //             let formIsValid = true;
+
+    //             formIsValid = this.num_patente.config.valid && formIsValid;
+    //             this.setState({ num_patente: this.num_patente.config, formIsValid: formIsValid });
+    //             // console.log(this.state.num_patente)
+    //         }
+    //         else if (inputIdentifier === 'description') {
+    //             this.description.config.value = event.target.value;
+
+    //             this.description.config.valid = this.checkValidity(this.description.config.value, this.description.config.validation);
+    //             //console.log(this.description.config.valid );
+    //             this.description.config.touched = true;
+
+
+    //             let formIsValid = true;
+
+    //             formIsValid = this.description.config.valid && formIsValid;
+    //             this.setState({ description: this.description.config, formIsValid: formIsValid });
+    //             //  console.log(this.state.description)
+    //         }
+
+    //         else {
+    //             const updatedOrderForm = {
+    //                 ...this.state.orderForm
+    //             };
+    //             const updatedFormElement = {
+    //                 ...updatedOrderForm[inputIdentifier]
+    //             };
+
+    //             updatedFormElement.value = event.target.value;
+    //             updatedFormElement.valid = this.checkValidity(updatedFormElement.value, updatedFormElement.validation);
+    //             updatedFormElement.touched = true;
+    //             updatedOrderForm[inputIdentifier] = updatedFormElement;
+
+    //             let formIsValid = true;
+    //             for (let inputIdentifier in updatedOrderForm) {
+    //                 formIsValid = updatedOrderForm[inputIdentifier].valid && formIsValid;
+    //             }
+
+
+    //             this.setState({ orderForm: updatedOrderForm, formIsValid: formIsValid });
+    //         }
 
 
 
@@ -406,6 +494,7 @@ class Register extends Component {
 
 
     render() {
+
         // const formElementsArray = [];
         // for (let key in this.state.orderForm) {
         //     formElementsArray.push({
@@ -449,20 +538,30 @@ class Register extends Component {
         //     </form>
         // );
 
+        const { errors } = this.state;
+
         return (
             // <div classNameName="ContactData">
             //     <h4>Enter your Contact Data</h4>
             //     {form}
             // </div>
+
             <div>
                 <Header theme="#fefefe" isLighten={false} />
+
+
                 <div className="page-content">
 
                     <div className="form-v1-content">
 
                         <div className="wizard-form">
-                            <form className="form-register" action="#" method="post">
+                            <form className="form-register" onSubmit={this.onSubmit}>
                                 <div id="form-total">
+
+                                    <div className="btn-group" role="group" aria-label="Basic example" style={{ marginTop: "20px" }}>
+                                        <button type="button" className="btn btn-outline-primary active" style={{ borderTopLeftRadius: "20px", borderBottomLeftRadius: "20px" }}>Agent</button>
+                                        <button type="button" className="btn btn-outline-primary" style={{ borderTopRightRadius: "20px", borderBottomRightRadius: "20px" }}>Client</button>
+                                    </div>
                                     {/* <!-- SECTION 1 --> */}
                                     <h2>
                                         <p className="step-icon"><span>01</span></p>
@@ -478,13 +577,29 @@ class Register extends Component {
                                                 <div className="form-holder">
                                                     <fieldset>
                                                         <legend>First Name</legend>
-                                                        <input type="text" className="form-control" id="first-name" name="first-name" placeholder="First Name" required />
+                                                        <input type="text" className={classnames('form-control form-control-lg', {
+                                                            'is-invalid': errors.name
+                                                        })} id="first-name" name="firstName" placeholder="First Name"
+                                                            value={this.state.firstName}
+                                                            onChange={this.onChange}
+                                                            required />
+                                                        {errors.name && (
+                                                            <div className="invalid-feedback">{errors.name}</div>
+                                                        )}
                                                     </fieldset>
                                                 </div>
                                                 <div className="form-holder">
                                                     <fieldset>
                                                         <legend>Last Name</legend>
-                                                        <input type="text" className="form-control" id="last-name" name="last-name" placeholder="Last Name" required />
+                                                        <input type="text" className={classnames('form-control form-control-lg', {
+                                                            'is-invalid': errors.name
+                                                        })} id="last-name" name="lastName" placeholder="Last Name"
+                                                            value={this.state.firstName}
+                                                            onChange={this.onChange}
+                                                            required />
+                                                        {errors.name && (
+                                                            <div className="invalid-feedback">{errors.name}</div>
+                                                        )}
                                                     </fieldset>
                                                 </div>
                                             </div>
@@ -492,7 +607,15 @@ class Register extends Component {
                                                 <div className="form-holder form-holder-2">
                                                     <fieldset>
                                                         <legend>Your Email</legend>
-                                                        <input type="text" name="your_email" id="your_email" className="form-control" pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" placeholder="example@email.com" required />
+                                                        <input type="text" name="email" id="your_email" className={classnames('form-control form-control-lg', {
+                                                            'is-invalid': errors.email
+                                                        })} pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" placeholder="example@email.com"
+                                                            value={this.state.email}
+                                                            onChange={this.onChange}
+                                                            required />
+                                                        {errors.email && (
+                                                            <div className="invalid-feedback">{errors.email}</div>
+                                                        )}
                                                     </fieldset>
                                                 </div>
                                             </div>
@@ -500,7 +623,15 @@ class Register extends Component {
                                                 <div className="form-holder form-holder-2">
                                                     <fieldset>
                                                         <legend>Phone Number</legend>
-                                                        <input type="text" className="form-control" id="phone" name="phone" placeholder="+1 888-999-7777" required />
+                                                        <input type="number" className={classnames('form-control form-control-lg', {
+                                                            'is-invalid': errors.phone
+                                                        })} id="phone" name="phone" placeholder="+1 888-999-7777"
+                                                            value={this.state.phone}
+                                                            onChange={this.onChange}
+                                                            required />
+                                                        {errors.phone && (
+                                                            <div className="invalid-feedback">{errors.phone}</div>
+                                                        )}
                                                     </fieldset>
                                                 </div>
                                             </div>
@@ -508,32 +639,40 @@ class Register extends Component {
                                                 <div className="form-holder form-holder-2">
                                                     <label className="special-label">Birth Date:</label>
                                                     <select name="month" id="month">
-                                                        <option value="MM" disabled selected>MM</option>
+                                                        <option value="MM" disabled defaultValue>MM</option>
                                                         <option value="16">16</option>
                                                         <option value="17">17</option>
                                                         <option value="18">18</option>
                                                         <option value="19">19</option>
                                                     </select>
                                                     <select name="date" id="date">
-                                                        <option value="DD" disabled selected>DD</option>
+                                                        <option value="DD" disabled defaultValue>DD</option>
                                                         <option value="Feb">Feb</option>
                                                         <option value="Mar">Mar</option>
                                                         <option value="Apr">Apr</option>
                                                         <option value="May">May</option>
                                                     </select>
                                                     <select name="year" id="year">
-                                                        <option value="YYYY" disabled selected>YYYY</option>
-                                                        <option value="2017">2017</option>
-                                                        <option value="2016">2016</option>
-                                                        <option value="2015">2015</option>
-                                                        <option value="2014">2014</option>
-                                                        <option value="2013">2013</option>
+                                                        <option value="YYYY" disabled defaultValue>YYYY</option>
+                                                        <option value="2017">1987</option>
+                                                        <option value="2016">1988</option>
+                                                        <option value="2015">1985</option>
+                                                        <option value="2014">1984</option>
+                                                        <option value="2013">1983</option>
                                                     </select>
                                                 </div>
                                             </div>
                                             <div className="form-row">
                                                 <div className="form-holder form-holder-2">
-                                                    <input type="text" className="form-control input-border" id="ssn" name="ssn" placeholder="SSN" required />
+                                                    <input type="password" className={classnames('form-control form-control-lg', {
+                                                        'is-invalid': errors.password
+                                                    })} id="password" name="password" placeholder="Password"
+                                                        value={this.state.password}
+                                                        onChange={this.onChange}
+                                                        required />
+                                                    {errors.password && (
+                                                        <div className="invalid-feedback">{errors.password}</div>
+                                                    )}
                                                 </div>
                                             </div>
                                         </div>
@@ -551,22 +690,29 @@ class Register extends Component {
                                             </div>
                                             <div className="form-row">
                                                 <div className="form-holder form-holder-1">
-                                                    <input type="text" name="find_bank" id="find_bank" placeholder="Find Your Bank" className="form-control" required />
+                                                    <input type="text" name="bank" id="bank" placeholder="Find Your Bank" className={classnames('form-control form-control-lg', {
+                                                        'is-invalid': errors.bank
+                                                    })} value={this.state.bank}
+                                                        onChange={this.onChange}
+                                                        required />
+                                                    {errors.bank && (
+                                                        <div className="invalid-feedback">{errors.bank}</div>
+                                                    )}
                                                 </div>
                                             </div>
                                             <div className="form-row-total">
                                                 <div className="form-row">
                                                     <div className="form-holder form-holder-2 form-holder-3">
                                                         <input type="radio" className="radio" name="bank-1" id="bank-1" value="bank-1" checked />
-                                                        <label className="bank-images label-above bank-1-label" for="bank-1">
+                                                        <label className="bank-images label-above bank-1-label" htmlFor="bank-1">
                                                             <img src={require("../assets/images/biat.png")} alt="bank-1" />
                                                         </label>
                                                         <input type="radio" className="radio" name="bank-2" id="bank-2" value="bank-2" />
-                                                        <label className="bank-images label-above bank-2-label" for="bank-2">
+                                                        <label className="bank-images label-above bank-2-label" htmlFor="bank-2">
                                                             <img src={require("../assets/images/atb.jpg")} alt="bank-2" />
                                                         </label>
                                                         <input type="radio" className="radio" name="bank-3" id="bank-3" value="bank-3" />
-                                                        <label className="bank-images label-above bank-3-label" for="bank-3">
+                                                        <label className="bank-images label-above bank-3-label" htmlFor="bank-3">
                                                             <img src={require("../assets/images/bts.jpg")} alt="bank-3" />
                                                         </label>
                                                     </div>
@@ -574,16 +720,16 @@ class Register extends Component {
                                                 <div className="form-row">
                                                     <div className="form-holder form-holder-2 form-holder-3">
                                                         <input type="radio" className="radio" name="bank-4" id="bank-4" value="bank-4" />
-                                                        <label className="bank-images bank-4-label" for="bank-4">
+                                                        <label className="bank-images bank-4-label" htmlFor="bank-4">
                                                             <img src={require("../assets/images/zitouna.jpg")} alt="bank-4" />
                                                         </label>
                                                         <input type="radio" className="radio" name="bank-5" id="bank-5" value="bank-5" />
-                                                        <label className="bank-images bank-5-label" for="bank-5">
+                                                        <label className="bank-images bank-5-label" htmlFor="bank-5">
                                                             <img src={require("../assets/images/amen.jpg")} alt="bank-5" />
                                                         </label>
                                                         <input type="radio" className="radio" name="bank-6" id="bank-6" value="bank-6" />
-                                                        <label className="bank-images bank-6-label" for="bank-6">
-                                                            <img src={require("../assets/images/atb.jpg")} alt="bank-6" />
+                                                        <label className="bank-images bank-6-label" htmlFor="bank-6">
+                                                            <img src={require("../assets/images/tijari.jpg")} alt="bank-6" />
                                                         </label>
                                                     </div>
                                                 </div>
@@ -603,24 +749,24 @@ class Register extends Component {
                                             </div>
                                             <div className="form-row">
                                                 <div className="form-holder form-holder-2">
-                                                    <input type="radio" className="radio" name="radio1" id="plan-1" value="plan-1" />
-                                                    <label className="plan-icon plan-1-label" for="plan-1">
+                                                    <input type="radio" className="radio" name="radio1" id="plan-1" value="1" />
+                                                    <label className="plan-icon plan-1-label" htmlFor="plan-1">
                                                         <img src={require("../assets/images/form-v1-icon-2.png")} alt="pay-1" />
                                                     </label>
                                                     <div className="plan-total">
                                                         <span className="plan-title">Specific Plan</span>
                                                         <p className="plan-text">Pellentesque nec nam aliquam sem et volutpat consequat mauris nunc congue nisi.</p>
                                                     </div>
-                                                    <input type="radio" className="radio" name="radio1" id="plan-2" value="plan-2" />
-                                                    <label className="plan-icon plan-2-label" for="plan-2">
+                                                    <input type="radio" className="radio" name="radio1" id="plan-2" value="2" />
+                                                    <label className="plan-icon plan-2-label" htmlFor="plan-2">
                                                         <img src={require("../assets/images/form-v1-icon-2.png")} alt="pay-1" />
                                                     </label>
                                                     <div className="plan-total">
                                                         <span className="plan-title">Medium Plan</span>
                                                         <p className="plan-text">Pellentesque nec nam aliquam sem et volutpat consequat mauris nunc congue nisi.</p>
                                                     </div>
-                                                    <input type="radio" className="radio" name="radio1" id="plan-3" value="plan-3" checked />
-                                                    <label className="plan-icon plan-3-label" for="plan-3">
+                                                    <input type="radio" className="radio" name="radio1" id="plan-3" value="3" checked />
+                                                    <label className="plan-icon plan-3-label" htmlFor="plan-3">
                                                         <img src={require("../assets/images/form-v1-icon-3.png")} alt="pay-2" />
                                                     </label>
                                                     <div className="plan-total">
@@ -631,6 +777,64 @@ class Register extends Component {
                                             </div>
                                         </div>
                                     </section>
+                                    {/* <!-- SECTION 4 --> */}
+                                    <h2 id="section4-link">
+                                        <p className="step-icon"><span>04</span></p>
+                                        <span className="step-text">Additional Info</span>
+                                    </h2>
+                                    <section>
+                                        <div id="section4">
+                                            <div className="inner">
+                                                <div className="wizard-header">
+                                                    <h3 className="heading">Additional Info</h3>
+                                                    <p>Please enter your infomation and proceed to finish.</p>
+                                                </div>
+                                                <div className="form-row">
+                                                    <div className="form-holder">
+                                                        <fieldset>
+                                                            <legend>CIN Number</legend>
+                                                            <input type="number" className={classnames('form-control form-control-lg', {
+                                                                'is-invalid': errors.cin
+                                                            })} id="cin" name="cin" placeholder="ex: 09998989"
+                                                                value="00000000"
+                                                                onChange={this.onChange}
+                                                                required />
+                                                            {errors.cin && (
+                                                                <div className="invalid-feedback">{errors.cin}</div>
+                                                            )}
+                                                        </fieldset>
+                                                    </div>
+                                                    <div className="form-holder">
+                                                        <fieldset>
+                                                            <legend>Trade license</legend>
+                                                            <input type="number" className={classnames('form-control form-control-lg', {
+                                                                'is-invalid': errors.license
+                                                            })} id="licence" name="licence" placeholder="Licence Number"
+                                                                value={this.state.license}
+                                                                onChange={this.onChange}
+                                                                required />
+                                                            {errors.license && (
+                                                                <div className="invalid-feedback">{errors.license}</div>
+                                                            )}
+                                                        </fieldset>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="inner" id="inner">
+                                            <div className="wizard-header">
+                                                <h3 className="heading">Get Started</h3>
+                                                <p>By accepting licence terms you will start using our services now!</p>
+                                            </div>
+                                        </div>
+                                        <div className="was-validated" style={{ marginTop: "12px", marginRight: "150px" }}>
+                                            <div className="custom-control custom-checkbox mb-3">
+                                                <input type="checkbox" className="custom-control-input" id="customControlValidation1" required />
+                                                <label className="custom-control-label" htmlFor="customControlValidation1">Accept our terms & conditions</label>
+                                                {errors.terms && (<div className="invalid-feedback" >Example invalid feedback text</div>)}
+                                            </div></div>
+                                    </section>
+                                    <input type="submit" hidden className="btn btn-info btn-block mt-4" />
                                 </div>
                             </form>
                         </div>
