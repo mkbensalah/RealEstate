@@ -10,7 +10,6 @@ import AdvertisingMaker from '../components/AllServices/ServiceMaker/Advertising
 
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import DashView from '../components/DashView';
 
 
 class Dashboard extends Component {
@@ -30,11 +29,12 @@ class Dashboard extends Component {
         return (
             <Aux>
                 <Header />
-                <DashView />
-                <BuilderMaker agId={this.props.auth.user.id} />
-                <RepairMaker agId={this.props.auth.user.id} />
-                <LeasingMaker agId={this.props.auth.user.id} />
-                <AdvertisingMaker agId={this.props.auth.user.id} />
+               <Properties/>
+                <h1> Mar7be bik si {this.props.auth.user.username}</h1>
+              <BuilderMaker agId={this.props.auth.user.id}/>
+              <RepairMaker agId={this.props.auth.user.id}/>
+              <LeasingMaker agId={this.props.auth.user.id}/>
+              <AdvertisingMaker agId={this.props.auth.user.id}/>
                 <Footer />
             </Aux>
         );
