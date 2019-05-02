@@ -57,7 +57,18 @@ router.get("/leasing/all", (req, res) => {
 router.get("/re-construct/all", (req, res) => {
     serviceModel.getAllReconstruction((err, rows) => {
         res.json({
-            "re-construction": rows
+            construction: rows
+        })
+    })
+});
+
+// @route   GET api/service/repair/all
+// @desc    Get all reconstruction services
+// @access  Public
+router.get("/repair/all", (req, res) => {
+    serviceModel.getAllRepair((err, rows) => {
+        res.json({
+            repair: rows
         })
     })
 });
