@@ -1,11 +1,18 @@
 import React, {Component} from 'react';
 
-
+import Aux from '../../hoc/Auxliary'
 import Button from '../../hoc/Button';
 import Input from '../../hoc/Input';
+import Modal from '../../../components/Modal'
 import axios from "axios";
+import { Link } from 'react-router-dom'
+import Register from "../../../containers/Home";
 
 class BuilderMaker extends Component {
+    constructor(props) {
+        super(props);
+        this.child = null;
+    }
 
     state = {
 
@@ -130,7 +137,8 @@ class BuilderMaker extends Component {
             }
         },
         formIsValid: true,
-        loading: false
+        loading: false,
+        purchasing: false
     }
 
     orderHandler = (event) => {
@@ -168,6 +176,16 @@ console.log(index);
                 // this.props.history.push('/');
                 // this.props.red();
                 //    console.log(response.data);
+                this.child = (
+                    <Aux>
+                        <div >
+                        <h6 style={{color: '#5c9210'}}>One Service Added With Success !</h6>
+                        <Button btnType="Success" style={{color: '#f44336'}} disabled={!this.state.formIsValid} ><Link to={'/dashboard'}> CONTINUE</Link></Button>
+                        </div>
+                    </Aux>
+                )
+                this.setState({ purchasing: true });
+
             })
             .catch(error => {
                 this.setState({ loading: false });
@@ -229,7 +247,9 @@ inputChangedHandler = (event, inputIdentifier) => {
         this.setState({orderForm: updatedOrderForm, formIsValid: formIsValid});
     }
 
-
+    purchaseCancelHandler = () => {
+        this.setState({ purchasing: false });
+    }
 
 
     render() {
@@ -240,6 +260,7 @@ inputChangedHandler = (event, inputIdentifier) => {
                 config: this.state.orderForm[key]
             });
         }
+
 
 
         let form = (
@@ -261,10 +282,17 @@ inputChangedHandler = (event, inputIdentifier) => {
         );
 
         return (
+            <Aux>
+
             <div className="ContactData">
                 <h4>Enter your Builder Service Data</h4>
                 {form}
+                <Modal show={this.state.purchasing} modalClosed={this.purchaseCancelHandler} >
+                    {this.child}
+                </Modal>
             </div>
+
+            </Aux>
         );
     }
 }

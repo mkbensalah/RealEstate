@@ -1,12 +1,17 @@
 import React, {Component} from 'react';
 
-
+import Aux from '../../hoc/Auxliary'
+import { Link } from 'react-router-dom'
 import Button from '../../hoc/Button';
 import Input from '../../hoc/Input';
 import axios from "axios";
+import Modal from '../../../components/Modal'
 
 class RepairMaker extends Component {
-
+    constructor(props) {
+        super(props);
+        this.child = null;
+    }
     state = {
 
         orderForm: {
@@ -117,7 +122,8 @@ class RepairMaker extends Component {
             }
         },
         formIsValid: true,
-        loading: false
+        loading: false,
+        purchasing: false
     }
 
     orderHandler = (event) => {
@@ -154,6 +160,15 @@ class RepairMaker extends Component {
                 // this.props.history.push('/');
                 // this.props.red();
                 //    console.log(response.data);
+                this.child = (
+                    <Aux>
+                        <div >
+                            <h6 style={{color: '#5c9210'}}>One Service Added With Success !</h6>
+                            <Button btnType="Success" style={{color: '#f44336'}} disabled={!this.state.formIsValid} ><Link to={'/dashboard'}> CONTINUE</Link></Button>
+                        </div>
+                    </Aux>
+                )
+                this.setState({ purchasing: true });
             })
             .catch(error => {
                 this.setState({ loading: false });
@@ -215,7 +230,9 @@ class RepairMaker extends Component {
         this.setState({orderForm: updatedOrderForm, formIsValid: formIsValid});
     }
 
-
+    purchaseCancelHandler = () => {
+        this.setState({ purchasing: false });
+    }
 
 
     render() {
@@ -247,10 +264,15 @@ class RepairMaker extends Component {
         );
 
         return (
+            <Aux>
             <div className="ContactData">
                 <h4>Enter your Repair Service Data</h4>
                 {form}
             </div>
+                <Modal show={this.state.purchasing} modalClosed={this.purchaseCancelHandler} >
+                    {this.child}
+                </Modal>
+            </Aux>
         );
     }
 }

@@ -7,23 +7,54 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import axios from "axios";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles";
+import {createMuiTheme, MuiThemeProvider} from "@material-ui/core/styles";
 import Pagination from "material-ui-flat-pagination";
+import IconButton from '@material-ui/core/IconButton';
+import FilterList from '@material-ui/icons/FilterList';
+import Ne from '@material-ui/icons/FiberNew';
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
+import SideNav, {NavIcon, NavItem, NavText} from '@trendmicro/react-sidenav';
+import {FloatingMenu,
+    MainButton,
+    ChildButton,} from 'react-floating-button-menu';
+import MdAdd from '@material-ui/icons/add';
+import MdClose from '@material-ui/icons/clear';
+
+
+import '@trendmicro/react-sidenav/dist/react-sidenav.css';
+import {Link} from 'react-router-dom';
 
 
 const theme = createMuiTheme();
+
+const ITEM_HEIGHT = 48;
+const options = [
+    'Show All Service',
+    'Show Service Building',
+    'Show Service Repair',
+    'Show Service Leasing'
+];
+
+
 class Services extends Component {
 
-    constructor(props){
+    constructor(props) {
         super(props);
         let data = null;
-        let aa =  null;
+        let aa = null;
+        this.handleClick = this.handleClick.bind(this);
+        let label = null;
     }
 
     state = {
         allServices: null,
         loading: false,
-        offset: 0
+        currentPage: 1,
+        todosPerPage: 4,
+        offset: 0,
+        isOpen: false,
+        anchorEl: null
     }
 
 
@@ -34,6 +65,7 @@ class Services extends Component {
                 this.data = response.data.services;
                 this.aa = [];
                 this.aa = this.data;
+                this.label = 'All Service'
                 this.setState({loading: true});
                 //console.log(this.aa[1].serviceID);
                 // this.setState({allServices: response.data.services});
@@ -46,11 +78,10 @@ class Services extends Component {
             });
     }
 
-<<<<<<< HEAD
 
     handleClose = (option) => {
-        this.setState({ anchorEl: null });
-        if( option === 'Show Service Building') {
+        this.setState({anchorEl: null});
+        if (option === 'Show Service Building') {
 
             axios.get('http://localhost:5000/api/service/re-construct/all')
                 .then(response => {
@@ -72,8 +103,7 @@ class Services extends Component {
                 });
 
 
-        }
-        else if( option === 'Show All Service') {
+        } else if (option === 'Show All Service') {
 
             axios.get('http://localhost:5000/api/service/all')
                 .then(response => {
@@ -95,9 +125,7 @@ class Services extends Component {
                 });
 
 
-        }
-
-        else if( option === 'Show Service Repair') {
+        } else if (option === 'Show Service Repair') {
             axios.get('http://localhost:5000/api/service/repair/all')
                 .then(response => {
                     this.setState({loading: false});
@@ -116,8 +144,7 @@ class Services extends Component {
                     console.log("nnnnnnnnnnn");
                     console.log(error);
                 });
-        }
-        else if( option === 'Show Service Leasing') {
+        } else if (option === 'Show Service Leasing') {
             axios.get('http://localhost:5000/api/service/leasing/all')
                 .then(response => {
                     this.setState({loading: false});
@@ -142,15 +169,23 @@ class Services extends Component {
     };
 
 
-=======
->>>>>>> parent of fb273ff... change
     handleClick(offset) {
-        this.setState({ offset });
+        console.log(offset);
+        this.setState({currentPage: offset + 1, offset});
+
     }
 
+    handleClickFi = event => {
+        this.setState({anchorEl: event.currentTarget});
+    };
+
+
     render() {
+        console.log(this.state.currentPage)
+        const {currentPage, todosPerPage} = this.state;
+        let renderPageNumbers;
+        let pageNumbers;
         let service = null;
-<<<<<<< HEAD
         if (this.state.loading) {
 
             const indexOfLastTodo = currentPage * todosPerPage;
@@ -183,77 +218,145 @@ class Services extends Component {
                 );
             });
             const open = Boolean(this.state.anchorEl);
-=======
-        if(this.state.loading){
-            service = this.aa.map(element => (
-                <Aux  key={element.serviceID}>
-                <ServiceCard key={element.serviceID} elt={element}/>
+        }
+        ;
 
-                </Aux>
-            ))
->>>>>>> parent of fb273ff... change
-        };
+
+        const open = Boolean(this.state.anchorEl);
         return (
             <Aux>
-                <Header/>
+                <Header name={this.props.auth.user.username}/>
+
+
+                <SideNav
+                    onSelect={(selected) => {
+                        if (selected === 'home') {
+                            this.props.history.push('dashboard');
+                            console.log('ddddddddddddddddddddddddddddd')
+                        } else {
+                            this.props.history.push('services');
+                        }
+                    }}
+                    style={{backgroundColor: 'grey'}}
+                >
+                    <SideNav.Toggle/>
+                    <SideNav.Nav defaultSelected="home">
+                        <NavItem eventKey="home">
+
+                            <NavIcon>
+                                <i className="fa fa-fw fa-home" style={{fontSize: '1.75em'}}/>
+                            </NavIcon>
+                            <NavText>
+                                Home
+                            </NavText>
+                        </NavItem>
+                        <NavItem eventKey="services">
+                            <NavIcon>
+                                <i className="fa fa-fw fa-line-chart" style={{fontSize: '1.75em'}}/>
+                            </NavIcon>
+                            <NavText>
+                                Services
+                            </NavText>
+                        </NavItem>
+                    </SideNav.Nav>
+                </SideNav>
+
+
                 <section className="sectionpadding10050 featured-properties-area">
+                    <div style={{position: 'absolute', right: '4px', textAlign: 'right'}}>
+                        <FloatingMenu
+                            slideSpeed={500}
+                            direction="left"
+
+                            spacing={8}
+                            isOpen={this.state.isOpen}
+                        >
+                            <MainButton
+                                iconResting={<Ne style={{fontSize: 45}} nativeColor="white"/>}
+                                iconActive={<MdClose style={{fontSize: 40}} nativeColor="white"/>}
+                                backgroundColor="grey"
+                                onClick={() => this.setState({isOpen: !this.state.isOpen})}
+                                size={70}
+                            />
+                            <ChildButton
+
+                                icon={<Link to={{ pathname: '/servicemaker', state: { foo: 'builder'} }} style={{color : 'white', textAlign: 'center' }}>Builder</Link>}
+                                backgroundColor="#f44336"
+                                size={60}
+                                onClick={() => console.log('First button clicked')}
+                            />
+                            <ChildButton
+                                icon={<Link to={{ pathname: '/servicemaker', state: { foo: 'repair'} }} style={{color : 'white', textAlign: 'center'}}>Repair</Link>}
+                                backgroundColor="#f44336"
+                                size={60}
+                                onClick={() => console.log('First button clicked')}
+                            />
+                            <ChildButton
+                                icon={<Link to={{ pathname: '/servicemaker', state: { foo: 'leasing'} }} style={{color : 'white', textAlign: 'center'}}>Leasing</Link>}
+                                backgroundColor="#f44336"
+                                size={60}
+                                onClick={() => console.log('First button clicked')}
+                            />
+                            <ChildButton
+                                icon={<Link to={{ pathname: '/servicemaker', state: { foo: 'advertising'} }} style={{color : 'white', textAlign: 'center'}}>Ads</Link>}
+                                backgroundColor="#f44336"
+                                size={60}
+                                onClick={() => console.log('First button clicked')}
+                            />
+                        </FloatingMenu>
 
 
-                            <div className="row justify-content-center">
-
-                                <h2 className="section-title mb-3">How It Works</h2>
-
-<<<<<<< HEAD
-                    <IconButton aria-label="Sort By :"
-                                aria-owns={open ? 'long-menu' : undefined}
-                                aria-haspopup="true"
-                                onClick={this.handleClickFi}>
-                        <div className="row">
-                            <h2>Sort By :</h2>
-                            <h2 style={{paddingLeft : '15px', paddingRight : '15px'}}>{this.label}</h2>
-                            <FilterList  style={ { height: '40px', width: '40px' } }/>
-
-                        </div>
-                    </IconButton>
-                    <Menu
-                        id="long-menu"
-                        anchorEl={this.state.anchorEl}
-                        open={open}
-                        onClose={this.handleClose}
-                        PaperProps={{
-                            style: {
-                                maxHeight: ITEM_HEIGHT * 4.5,
-                                width: 200,
-                            },
-                        }}
-                    >
-                        {options.map(option => (
-                            <MenuItem key={option} selected={option === 'Show All Service'} onClick={() => this.handleClose(option)}>
-                                {option}
-                            </MenuItem>
-                        ))}
-                    </Menu>
+                    </div>
 
                     <div className="row justify-content-center" style={{margin: '32px'}}>
 
+                        <IconButton aria-label="Sort By :"
+                                    aria-owns={open ? 'long-menu' : undefined}
+                                    aria-haspopup="true"
+                                    onClick={this.handleClickFi}>
+                            <div className="row" >
+                                <h3 style={{color : '#f44336', textAlign: 'center'}}> Sort By :</h3>
+                                <h3 style={{paddingLeft: '15px', paddingRight: '15px', color : '#f44336', textAlign: 'center'}}>{this.label}</h3>
+                                <FilterList style={{height: '20px', width: '20px',color : '#f44336', textAlign: 'center'}}/>
 
+                            </div>
+                        </IconButton>
+                        <Menu
+                            id="long-menu"
+                            anchorEl={this.state.anchorEl}
+                            open={open}
+                            onClose={this.handleClose}
+                            PaperProps={{
+                                style: {
+                                    maxHeight: ITEM_HEIGHT * 4.5,
+                                    width: 200,
+                                },
+                            }}
+                        >
+                            {options.map(option => (
+                                <MenuItem key={option} selected={option === 'Show All Service'}
+                                          onClick={() => this.handleClose(option)}>
+                                    {option}
+                                </MenuItem>
+                            ))}
+                        </Menu>
 
                         {service}
 
                     </div>
-=======
-                                <div className="row justify-content-center" style={{margin : '32px'}}>
-                                    {service}
-
->>>>>>> parent of fb273ff... change
-
-                                </div>
-
-                            </div>
 
 
                 </section>
-                
+                <MuiThemeProvider theme={theme}>
+                    <CssBaseline/>
+                    <Pagination
+                        limit={1}
+                        offset={this.state.offset}
+                        total={100}
+                        size="large"
+                        onClick={(e, offset) => this.handleClick(offset)}
+                    />
+                </MuiThemeProvider>
                 <h1> Mar7be bik si {this.props.auth.user.username}</h1>
                 <Footer/>
             </Aux>

@@ -1,109 +1,50 @@
 import React, {Component} from 'react';
 
-
-import Button from '../../hoc/Button';
-import Input from '../../hoc/Input';
+import Aux from '../components/hoc/Auxliary'
+import Button from '../components/hoc/Button';
+import Input from '../components/hoc/Input';
+import Modal from '../components/Modal'
 import axios from "axios";
-import Modal from '../../../components/Modal'
-import Aux from "./BuilderMaker";
-import {Link} from "react-router-dom";
+import { Link } from 'react-router-dom'
 
-class LeasingMaker extends Component {
+
+class BuilderMaker extends Component {
+    constructor(props) {
+        super(props);
+        this.child = null;
+    }
 
     state = {
 
         orderForm: {
-            buildingtype: {
+            price: {
+                elementType: 'input',
+                elementConfig: {
+                    type: 'number',
+                    placeholder: 'Your Price'
+                },
+                value: "",
+                validation: {
+                    required: true,
+                },
+                valid: false,
+                touched: false
+            },
+            paymentMethod: {
                 elementType: 'select',
                 elementConfig: {
                     options: [
-                        {value: 'type', displayValue: 'Type'},
-                        {value: 'building', displayValue: 'Building'},
-                        {value: 'home', displayValue: 'Home'},
-                        {value: 'extension', displayValue: 'Extension'},
+                        {value: 'payment Method', displayValue: 'Payment Method'},
+                        {value: 'cash', displayValue: 'Cash'},
+                        {value: 'checks', displayValue: 'Checks'},
+                        {value: 'credit', displayValue: 'Credit'},
+                        {value: 'debitCards', displayValue: 'DebitCards'},
+                        {value: 'payPal', displayValue: 'PayPal'},
                     ]
                 },
                 value: '',
                 validation: {},
                 valid: true
-            },
-            zone: {
-                elementType: 'input',
-                elementConfig: {
-                    type: 'text',
-                    placeholder: 'Zone'
-                },
-                value: '',
-                validation: {
-                    required: true
-                },
-                valid: false,
-                touched: false
-            },
-            fromDate: {
-                elementType: 'input',
-                elementConfig: {
-                    type: 'text',
-                    placeholder: 'From'
-                },
-                value: "",
-                validation: {
-                    required: true,
-                },
-                valid: false,
-                touched: false
-            },
-            duration: {
-                elementType: 'input',
-                elementConfig: {
-                    type: 'number',
-                    placeholder: 'duration'
-                },
-                value: "",
-                validation: {
-                    required: true,
-                },
-                valid: false,
-                touched: false
-            },
-            price: {
-                elementType: 'input',
-                elementConfig: {
-                    type: 'number',
-                    placeholder: 'Price'
-                },
-                value: '',
-                validation: {
-                    required: true
-                },
-                valid: false,
-                touched: false
-            },
-            increase: {
-                elementType: 'input',
-                elementConfig: {
-                    type: 'number',
-                    placeholder: 'Increase in year'
-                },
-                value: '',
-                validation: {
-                    required: true
-                },
-                valid: false,
-                touched: false
-            },
-            address: {
-                elementType: 'input',
-                elementConfig: {
-                    type: 'text',
-                    placeholder: 'Address'
-                },
-                value: '',
-                validation: {
-                    required: true
-                },
-                valid: false,
-                touched: false
             },
             description: {
                 elementType: 'input',
@@ -128,6 +69,7 @@ class LeasingMaker extends Component {
         event.preventDefault();
 
         this.setState({ loading: true });
+
         const formData = {};
         for (let formElementIdentifier in this.state.orderForm) {
             formData[formElementIdentifier] = this.state.orderForm[formElementIdentifier].value;
@@ -135,23 +77,19 @@ class LeasingMaker extends Component {
 
         var index = 0
         var newUser = {
-            type: 'Leasing',
-            agenceid:this.props.agId,
-            prix: this.state.orderForm.price.value,
-            adresse: this.state.orderForm.address.value,
-            Description: this.state.orderForm.description.value,
 
-            buildingType: this.state.orderForm.buildingtype.value,
-            fromDate: this.state.orderForm.fromDate.value,
-            duration: this.state.orderForm.duration.value,
-            price: this.state.orderForm.price.value,
-            increase : this.state.orderForm.increase.value,
-            zone: this.state.orderForm.zone.value
+            prix: this.state.orderForm.price.value,
+
+            mode_paiement: this.state.orderForm.paymentMethod.value,
+            Description: this.state.orderForm.description.value,
+            IDClient: this.props.idus,
+            IDService: this.props.idser,
+            IDbien: 1
         }
 
-        console.log(newUser);
+        console.log(index);
 
-        axios.post('http://localhost:5000/api/service', newUser)
+        axios.post('http://localhost:5000/api/offer/new', newUser)
             .then(response => {
                 this.setState({ loading: false });
                 console.log(newUser);
@@ -167,6 +105,7 @@ class LeasingMaker extends Component {
                     </Aux>
                 )
                 this.setState({ purchasing: true });
+
             })
             .catch(error => {
                 this.setState({ loading: false });
@@ -228,7 +167,6 @@ class LeasingMaker extends Component {
         this.setState({orderForm: updatedOrderForm, formIsValid: formIsValid});
     }
 
-
     purchaseCancelHandler = () => {
         this.setState({ purchasing: false });
     }
@@ -242,6 +180,7 @@ class LeasingMaker extends Component {
                 config: this.state.orderForm[key]
             });
         }
+
 
 
         let form = (
@@ -264,17 +203,19 @@ class LeasingMaker extends Component {
 
         return (
             <Aux>
-            <div className="ContactData">
-                <h4>Enter your  Leasing Service Data</h4>
-                {form}
-            </div>
-                <Modal show={this.state.purchasing} modalClosed={this.purchaseCancelHandler} >
-                    {this.child}
-                </Modal>
+
+                <div className="ContactData">
+                    <h4>Enter your Builder Service Data</h4>
+                    {form}
+                    <Modal show={this.state.purchasing} modalClosed={this.purchaseCancelHandler} >
+                        {this.child}
+                    </Modal>
+                </div>
+
             </Aux>
         );
     }
 }
 
 
-export default LeasingMaker;
+export default BuilderMaker;

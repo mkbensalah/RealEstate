@@ -18,6 +18,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
+import { Link } from 'react-router-dom'
 
 const styles = theme => ({
     card: {
@@ -48,7 +49,7 @@ const styles = theme => ({
 
 const options = [
     'Show Agency',
-    'Have a Deal',
+    'Make a Deal',
     'Add in Favors'
 ];
 
@@ -75,8 +76,10 @@ class ServiceCard extends React.Component {
         this.setState({ anchorEl: event.currentTarget });
     };
 
-    handleClose = () => {
+    handleClose = ( option ) => {
+        this.props.history.push('')
         this.setState({ anchorEl: null });
+
     };
 
     render() {
@@ -121,8 +124,8 @@ class ServiceCard extends React.Component {
                     }}
                 >
                     {options.map(option => (
-                        <MenuItem key={option} selected={option === 'Pyxis'} onClick={this.handleClose}>
-                            {option}
+                        <MenuItem key={option} selected={option === 'Pyxis'} onClick={() => this.handleClose(option)}>
+                            <Link to={{ pathname: '/offerMaker', state: { foo: this.props.elt.serviceID} }} style={{ color: '#f44336'}}> {option}</Link>
                         </MenuItem>
                     ))}
                 </Menu>

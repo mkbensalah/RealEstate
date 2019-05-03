@@ -207,7 +207,7 @@ exports.getAllBuildings = function (done) {
 
 // find property by ID
 exports.findById = function (id, done) {
-    db.get().query("SELECT * FROM bien a , bien_immeuble b   WHERE a.idbien =? AND a.idbien=b.idbien", id, function (
+    db.get().query("SELECT * FROM bien WHERE idbien =?", id, function (
         err,
         rows
     ) {

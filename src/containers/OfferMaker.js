@@ -1,18 +1,19 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import Header from '../components/Header';
-import Properties from '../components/Properties';
 import Footer from '../components/Footer';
 import Aux from '../components/hoc/Auxliary'
 
-import SideNav, { Toggle, Nav, NavItem, NavIcon, NavText } from '@trendmicro/react-sidenav';
+import SideNav, {NavIcon, NavItem, NavText} from '@trendmicro/react-sidenav';
+import OfferForm from '../components/OfferForm'
 
 
 import '@trendmicro/react-sidenav/dist/react-sidenav.css';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 
 
-class Dashboard extends Component {
+
+class OfferMaker extends Component {
 
     // purchaseContinueHandler = () => {
     //     this.props.history.push('/checkout');
@@ -23,27 +24,30 @@ class Dashboard extends Component {
         if (!this.props.auth.isAuthenticated) {
             this.props.history.push('/login');
         }
-
     }
 
     render() {
+        const {foo} = this.props.location.state;
         return (
             <Aux>
                 <Header name={this.props.auth.user.username}/>
                 <SideNav
                     onSelect={(selected) => {
-                        if( selected === 'home')
-                        { this.props.history.push('dashboard'); console.log('ddddddddddddddddddddddddddddd')}
-                        else {this.props.history.push('services');}
+                        if (selected === 'home') {
+                            this.props.history.push('dashboard');
+                            console.log('ddddddddddddddddddddddddddddd')
+                        } else {
+                            this.props.history.push('services');
+                        }
                     }}
-                    style={{backgroundColor : 'grey'}}
+                    style={{backgroundColor: 'grey'}}
                 >
-                    <SideNav.Toggle />
+                    <SideNav.Toggle/>
                     <SideNav.Nav defaultSelected="home">
                         <NavItem eventKey="home">
 
                             <NavIcon>
-                                <i className="fa fa-fw fa-home" style={{ fontSize: '1.75em' }} />
+                                <i className="fa fa-fw fa-home" style={{fontSize: '1.75em'}}/>
                             </NavIcon>
                             <NavText>
                                 Home
@@ -51,7 +55,7 @@ class Dashboard extends Component {
                         </NavItem>
                         <NavItem eventKey="services">
                             <NavIcon>
-                                <i className="fa fa-fw fa-line-chart" style={{ fontSize: '1.75em' }} />
+                                <i className="fa fa-fw fa-line-chart" style={{fontSize: '1.75em'}}/>
                             </NavIcon>
                             <NavText>
                                 Services
@@ -59,20 +63,21 @@ class Dashboard extends Component {
                         </NavItem>
                     </SideNav.Nav>
                 </SideNav>
-                <Properties/>
-                <h1> Mar7be bik si {this.props.auth.user.username}</h1>
+                <section className="sectionpadding10050 featured-properties-area">
 
+                    <div className="row justify-content-center" style={{margin: '32px'}}>
+                       <OfferForm idus={this.props.auth.user.id} idser={foo}/>
 
-
-
-                <Footer />
+                    </div>
+                </section>
+                <Footer/>
             </Aux>
         );
     }
 }
 
 
-Dashboard.propTypes = {
+OfferMaker.propTypes = {
     auth: PropTypes.object.isRequired,
     errors: PropTypes.object.isRequired
 };
@@ -82,4 +87,4 @@ const mapStateToProps = state => ({
     errors: state.errors
 });
 
-export default connect(mapStateToProps, {})(Dashboard);
+export default connect(mapStateToProps, {})(OfferMaker);

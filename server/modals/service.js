@@ -301,20 +301,25 @@ exports.getAll = function (done) {
 
 // list all reconstruction services
 exports.getAllReconstruction = function (done) {
-    db.get().query(
-        "SELECT * FROM service b, service_reconstruction _b " +
-        "WHERE b.serviceID = _b.serviceID",
-        function (err, rows) {
-            if (err) return done(err);
-            done(null, rows);
-        });
+    db.get().query("SELECT * FROM BuilderService INNER JOIN service ON BuilderService.serviceID=service.serviceID", function (err, rows) {
+        if (err) return done(err);
+        done(null, rows);
+    });
+};
+
+
+// list all repair services
+exports.getAllRepair = function (done) {
+    db.get().query("SELECT * FROM RepairService INNER JOIN service ON RepairService.serviceID=service.serviceID", function (err, rows) {
+        if (err) return done(err);
+        done(null, rows);
+    });
 };
 
 // list all leasing services 
 exports.getALLeasing = function (done) {
     db.get().query(
-        "SELECT * FROM service b, service_location _b " +
-        "WHERE b.serviceID = _b.serviceID",
+        "SELECT * FROM LeasingService INNER JOIN service ON LeasingService.serviceID=service.serviceID",
         function (err, rows) {
             if (err) return done(err);
             done(null, rows);

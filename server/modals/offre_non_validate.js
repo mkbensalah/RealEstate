@@ -4,16 +4,16 @@ var db = require("../helpers/db-setup");
 // create offre 
 exports.create = function (offre, done) {
     console.log(offre);
-    var values = [offre.prix, offre.mode_paiement, offre.Description, offre.IDClient, offre.IDService_Bien];
+    var values = [offre.prix, offre.mode_paiement, offre.Description, offre.IDClient, offre.IDService,offre.IDbien];
     db.get().query(
-        "INSERT INTO offre (prix, mode_paiement, Description, IDClient, IDService_Bien) VALUES(?, ?, ?, ?, ?)",
+        "INSERT INTO offre (prix, mode_paiement, Description, Idclient, IDService, IDbien) VALUES(?, ?, ?, ?, ?, ?)",
         values,
         function (err, result) {
             if (err) return done(err);
             console.log(result.insertId);
             db.get().query(
                 "INSERT INTO offre_non_verif (IDoffre , IDagence) VALUES(?, ?)",
-                [result.insertId, offre.IDService_Bien],
+                [result.insertId, offre.IDClient],
                 function (err, result) {
                     if (err) return done(err);
                     done(null, result.insertId);

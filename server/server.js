@@ -11,7 +11,7 @@ const cors = require("cors");
 // import routes
 const users = require("./routes/api/users");
 const profiles = require("./routes/api/profiles");
-const offres = require("./routes/api/offre");
+const offers = require("./routes/api/offers");
 const services = require("./routes/api/services");
 const properties = require("./routes/api/properties");
 
@@ -44,7 +44,7 @@ require("./config/passport")(passport);
 // use routes
 app.use("/api/users", users);
 app.use("/api/profile", profiles);
-app.use("/api/offre", offres);
+app.use("/api/offer", offers);
 app.use("/api/service", services);
 app.use("/api/property", properties);
 
