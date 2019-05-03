@@ -8,8 +8,6 @@ import RepairMaker from '../components/AllServices/ServiceMaker/RepairMaker';
 import LeasingMaker from '../components/AllServices/ServiceMaker/LeasingMaker';
 import AdvertisingMaker from '../components/AllServices/ServiceMaker/AdvertisingMaker';
 
-
-import '@trendmicro/react-sidenav/dist/react-sidenav.css';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
@@ -30,36 +28,7 @@ class Dashboard extends Component {
     render() {
         return (
             <Aux>
-                <Header name={this.props.auth.user.username}/>
-                <SideNav
-                    onSelect={(selected) => {
-                        if( selected === 'home')
-                        { this.props.history.push('dashboard'); console.log('ddddddddddddddddddddddddddddd')}
-                        else {this.props.history.push('services');}
-                    }}
-                   style={{backgroundColor : 'grey'}}
-                >
-                    <SideNav.Toggle />
-                    <SideNav.Nav defaultSelected="home">
-                        <NavItem eventKey="home">
-
-                            <NavIcon>
-                                <i className="fa fa-fw fa-home" style={{ fontSize: '1.75em' }} />
-                            </NavIcon>
-                            <NavText>
-                                Home
-                            </NavText>
-                        </NavItem>
-                        <NavItem eventKey="services">
-                            <NavIcon>
-                                <i className="fa fa-fw fa-line-chart" style={{ fontSize: '1.75em' }} />
-                            </NavIcon>
-                            <NavText>
-                                Services
-                            </NavText>
-                        </NavItem>
-                    </SideNav.Nav>
-                </SideNav>
+                <Header />
                <Properties/>
                 <h1> Mar7be bik si {this.props.auth.user.username}</h1>
               <BuilderMaker agId={this.props.auth.user.id}/>

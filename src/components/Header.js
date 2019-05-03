@@ -4,8 +4,6 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
 import { logoutUser } from '../actions/authAction';
-import Aux from '../components/hoc/Auxliary'
-import SideNav from "../containers/Dashboard";
 
 
 class Header extends Component {
@@ -39,34 +37,16 @@ class Header extends Component {
 			</ul>
 		);
 
-
-		const aa = (
-			<Aux>
-			<li style={{paddingLeft: '50px' ,marginRight: '0px'}}>
-				<a href="#contact-section" className={"nav-link " + (this.props.isLighten ? "shaded" : "darken")}>
-					<img
-						src={require('../assets/images/person_3.jpg')}
-						style={{width: 50, height: 50, borderRadius: 50/ 2}}
-					/>
-				</a>
-			</li>
-				<li style={{marginLeft: '0px'}}><a href="#contact-section" className={"nav-link " + (this.props.isLighten ? "shaded" : "darken")}><h3>{this.props.name}</h3></a></li>
-				<li style={{paddingRight: '0px', marginRight: '0px',}}><Link className={"nav-link " + (this.props.isLighten ? "shaded" : "darken")} to="register"><h4>Logout</h4></Link></li>
-			</Aux>
-				);
-
-
-		const bb = (
-			<Aux>
-				<li style={{paddingLeft: '50px' ,marginRight: '0px'}}><Link className={"nav-link " + (this.props.isLighten ? "shaded" : "darken")} to="login">Login</Link></li>
-				<li style={{marginLeft: '0px'}}><Link className={"nav-link " + (this.props.isLighten ? "shaded" : "darken")} to="register">Register</Link></li>
-			</Aux>
+		const guestLinks = (
+			<ul className="nav navbar-nav navbar-right">
+				<li><button className="bn" onClick={() => this.props.ordered('register')}>Register</button></li>
+				<li><button className="bn" onClick={() => this.props.ordered('login')}>Login</button></li>
+			</ul>
 		);
 
- 		let im = (this.props.name) ?  aa : bb;
 		return (
 			<div>
-				<div className="header_bar d-flex flex-row align-items-center justify-content-start js-sticky-top-header"  style={{backgroundColor : 'grey'}}>
+				<div className="header_bar d-flex flex-row align-items-center justify-content-start js-sticky-top-header">
 					<div className="header_list">
 						<ul className="d-flex flex-row align-items-center justify-content-start">
 							{/* <!-- Phone --> */}
@@ -96,7 +76,12 @@ class Header extends Component {
 								<li><a href="#"><i className="fa fa-behance" aria-hidden="true"></i></a></li>
 							</ul>
 						</div>
-
+						<div className="log_reg d-flex flex-row align-items-center justify-content-start">
+							<ul className="d-flex flex-row align-items-start justify-content-start">
+								<li><Link to="login">Login</Link></li>
+								<li><Link to="register">Register</Link></li>
+							</ul>
+						</div>
 					</div>
 				</div>
 				<header className="site-navbar py-4 js-sticky-header site-navbar-target" style={{
@@ -122,9 +107,6 @@ class Header extends Component {
 										<li><a href="#about-section" className={"nav-link " + (this.props.isLighten ? "shaded" : "darken")}>About</a></li>
 										<li><a href="#news-section" className={"nav-link " + (this.props.isLighten ? "shaded" : "darken")}>News</a></li>
 										<li><a href="#contact-section" className={"nav-link " + (this.props.isLighten ? "shaded" : "darken")}>Contact</a></li>
-										{im}
-
-
 									</ul>
 								</nav>
 							</div>
