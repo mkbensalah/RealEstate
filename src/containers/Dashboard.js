@@ -3,18 +3,10 @@ import Header from '../components/Header';
 import Properties from '../components/Properties';
 import Footer from '../components/Footer';
 import Aux from '../components/hoc/Auxliary'
-<<<<<<< Updated upstream
-import { Link } from "react-router-dom";
-=======
->>>>>>> Stashed changes
 import BuilderMaker from '../components/AllServices/ServiceMaker/BuilderMaker';
 import RepairMaker from '../components/AllServices/ServiceMaker/RepairMaker';
 import LeasingMaker from '../components/AllServices/ServiceMaker/LeasingMaker';
 import AdvertisingMaker from '../components/AllServices/ServiceMaker/AdvertisingMaker';
-<<<<<<< Updated upstream
-import SideNav, { Toggle, Nav, NavItem, NavIcon, NavText } from '@trendmicro/react-sidenav';
-=======
->>>>>>> Stashed changes
 
 
 import '@trendmicro/react-sidenav/dist/react-sidenav.css';
@@ -38,7 +30,6 @@ class Dashboard extends Component {
     render() {
         return (
             <Aux>
-<<<<<<< Updated upstream
                 <Header name={this.props.auth.user.username}/>
                 <SideNav
                     onSelect={(selected) => {
@@ -69,9 +60,6 @@ class Dashboard extends Component {
                         </NavItem>
                     </SideNav.Nav>
                 </SideNav>
-=======
-                <Header />
->>>>>>> Stashed changes
                <Properties/>
                 <h1> Mar7be bik si {this.props.auth.user.username}</h1>
               <BuilderMaker agId={this.props.auth.user.id}/>

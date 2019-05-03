@@ -135,7 +135,7 @@ export default class listing extends Component {
                       <h3 class="text-black mb-4 h5 font-family-2">Filter by Price</h3>
                       <div id="slider-range" class="border-primary" onTouchMove={this.handleChange} ></div>
                       <input type="text" name="text" id="amount"  class="form-control border-0 pl-0 bg-white" disabled=""  />
-                    </div>
+                    </div> 
                   </div>
                   <div class="col-md-9 order-2 order-md-1">
 
@@ -143,7 +143,7 @@ export default class listing extends Component {
 
             <div class="property horizontal d-flex">
                       <div class="mr-3 img-entry">
-                        <a href="property-single.html" ><img src={'src/assets/listing/'+el.idbien+'.jpg'} alt="Image" class="img-fluid" /></a>
+                        <a href={'single_property'+el.idbien} ><img src={'/src/assets/listing/'+el.idbien+'.jpg'} alt="Image" class="img-fluid" /></a>
                       </div>
                       <div class="prop-details p-3">
                         <div><a href="property-single.html"><strong class="price"> {el.prix} DT </strong></a></div>

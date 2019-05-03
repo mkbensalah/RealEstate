@@ -4,10 +4,9 @@ import PrivateRoute from './common/PrivateRoute';
 import Home from './containers/Home';
 import Dashboard from '../src/containers/Dashboard'
 import Services from '../src/containers/Services'
-<<<<<<< Updated upstream
-=======
+
+import Single_property from '../src/containers/Single_property'
 import Propery_listing from '../src/containers/Propery_listing'
->>>>>>> Stashed changes
 
 import jwt_decode from 'jwt-decode';
 import setAuthToken from './helpers/setAuthToken';
@@ -18,6 +17,7 @@ import store from './store';
 
 import Recommandation from './containers/Recommandation';
 import Login from './containers/Login';
+
 
 import './App.css';
 import Register from './containers/Register';
@@ -53,10 +53,8 @@ class App extends Component {
                         <Route path="/" exact component={Home}/>
                         <Route path="/login" exact component={Login}/>
                         <Route path="/register" exact component={Register}/>
-<<<<<<< Updated upstream
-=======
                         <Route path="/listing" exact component={Propery_listing}/>
->>>>>>> Stashed changes
+                        <Route path="/single_property:id" exact component={Single_property}/>
                         <Switch>
                             <PrivateRoute path="/services" exact component={Services}/>
                             <PrivateRoute path="/dashboard" exact component={Dashboard}/>
