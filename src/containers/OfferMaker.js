@@ -5,6 +5,11 @@ import Aux from '../components/hoc/Auxliary'
 
 import SideNav, {NavIcon, NavItem, NavText} from '@trendmicro/react-sidenav';
 import OfferForm from '../components/OfferForm'
+import { Widget, addResponseMessage, addLinkSnippet, addUserMessage } from 'react-chat-widget';
+
+import 'react-chat-widget/lib/styles.css';
+
+import logo from '../assets/images/logo1.png';
 
 
 import '@trendmicro/react-sidenav/dist/react-sidenav.css';
@@ -21,10 +26,16 @@ class OfferMaker extends Component {
 
 
     componentDidMount() {
+         addResponseMessage("Welcome to Dari.tn!");
         if (!this.props.auth.isAuthenticated) {
             this.props.history.push('/login');
         }
     }
+    handleNewUserMessage = (newMessage) => {
+        console.log(`New message incoming! ${newMessage}`);
+        // Now send the message throught the backend API
+    }
+
 
     render() {
         const {foo} = this.props.location.state;
@@ -40,7 +51,7 @@ class OfferMaker extends Component {
                             this.props.history.push('services');
                         }
                     }}
-                    style={{backgroundColor: 'grey'}}
+                    style={{backgroundColor: '#55407d'}}
                 >
                     <SideNav.Toggle/>
                     <SideNav.Nav defaultSelected="home">
@@ -63,10 +74,17 @@ class OfferMaker extends Component {
                         </NavItem>
                     </SideNav.Nav>
                 </SideNav>
+                <Widget
+                    handleNewUserMessage={this.handleNewUserMessage}
+                    profileAvatar={logo}
+                    title="Send Message To Agency"
+                    subtitle="Welcome"
+                />
                 <section className="sectionpadding10050 featured-properties-area">
 
                     <div className="row justify-content-center" style={{margin: '32px'}}>
                        <OfferForm idus={this.props.auth.user.id} idser={foo}/>
+
 
                     </div>
                 </section>

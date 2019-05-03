@@ -36,7 +36,7 @@ class Dashboard extends Component {
                         { this.props.history.push('dashboard'); console.log('ddddddddddddddddddddddddddddd')}
                         else {this.props.history.push('services');}
                     }}
-                    style={{backgroundColor : 'grey'}}
+                    style={{backgroundColor : '#55407d'}}
                 >
                     <SideNav.Toggle />
                     <SideNav.Nav defaultSelected="home">

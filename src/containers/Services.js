@@ -237,7 +237,7 @@ class Services extends Component {
                             this.props.history.push('services');
                         }
                     }}
-                    style={{backgroundColor: 'grey'}}
+                    style={{backgroundColor: '#55407d'}}
                 >
                     <SideNav.Toggle/>
                     <SideNav.Nav defaultSelected="home">
@@ -274,7 +274,7 @@ class Services extends Component {
                             <MainButton
                                 iconResting={<Ne style={{fontSize: 45}} nativeColor="white"/>}
                                 iconActive={<MdClose style={{fontSize: 40}} nativeColor="white"/>}
-                                backgroundColor="grey"
+                                backgroundColor="#55407d"
                                 onClick={() => this.setState({isOpen: !this.state.isOpen})}
                                 size={70}
                             />
@@ -357,7 +357,7 @@ class Services extends Component {
                         onClick={(e, offset) => this.handleClick(offset)}
                     />
                 </MuiThemeProvider>
-                <h1> Mar7be bik si {this.props.auth.user.username}</h1>
+
                 <Footer/>
             </Aux>
         );

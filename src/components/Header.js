@@ -66,7 +66,7 @@ class Header extends Component {
  		let im = (this.props.name) ?  aa : bb;
 		return (
 			<div>
-				<div className="header_bar d-flex flex-row align-items-center justify-content-start js-sticky-top-header"  style={{backgroundColor : 'grey'}}>
+				<div className="header_bar d-flex flex-row align-items-center justify-content-start js-sticky-top-header"  >
 					<div className="header_list">
 						<ul className="d-flex flex-row align-items-center justify-content-start">
 							{/* <!-- Phone --> */}

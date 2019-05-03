@@ -77,7 +77,7 @@ class ServiceCard extends React.Component {
     };
 
     handleClose = ( option ) => {
-        this.props.history.push('')
+
         this.setState({ anchorEl: null });
 
     };
