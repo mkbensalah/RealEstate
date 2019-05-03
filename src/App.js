@@ -5,6 +5,9 @@ import Home from './containers/Home';
 import Dashboard from '../src/containers/Dashboard'
 import Services from '../src/containers/Services'
 
+import Single_property from '../src/containers/Single_property'
+import Propery_listing from '../src/containers/Propery_listing'
+
 import jwt_decode from 'jwt-decode';
 import setAuthToken from './helpers/setAuthToken';
 import { logoutUser, setCurrentUser } from './actions/authAction';
@@ -14,6 +17,7 @@ import store from './store';
 
 import Recommandation from './containers/Recommandation';
 import Login from './containers/Login';
+
 
 import './App.css';
 import Register from './containers/Register';
@@ -60,10 +64,12 @@ class App extends Component {
                             <PrivateRoute path="/calculator" exact component={Recommandation} />
 
                             <PrivateRoute path="/owner" exact component={OwnerPage} />
-                            <PrivateRoute path="/listing" exact component={Listing} />
+                            {/* <PrivateRoute path="/listing" exact component={Listing} /> */}
                             <PrivateRoute path="/leasing" exact component={LeasingPage} />
                             <PrivateRoute path="/homes" exact component={ListingHomes} />
                             <PrivateRoute path="/create" exact component={Property} />
+                            <PrivateRoute path="/listing" exact component={Propery_listing} />
+                            <PrivateRoute path="/single_property:id" exact component={Single_property} />
 
                         </Switch>
                     </Switch>

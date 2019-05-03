@@ -3,10 +3,21 @@
   <component name="ChangeListManager">
     <list default="true" id="d29d4e99-0f65-47b9-83ec-474580d047a9" name="Default Changelist" comment="kc">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/build.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/build.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/build.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/build.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/pro/css/bootstrap/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/pro/css/bootstrap/bootstrap.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+<<<<<<< Updated upstream
+      <change beforePath="$PROJECT_DIR$/server/modals/service.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/modals/service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/api/services.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/api/services.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Dashboard.js" afterDir="false" />
+=======
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Properties.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Properties.js" afterDir="false" />
+>>>>>>> Stashed changes
       <change beforePath="$PROJECT_DIR$/src/containers/Services.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Services.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -22,6 +33,15 @@
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/containers/Services.js">
+<<<<<<< Updated upstream
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="825">
+              <caret line="252" column="26" selection-start-line="252" selection-start-column="26" selection-end-line="252" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+                <element signature="n#!!block;n#componentDidMount#0;n#Services#0" />
+                <element signature="e#2034#3702#0" />
+=======
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1075">
               <caret line="82" column="16" selection-start-line="82" selection-start-column="16" selection-end-line="82" selection-end-column="16" />
@@ -40,12 +60,22 @@
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
                 <element signature="e#924#1426#0" />
+>>>>>>> Stashed changes
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< Updated upstream
+        <entry file="file://$PROJECT_DIR$/src/containers/Dashboard.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="675">
+              <caret line="63" column="26" lean-forward="true" selection-start-line="35" selection-start-column="16" selection-end-line="63" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+=======
         <entry file="file://$PROJECT_DIR$/server/routes/api/services.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
@@ -59,15 +89,21 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="381">
               <caret line="297" column="7" selection-start-line="297" selection-start-column="7" selection-end-line="297" selection-end-column="7" />
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/SideBar.js">
+        <entry file="file://$PROJECT_DIR$/src/components/Header.js">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
+            <state relative-caret-position="575">
+              <caret line="53" column="162" selection-start-line="53" selection-start-column="71" selection-end-line="53" selection-end-column="162" />
+=======
             <state relative-caret-position="125">
               <caret line="7" column="25" selection-end-line="39" selection-end-column="1" />
+>>>>>>> Stashed changes
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -95,17 +131,36 @@
       <find>card</find>
       <find>hover</find>
       <find>class</find>
+<<<<<<< Updated upstream
+=======
       <find>getAll</find>
+>>>>>>> Stashed changes
       <find>class=</find>
       <find>RecipeReviewCard</find>
       <find>expanded</find>
       <find>anchorEl</find>
+<<<<<<< Updated upstream
+      <find>IconButton</find>
+      <find>handleClick</find>
+      <find>svg</find>
+      <find>open</find>
+      <find>getAll</find>
+      <find>console</find>
+      <find>guestLinks</find>
+      <find>LOGIN</find>
+=======
+>>>>>>> Stashed changes
     </findStrings>
     <replaceStrings>
       <replace>itemProp</replace>
       <replace>tabIndex</replace>
+<<<<<<< Updated upstream
+      <replace>ServiceCard</replace>
+      <replace>className=</replace>
+=======
       <replace>className=</replace>
       <replace>ServiceCard</replace>
+>>>>>>> Stashed changes
       <replace>this.state.anchorEl</replace>
     </replaceStrings>
   </component>
@@ -123,7 +178,10 @@
         <option value="$PROJECT_DIR$/src/components/Login.js" />
         <option value="$PROJECT_DIR$/src/containers/Home.js" />
         <option value="$PROJECT_DIR$/src/components/Register.js" />
+<<<<<<< Updated upstream
+=======
         <option value="$PROJECT_DIR$/src/components/Header.js" />
+>>>>>>> Stashed changes
         <option value="$PROJECT_DIR$/src/components/SideBar.js" />
         <option value="$PROJECT_DIR$/src/components/CardContainer.js" />
         <option value="$PROJECT_DIR$/src/components/CardContent.js" />
@@ -137,12 +195,22 @@
         <option value="$PROJECT_DIR$/src/components/AllServices/HomePacking.js" />
         <option value="$PROJECT_DIR$/src/components/AllServices/HomeDecorator.js" />
         <option value="$PROJECT_DIR$/src/components/AllServices/ServiceMaker/AdvertisingMaker.js" />
+<<<<<<< Updated upstream
+        <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/src/components/Properties.js" />
+        <option value="$PROJECT_DIR$/src/components/ServiceCard.js" />
+        <option value="$PROJECT_DIR$/server/modals/service.js" />
+        <option value="$PROJECT_DIR$/server/routes/api/services.js" />
+        <option value="$PROJECT_DIR$/src/components/Header.js" />
+        <option value="$PROJECT_DIR$/src/containers/Dashboard.js" />
+=======
         <option value="$PROJECT_DIR$/server/routes/api/services.js" />
         <option value="$PROJECT_DIR$/src/containers/Dashboard.js" />
         <option value="$PROJECT_DIR$/server/modals/service.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/Properties.js" />
         <option value="$PROJECT_DIR$/src/components/ServiceCard.js" />
+>>>>>>> Stashed changes
         <option value="$PROJECT_DIR$/src/containers/Services.js" />
       </list>
     </option>
@@ -173,6 +241,8 @@
             <path>
               <item name="RealEstate" type="b2602c69:ProjectViewProjectNode" />
               <item name="RealEstate" type="462c0819:PsiDirectoryNode" />
+<<<<<<< Updated upstream
+=======
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -186,6 +256,7 @@
             <path>
               <item name="RealEstate" type="b2602c69:ProjectViewProjectNode" />
               <item name="RealEstate" type="462c0819:PsiDirectoryNode" />
+>>>>>>> Stashed changes
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="AllServices" type="462c0819:PsiDirectoryNode" />
@@ -251,13 +322,41 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< Updated upstream
+    <option name="totallyTimeSpent" value="83827000" />
+=======
     <option name="totallyTimeSpent" value="66406000" />
+>>>>>>> Stashed changes
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
+<<<<<<< Updated upstream
+      <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
+      <window_info id="npm" order="1" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="3" visible="true" weight="0.10906217" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32936078" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32936078" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32936078" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.076396205" />
+=======
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13066386" />
+>>>>>>> Stashed changes
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -275,31 +374,12 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/App.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="121" column="4" selection-start-line="121" selection-start-column="4" selection-end-line="121" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Search.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Backdrop.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -400,6 +480,7 @@
     <entry file="file://$PROJECT_DIR$/src/components/CardContainer.js" />
     <entry file="file://$PROJECT_DIR$/src/components/CardContent.js" />
     <entry file="file://$PROJECT_DIR$/public/css/style.css">
+<<<<<<< Updated upstream
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179500">
           <caret line="7180" selection-start-line="7180" selection-end-line="7180" />
@@ -419,6 +500,17 @@
     <entry file="file://$PROJECT_DIR$/src/components/AllServices/HomePacking.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
+=======
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179500">
+          <caret line="7180" selection-start-line="7180" selection-end-line="7180" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/AllServices/HomeRepair.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+>>>>>>> Stashed changes
           <caret line="38" selection-start-line="38" selection-end-line="38" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
@@ -426,6 +518,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/src/components/AllServices/HomeEvaluation.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
@@ -437,52 +530,127 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
           <caret line="24" column="60" selection-start-line="24" selection-start-column="60" selection-end-line="24" selection-end-column="60" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/components/AllServices/HomePacking.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+>>>>>>> Stashed changes
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/src/containers/Recommandation.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
           <caret line="9" column="33" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="33" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/components/AllServices/HomeEvaluation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="45" selection-start-line="1" selection-start-column="45" selection-end-line="1" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/AllServices/HomeLeasing.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="24" column="60" selection-start-line="24" selection-start-column="60" selection-end-line="24" selection-end-column="60" />
+>>>>>>> Stashed changes
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/src/common/PrivateRoute.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/containers/Recommandation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="9" column="33" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+>>>>>>> Stashed changes
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="575">
           <caret line="52" column="57" selection-start-line="52" selection-start-column="49" selection-end-line="52" selection-end-column="57" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/common/PrivateRoute.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+>>>>>>> Stashed changes
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/src/components/AllServices/HomeBuilder.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="27" column="44" lean-forward="true" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="52" column="57" selection-start-line="52" selection-start-column="49" selection-end-line="52" selection-end-column="57" />
+>>>>>>> Stashed changes
           <folding>
-            <element signature="e#0#40#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
+    <entry file="file://$PROJECT_DIR$/src/components/AllServices/ServiceMaker/AdvertisingMaker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="625">
+          <caret line="136" column="15" lean-forward="true" selection-start-line="125" selection-start-column="7" selection-end-line="136" selection-end-column="15" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/components/AllServices/HomeBuilder.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="27" column="44" lean-forward="true" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
+>>>>>>> Stashed changes
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< Updated upstream
+    <entry file="file://$PROJECT_DIR$/src/components/Properties.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="321" column="5" lean-forward="true" selection-start-line="321" selection-start-column="5" selection-end-line="321" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/SideBar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="7" column="25" selection-end-line="39" selection-end-column="1" />
+=======
     <entry file="file://$PROJECT_DIR$/server/modals/service.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="381">
@@ -504,12 +672,98 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="575">
           <caret line="25" column="5" lean-forward="true" selection-start-line="21" selection-start-column="3" selection-end-line="25" selection-end-column="5" />
+>>>>>>> Stashed changes
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
+    <entry file="file://$PROJECT_DIR$/src/assets/images/builder.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/AllServices/HomeDecorator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-214">
+          <caret line="1" column="47" selection-start-line="1" selection-start-column="47" selection-end-line="1" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/AllServices/ServiceMaker/BuilderMaker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-25">
+          <caret line="241" column="9" lean-forward="true" selection-start-line="236" selection-start-column="8" selection-end-line="241" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/images/filter.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="15" column="51" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ServiceCard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="170" column="67" lean-forward="true" selection-start-line="170" selection-start-column="23" selection-end-line="170" selection-end-column="67" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#924#1426#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/modals/service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="321" column="74" selection-start-line="321" selection-start-column="74" selection-end-line="321" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/routes/api/services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="47" column="12" lean-forward="true" selection-start-line="47" selection-start-column="12" selection-end-line="47" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/images/feature5.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/images/hero2.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/images/person_5.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/images/person_8.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/images/person_1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/images/person_2.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/images/person_3.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/images/person_6.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Header.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="53" column="162" selection-start-line="53" selection-start-column="71" selection-end-line="53" selection-end-column="162" />
+=======
     <entry file="file://$PROJECT_DIR$/src/components/Properties.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
@@ -521,22 +775,41 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
           <caret line="92" column="30" selection-start-line="92" selection-start-column="30" selection-end-line="92" selection-end-column="30" />
+>>>>>>> Stashed changes
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
+    <entry file="file://$PROJECT_DIR$/src/containers/Dashboard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="63" column="26" lean-forward="true" selection-start-line="35" selection-start-column="16" selection-end-line="63" selection-end-column="26" />
+=======
     <entry file="file://$PROJECT_DIR$/src/components/SideBar.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
           <caret line="7" column="25" selection-end-line="39" selection-end-column="1" />
+>>>>>>> Stashed changes
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
+    <entry file="file://$PROJECT_DIR$/src/containers/Services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="252" column="26" selection-start-line="252" selection-start-column="26" selection-end-line="252" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <element signature="n#!!block;n#componentDidMount#0;n#Services#0" />
+            <element signature="e#2034#3702#0" />
+          </folding>
+=======
     <entry file="file://$PROJECT_DIR$/src/assets/images/builder.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -544,6 +817,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-214">
           <caret line="1" column="47" selection-start-line="1" selection-start-column="47" selection-end-line="1" selection-end-column="47" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
