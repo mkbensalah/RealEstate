@@ -10,20 +10,14 @@ export default class listing extends Component {
         super(props);
         this.state = {
           list: [
-                   {"id" : 1 , "adresse" : "480 12th, Unit 14, San Francisco, CA " , "prix" : 600 , "meuble" : 1 ,"nb_chambre" : 3 , "surface" : 300 , "type" : "immeuble"},
-                   {"id" : 2 , "adresse" : "480 12th, Unit 14, San Francisco, CA ",  "prix" : 500 , "meuble" : 0 , "nb_chambre" : 2 , "surface" : 400, "type" : "immeuble"},
-                   {"id" : 3 , "adresse" : "480 12th, Unit 14, San Francisco, CA ",  "prix" : 400 , "meuble" : 0 , "nb_chambre" : 2 , "surface" : 400, "type" : "terrain" , "type_terrain" : "agricole" ,"prix_metre" : 100 }
-
+                  
                 ],
           filtred:[
-                   {"id" : 1 , "adresse" : "480 12th, Unit 14, San Francisco, CA " , "prix" : 600 , "meuble" : 1 ,"nb_chambre" : 3 , "surface" : 300, "type" : "immeuble"},
-                   {"id" : 2 , "adresse" : "480 12th, Unit 14, San Francisco, CA ",  "prix" : 500 , "meuble" : 0 , "nb_chambre" : 2 , "surface" : 400, "type" : "immeuble"},
-                   {"id" : 3 , "adresse" : "480 12th, Unit 14, San Francisco, CA ",  "prix" : 400 , "meuble" : 0 , "nb_chambre" : 2 , "surface" : 400, "type" : "terrain" , "type_terrain" : "agricole" ,"prix_metre" : 100 }        
-         ],    
+                         ],    
          filtre:{
            "meuble" : "all" , 
            "type" : "all",
-           "nb_chambre" : "all"
+           "nbchambre" : "all"
          }
         };
        this.handleChange = this.handleChange.bind(this);
@@ -31,12 +25,26 @@ export default class listing extends Component {
       }
 
       componentDidMount() {
-        axios.get(`http://localhost:5000/api/property/building/all`)
+        axios.get(`http://localhost:5000/api/property/terrain/all`)
           .then(res => {
             const res_obj = res.data;
-            console.log(res_obj);
-            //this.setState({ list:res_obj });
-          })
+           // console.log(res_obj.rows);
+
+           axios.get(`http://localhost:5000/api/property/building/all`)
+           .then(res => {
+              const newList = res.data.rows ;
+            
+
+           res_obj.rows.forEach(function (ele){
+                   newList[newList.length]=ele ;
+             });
+             console.log(newList);
+
+             this.setState({ list:newList , filtred:newList});
+           });
+
+          });
+          
       }
 
       handleChange(e) {
@@ -51,14 +59,17 @@ export default class listing extends Component {
          
          a = document.getElementById("chambre");
          b = a.options[a.selectedIndex].value;
-         this.state.filtre.nb_chambre=b ;
-         
+         this.state.filtre.nbchambre=b ;
+         if (this.state.filtre.type=="terrain") {
+              this.state.filtre.meuble="all" ;
+              this.state.filtre.nbchambre="all" ;
+         }
         
          let currentList = [];
          let newList = [];
          currentList = this.state.list ;
          newList= currentList.filter(val=>{
-                 return ( (this.state.filtre.meuble=="all" ||  (this.state.filtre.meuble == val.meuble)) && (this.state.filtre.type=="all" || this.state.filtre.type== val.type ) && (this.state.filtre.nb_chambre=="all" || this.state.filtre.nb_chambre== val.nb_chambre)  )
+                 return ( (this.state.filtre.meuble=="all" ||  (this.state.filtre.meuble == val.meuble)) && (this.state.filtre.type=="all" || this.state.filtre.type== val.type ) && (this.state.filtre.nbchambre=="all" || this.state.filtre.nbchambre== val.nbchambre)  )
             
          })
          this.setState({
@@ -132,12 +143,12 @@ export default class listing extends Component {
 
             <div class="property horizontal d-flex">
                       <div class="mr-3 img-entry">
-                        <a href="property-single.html" ><img src={'src/assets/listing/'+el.id+'.jpg'} alt="Image" class="img-fluid" /></a>
+                        <a href="property-single.html" ><img src={'src/assets/listing/'+el.idbien+'.jpg'} alt="Image" class="img-fluid" /></a>
                       </div>
                       <div class="prop-details p-3">
                         <div><a href="property-single.html"><strong class="price"> {el.prix} DT </strong></a></div>
                         <div class="mb-2 d-flex justify-content-between">
-                          <span class="w border-r">  {el.type=='terrain' ? el.prix_metre + ' dt/m²' :  'S + ' + el.nb_chambre } </span> 
+                          <span class="w border-r">  {el.type=='terrain' ? el.prix_metre + ' dt/m²' :  'S + ' + el.nbchambre } </span> 
                           <span class="w border-r">      {el.type=='terrain' ? el.type_terrain :  (el.meuble==1 ? 'meuble' : 'non meuble') }   </span>
                           <span class="w">{el.surface} m². </span>
                         </div>
