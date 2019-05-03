@@ -1,24 +1,4 @@
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
-html {
-  line-height: 1.15;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
-body {
-  margin: 0;
-}
-article,
-aside,
-footer,
-header,
-nav,
-section {
-  display: block;
-}
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
 figcaption,
 figure,
 main {
@@ -211,7 +191,7 @@ img {
 a {
   color: #fff;
   text-decoration: none;
-  padding: 10px 20px;
+  /* padding: 10px 20px; */
 }
 h4 {
   font-size: 1rem;

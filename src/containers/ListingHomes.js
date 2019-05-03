@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import ListingProps from '../components/ListingProps';
 import Filter from '../components/Filter';
-import Header from '../components/Header';
+import TopHeader from '../components/TopHeader';
+import Footer from '../components/Footer';
 
 
 export default class ListingHomes extends Component {
@@ -160,11 +161,12 @@ export default class ListingHomes extends Component {
     render() {
         return (
             <div>
-                <Header />
+                <TopHeader />
                 <section>
                     <div style={{ marginTop: "100px" }}></div>
                     <Filter handleOnChange={this.handleOnChange} global={this.state} populateAction={this.populateForms} />
                     <ListingProps property={this.state.filterData} global={this.state} handleOnChange={this.handleOnChange} handleOnChangeView={this.handleOnChangeView} />
+                    <Footer></Footer>
                 </section>
 
             </div>

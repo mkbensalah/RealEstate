@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import '../assets/css/index.css';
-import Header from '../components/Header';
+import TopHeader from '../components/TopHeader';
+import Footer from '../components/Footer';
 
 export default class LeasingPage extends Component {
     render() {
         return (
             <div>
-                <Header />
+                <TopHeader />
                 <div style={{ marginTop: "100px" }}></div>
                 <div class="js-view-container" name="visibility: visible; opacity: 1;">
 
@@ -429,7 +430,7 @@ export default class LeasingPage extends Component {
                                                 </div>
                                             </div>
                                             <div class="js-list-content">
-                                                <div id="57015b4da76d50970d6e1d6d" class="js-list-row list-row mycard" data-filter-values="AMAZON ONLINE,inprogress" name="">
+                                                <div id="57015b4da76d50970d6e1d6d" class="js-list-row list-row mycard" data-filter-values="GHAZALA AGENCE ,inprogress" name="">
                                                     <div class="list-col">
 
                                                         <div class="list-label js-list-value text-success hidden-xs">Lease in progress</div>
@@ -441,7 +442,7 @@ export default class LeasingPage extends Component {
 
                                                             </div>
                                                             <div class="list-title js-list-value pull-left">
-                                                                AMAZON ONLINE
+                                                                GHAZALA AGENCE 
                         </div>
                                                         </div>
                                                     </div>
@@ -449,7 +450,7 @@ export default class LeasingPage extends Component {
                                                         <div>Lease contract</div>
                                                         <div>
 
-                                                            01/01/2016 <i class="fa fa-long-arrow-right"></i> 12/31/2024
+                                                            01/01/2018 <i class="fa fa-long-arrow-right"></i> 12/31/2024
                                     
                     </div>
                                                         <div>
@@ -463,7 +464,7 @@ export default class LeasingPage extends Component {
 
 
 
-                                                <div id="57015a53a76d50970d6e1d6c" class="js-list-row list-row mycard" data-filter-values="GOOGLE FRANCE,inprogress" name="">
+                                                <div id="57015a53a76d50970d6e1d6c" class="js-list-row list-row mycard" data-filter-values="GHAZALA AGENCE ,inprogress" name="">
                                                     <div class="list-col">
 
                                                         <div class="list-label js-list-value text-success hidden-xs">Lease in progress</div>
@@ -475,7 +476,7 @@ export default class LeasingPage extends Component {
 
                                                             </div>
                                                             <div class="list-title js-list-value pull-left">
-                                                                GOOGLE FRANCE
+                                                                GHAZALA AGENCE 
                         </div>
                                                         </div>
                                                     </div>
@@ -483,7 +484,7 @@ export default class LeasingPage extends Component {
                                                         <div>Lease contract</div>
                                                         <div>
 
-                                                            01/01/2016 <i class="fa fa-long-arrow-right"></i> 12/31/2024
+                                                            01/01/2018 <i class="fa fa-long-arrow-right"></i> 12/31/2024
                                     
                     </div>
                                                         <div>
@@ -497,7 +498,7 @@ export default class LeasingPage extends Component {
 
 
 
-                                                <div id="57015ea5a76d50970d6e1d6f" class="js-list-row list-row mycard" data-filter-values="MOZILLA Corporation,inprogress" name="">
+                                                <div id="57015ea5a76d50970d6e1d6f" class="js-list-row list-row mycard" data-filter-values="GHAZALA Agence,inprogress" name="">
                                                     <div class="list-col">
 
                                                         <div class="list-label js-list-value text-success hidden-xs">Lease in progress</div>
@@ -509,7 +510,7 @@ export default class LeasingPage extends Component {
 
                                                             </div>
                                                             <div class="list-title js-list-value pull-left">
-                                                                MOZILLA Corporation
+                                                                GHAZALA Agence
                         </div>
                                                         </div>
                                                     </div>
@@ -517,7 +518,7 @@ export default class LeasingPage extends Component {
                                                         <div>Lease contract</div>
                                                         <div>
 
-                                                            01/01/2016 <i class="fa fa-long-arrow-right"></i> 12/31/2024
+                                                            01/01/2018 <i class="fa fa-long-arrow-right"></i> 12/31/2024
                                     
                     </div>
                                                         <div>
@@ -531,7 +532,7 @@ export default class LeasingPage extends Component {
 
 
 
-                                                <div id="57015c0ca76d50970d6e1d6e" class="js-list-row list-row mycard" data-filter-values="RED HAT,inprogress" name="">
+                                                <div id="57015c0ca76d50970d6e1d6e" class="js-list-row list-row mycard" data-filter-values="GHAZALA AGENCE ,inprogress" name="">
                                                     <div class="list-col">
 
                                                         <div class="list-label js-list-value text-success hidden-xs">Lease in progress</div>
@@ -543,7 +544,7 @@ export default class LeasingPage extends Component {
 
                                                             </div>
                                                             <div class="list-title js-list-value pull-left">
-                                                                RED HAT
+                                                                GHAZALA AGENCE 
                         </div>
                                                         </div>
                                                     </div>
@@ -551,7 +552,7 @@ export default class LeasingPage extends Component {
                                                         <div>Lease contract</div>
                                                         <div>
 
-                                                            01/01/2016 <i class="fa fa-long-arrow-right"></i> 12/31/2024
+                                                            01/01/2018 <i class="fa fa-long-arrow-right"></i> 12/31/2024
                                     
                     </div>
                                                         <div>
@@ -705,7 +706,7 @@ export default class LeasingPage extends Component {
                                                                 <tr>
                                                                     <td colspan="7"><span class="year old">2009</span><span class="year">2010</span><span class="year">2011</span><span class="year">2012</span><span class="year">2013</span><span class="year">2014</span><span class="year">2015</span>
                                                                         <span
-                                                                            class="year">2016</span><span class="year">2017</span><span class="year">2018</span><span class="year active focused">2019</span><span class="year new">2020</span></td>
+                                                                            class="year">2018</span><span class="year">2017</span><span class="year">2018</span><span class="year active focused">2019</span><span class="year new">2020</span></td>
                                                                 </tr>
                                                             </tbody>
                                                             <tfoot>
@@ -786,7 +787,7 @@ export default class LeasingPage extends Component {
                                                         All <span class="js-all-filter-label text-muted">(4)</span>
                                                     </div>
                                                     <div class="pull-right">
-                                                        <span class="text-right js-total-topay">$428,160.00</span>
+                                                        <span class="text-right js-total-topay">DTN 428,160.00</span>
                                                     </div>
                                                 </div>
                                             </button>
@@ -796,7 +797,7 @@ export default class LeasingPage extends Component {
                                                         Paid <span class="js-paid-filter-label text-muted">(0)</span>
                                                     </div>
                                                     <div class="pull-right">
-                                                        <span class="js-total-paid text-success strong">$0.00</span>
+                                                        <span class="js-total-paid text-success strong">DTN 0.00</span>
                                                     </div>
                                                 </div>
                                             </button>
@@ -806,7 +807,7 @@ export default class LeasingPage extends Component {
                                                         Not paid <span class="js-not-paid-filter-label text-muted">(4)</span>
                                                     </div>
                                                     <div class="pull-right">
-                                                        <span class="js-total-notpaid text-danger strong">$428,160.00</span>
+                                                        <span class="js-total-notpaid text-danger strong">DTN 428,160.00</span>
                                                     </div>
                                                 </div>
                                             </button>
@@ -862,6 +863,7 @@ export default class LeasingPage extends Component {
 
 
                     </div>
+                    <Footer></Footer>
                 </div>
                 )
             }

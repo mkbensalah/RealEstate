@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import '../assets/css/index.css';
-import Header from '../components/Header';
+import TopHeader from '../components/TopHeader';
+import Footer from '../components/Footer';
 
 export default class Listing extends Component {
     render() {
         return (
             <div>
-                <Header />
+                <TopHeader />
                 <div style={{ marginTop: "100px" }}></div>
                 <div class="js-view-container" name="visibility: visible; opacity: 1;">
 
@@ -41,7 +42,7 @@ export default class Listing extends Component {
                                                                     <label class="control-label" for="payment">Amount</label>
                                                                     <div class="input-group">
                                                                         <input type="text" id="payment" class="form-control text-right"></input>
-                                                                        <span class="input-group-addon">$</span>
+                                                                        <span class="input-group-addon">DTN </span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -193,7 +194,7 @@ export default class Listing extends Component {
                                         </div>
 
                                         <div class="js-list-content">
-                                            <div id="57015b4da76d50970d6e1d6d" class="js-list-row list-row mycard" data-filter-values="AMAZON ONLINE,notpaid" name="">
+                                            <div id="57015b4da76d50970d6e1d6d" class="js-list-row list-row mycard" data-filter-values="GHAZALA AGENCE,notpaid" name="">
                                                 <div class="list-col">
                                                     <div class="list-label">
 
@@ -276,11 +277,11 @@ export default class Listing extends Component {
                                                         <div class="pull-left list-avatar-col">
                                                             <span class="fa-stack fa-lg">
                                                                 <i class="fa fa-calendar-o fa-stack-2x"></i>
-                                                                <span class="fa icon-text fa-stack-1x">$</span>
+                                                                <span class="fa icon-text fa-stack-1x">DTN </span>
                                                             </span>
                                                         </div>
                                                         <div class="pull-left">
-                                                            <div class="list-title js-list-value">JUMIA ONLINE</div>
+                                                            <div class="list-title js-list-value">GHAZALA AGENCE</div>
                                                         </div>
                                                     </div>
                                                     <div class="list-label">
@@ -310,13 +311,13 @@ export default class Listing extends Component {
                                                         <small class="pull-right">Payment</small>
                                                     </div>
                                                     <div class="list-payment-price text-right">
-                                                        <span><span class="price-content"><span class="price-amount odometer" data-key="payment">$0.00</span></span>
+                                                        <span><span class="price-content"><span class="price-amount odometer" data-key="payment">DTN 450.900</span></span>
                                                         </span>
                                                     </div>
                                                     <div class="list-label clearfix">
                                                         <div class="pull-left">Balance</div>
                                                         <div class="list-balance-price pull-right text-right">
-                                                            <span class="price-content"><span class="price-amount odometer" data-key="newBalance">-$92,160.00</span></span>
+                                                            <span class="price-content"><span class="price-amount odometer" data-key="newBalance">-DTN 92,16450.900</span></span>
                                                         </div>
                                                     </div>
                                                     <div data-toggle="tooltip" data-placement="right" class="list-comment-link" data-html="true" title="" name="display: none;" data-original-title=""><span class="glyphicon glyphicon-comment"></span></div>
@@ -326,7 +327,7 @@ export default class Listing extends Component {
 
 
 
-                                            <div id="57015a53a76d50970d6e1d6c" class="js-list-row list-row mycard" data-filter-values="GOOGLE FRANCE,notpaid" name="">
+                                            <div id="57015a53a76d50970d6e1d6c" class="js-list-row list-row mycard" data-filter-values="GHAZALA AGENCE,notpaid" name="">
                                                 <div class="list-col">
                                                     <div class="list-label">
 
@@ -409,11 +410,11 @@ export default class Listing extends Component {
                                                         <div class="pull-left list-avatar-col">
                                                             <span class="fa-stack fa-lg">
                                                                 <i class="fa fa-calendar-o fa-stack-2x"></i>
-                                                                <span class="fa icon-text fa-stack-1x">$</span>
+                                                                <span class="fa icon-text fa-stack-1x">DTN </span>
                                                             </span>
                                                         </div>
                                                         <div class="pull-left">
-                                                            <div class="list-title js-list-value">GOOGLE TUNISIA</div>
+                                                            <div class="list-title js-list-value">GHAZALA AGENCE</div>
                                                         </div>
                                                     </div>
                                                     <div class="list-label">
@@ -443,13 +444,13 @@ export default class Listing extends Component {
                                                         <small class="pull-right">Payment</small>
                                                     </div>
                                                     <div class="list-payment-price text-right">
-                                                        <span><span class="price-content"><span class="price-amount odometer" data-key="payment">$0.00</span></span>
+                                                        <span><span class="price-content"><span class="price-amount odometer" data-key="payment">DTN 450.900</span></span>
                                                         </span>
                                                     </div>
                                                     <div class="list-label clearfix">
                                                         <div class="pull-left">Balance</div>
                                                         <div class="list-balance-price pull-right text-right">
-                                                            <span class="price-content"><span class="price-amount odometer" data-key="newBalance">-$124,800.00</span></span>
+                                                            <span class="price-content"><span class="price-amount odometer" data-key="newBalance">-DTN 124,80450.900</span></span>
                                                         </div>
                                                     </div>
                                                     <div data-toggle="tooltip" data-placement="right" class="list-comment-link" data-html="true" title="" name="display: none;" data-original-title=""><span class="glyphicon glyphicon-comment"></span></div>
@@ -459,7 +460,7 @@ export default class Listing extends Component {
 
 
 
-                                            <div id="57015ea5a76d50970d6e1d6f" class="js-list-row list-row mycard" data-filter-values="MOZILLA Corporation,notpaid" name="">
+                                            <div id="57015ea5a76d50970d6e1d6f" class="js-list-row list-row mycard" data-filter-values="GHAZALA AGENCE,notpaid" name="">
                                                 <div class="list-col">
                                                     <div class="list-label">
 
@@ -542,7 +543,7 @@ export default class Listing extends Component {
                                                         <div class="pull-left list-avatar-col">
                                                             <span class="fa-stack fa-lg">
                                                                 <i class="fa fa-calendar-o fa-stack-2x"></i>
-                                                                <span class="fa icon-text fa-stack-1x">$</span>
+                                                                <span class="fa icon-text fa-stack-1x">DTN </span>
                                                             </span>
                                                         </div>
                                                         <div class="pull-left">
@@ -576,13 +577,13 @@ export default class Listing extends Component {
                                                         <small class="pull-right">Payment</small>
                                                     </div>
                                                     <div class="list-payment-price text-right">
-                                                        <span><span class="price-content"><span class="price-amount odometer" data-key="payment">$0.00</span></span>
+                                                        <span><span class="price-content"><span class="price-amount odometer" data-key="payment">DTN 450.900</span></span>
                                                         </span>
                                                     </div>
                                                     <div class="list-label clearfix">
                                                         <div class="pull-left">Balance</div>
                                                         <div class="list-balance-price pull-right text-right">
-                                                            <span class="price-content"><span class="price-amount odometer" data-key="newBalance">-$138,240.00</span></span>
+                                                            <span class="price-content"><span class="price-amount odometer" data-key="newBalance">-DTN 138,24450.900</span></span>
                                                         </div>
                                                     </div>
                                                     <div data-toggle="tooltip" data-placement="right" class="list-comment-link" data-html="true" title="" name="display: none;" data-original-title=""><span class="glyphicon glyphicon-comment"></span></div>
@@ -592,7 +593,7 @@ export default class Listing extends Component {
 
 
 
-                                            <div id="57015c0ca76d50970d6e1d6e" class="js-list-row list-row mycard" data-filter-values="RED HAT,notpaid" name="">
+                                            <div id="57015c0ca76d50970d6e1d6e" class="js-list-row list-row mycard" data-filter-values="GHAZALA AGENCE,notpaid" name="">
                                                 <div class="list-col">
                                                     <div class="list-label">
 
@@ -675,7 +676,7 @@ export default class Listing extends Component {
                                                         <div class="pull-left list-avatar-col">
                                                             <span class="fa-stack fa-lg">
                                                                 <i class="fa fa-calendar-o fa-stack-2x"></i>
-                                                                <span class="fa icon-text fa-stack-1x">$</span>
+                                                                <span class="fa icon-text fa-stack-1x">DTN </span>
                                                             </span>
                                                         </div>
                                                         <div class="pull-left">
@@ -709,13 +710,13 @@ export default class Listing extends Component {
                                                         <small class="pull-right">Payment</small>
                                                     </div>
                                                     <div class="list-payment-price text-right">
-                                                        <span><span class="price-content"><span class="price-amount odometer" data-key="payment">$0.00</span></span>
+                                                        <span><span class="price-content"><span class="price-amount odometer" data-key="payment">DTN 450.900</span></span>
                                                         </span>
                                                     </div>
                                                     <div class="list-label clearfix">
                                                         <div class="pull-left">Balance</div>
                                                         <div class="list-balance-price pull-right text-right">
-                                                            <span class="price-content"><span class="price-amount odometer" data-key="newBalance">-$72,960.00</span></span>
+                                                            <span class="price-content"><span class="price-amount odometer" data-key="newBalance">-DTN 72,96450.900</span></span>
                                                         </div>
                                                     </div>
                                                     <div data-toggle="tooltip" data-placement="right" class="list-comment-link" data-html="true" title="" name="display: none;" data-original-title=""><span class="glyphicon glyphicon-comment"></span></div>
@@ -946,7 +947,7 @@ export default class Listing extends Component {
                                                     All <span class="js-all-filter-label text-muted">(4)</span>
                                                 </div>
                                                 <div class="pull-right">
-                                                    <span class="text-right js-total-topay">$428,160.00</span>
+                                                    <span class="text-right js-total-topay">DTN 428,16450.900</span>
                                                 </div>
                                             </div>
                                         </button>
@@ -956,7 +957,7 @@ export default class Listing extends Component {
                                                     Paid <span class="js-paid-filter-label text-muted">(0)</span>
                                                 </div>
                                                 <div class="pull-right">
-                                                    <span class="js-total-paid text-success strong">$0.00</span>
+                                                    <span class="js-total-paid text-success strong">DTN 450.900</span>
                                                 </div>
                                             </div>
                                         </button>
@@ -966,7 +967,7 @@ export default class Listing extends Component {
                                                     Not paid <span class="js-not-paid-filter-label text-muted">(4)</span>
                                                 </div>
                                                 <div class="pull-right">
-                                                    <span class="js-total-notpaid text-danger strong">$428,160.00</span>
+                                                    <span class="js-total-notpaid text-danger strong">DTN 428,16450.900</span>
                                                 </div>
                                             </div>
                                         </button>
@@ -1022,6 +1023,7 @@ export default class Listing extends Component {
 
 
                 </div>
+                <Footer></Footer>
             </div>
         )
     }

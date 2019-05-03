@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {Route, Switch} from 'react-router-dom';
+import React, { Component } from 'react';
+import { Route, Switch } from 'react-router-dom';
 import PrivateRoute from './common/PrivateRoute';
 import Home from './containers/Home';
 import Dashboard from '../src/containers/Dashboard'
@@ -7,9 +7,9 @@ import Services from '../src/containers/Services'
 
 import jwt_decode from 'jwt-decode';
 import setAuthToken from './helpers/setAuthToken';
-import {logoutUser, setCurrentUser} from './actions/authAction';
+import { logoutUser, setCurrentUser } from './actions/authAction';
 
-import {Provider} from 'react-redux';
+import { Provider } from 'react-redux';
 import store from './store';
 
 import Recommandation from './containers/Recommandation';
@@ -17,6 +17,11 @@ import Login from './containers/Login';
 
 import './App.css';
 import Register from './containers/Register';
+import OwnerPage from './containers/OwnerPage';
+import Listing from './containers/Listing';
+import LeasingPage from './containers/LeasingPage';
+import ListingHomes from './containers/ListingHomes';
+import Property from './containers/Property';
 
 
 // Check for token
@@ -46,13 +51,20 @@ class App extends Component {
             <Provider store={store}>
                 <div>
                     <Switch>
-                        <Route path="/" exact component={Home}/>
-                        <Route path="/login" exact component={Login}/>
-                        <Route path="/register" exact component={Register}/>
+                        <Route path="/" exact component={Home} />
+                        <Route path="/login" exact component={Login} />
+                        <Route path="/register" exact component={Register} />
                         <Switch>
-                            <PrivateRoute path="/services" exact component={Services}/>
-                            <PrivateRoute path="/dashboard" exact component={Dashboard}/>
-                            <PrivateRoute path="/calculator" exact component={Recommandation}/>
+                            <PrivateRoute path="/services" exact component={Services} />
+                            <PrivateRoute path="/dashboard" exact component={Dashboard} />
+                            <PrivateRoute path="/calculator" exact component={Recommandation} />
+
+                            <PrivateRoute path="/owner" exact component={OwnerPage} />
+                            <PrivateRoute path="/listing" exact component={Listing} />
+                            <PrivateRoute path="/leasing" exact component={LeasingPage} />
+                            <PrivateRoute path="/homes" exact component={ListingHomes} />
+                            <PrivateRoute path="/create" exact component={Property} />
+
                         </Switch>
                     </Switch>
                 </div>

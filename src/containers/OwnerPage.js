@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
-import Header from '../components/Header';
+import TopHeader from '../components/TopHeader';
 import '../assets/css/index.css';
+import Footer from '../components/Footer';
 
 export default class OwnerPage extends Component {
     render() {
         return (
             <div>
-                <Header></Header>
+                <TopHeader />
                 <div style={{ marginTop: "100px" }}></div>
                 <div class="js-view-container" name="visibility: visible; opacity: 1;">
 
@@ -146,7 +147,7 @@ export default class OwnerPage extends Component {
 
                                 <div id="right-menu-pane" class="col-xs-4">
                                     <div class="js-side-menu side-menu mycard active affix-top" data-id="owner-menu" style={{ width: "380px", opacity: "1", display: "block", transform: "translateX(0px)" }}>
-                                        <button type="button" data-id="edit-owner" class="btn btn-default btn-block js-user-action js-only-mono-selection"><i class="fa fa-pencil-square-o"></i> Edit</button>
+                                        <button type="button" data-id="edit-owner" class="btn btn-default btn-block js-user-action js-only-mono-selection"><i class="fa fa-pencil-square-o"></i> Search</button>
                                     </div>
 
                                     <div class="js-side-menu side-menu mycard" data-id="owner-form-menu" data-target="#owner-form" name="width: 380px;">
@@ -161,7 +162,7 @@ export default class OwnerPage extends Component {
                     </div>
 
                 </div>
-
+                <Footer></Footer>
             </div>
         )
     }
